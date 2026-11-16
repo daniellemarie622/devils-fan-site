@@ -23,6 +23,7 @@
             display: flex;
             flex-direction: column;
             gap: 40px;
+            flex-shrink: 0;
         }
         aside h2 {
             color: #ffffff;
@@ -65,129 +66,108 @@
             background-color: #0f0f12;
             overflow-y: auto;
         }
-        .header-banner {
+        .hero-section {
+            display: flex;
+            gap: 40px;
+            align-items: center;
             background: linear-gradient(135deg, #16161a, #000000);
             border: 1px solid #222225;
             border-left: 5px solid #ce1126;
             border-radius: 12px;
-            padding: 35px;
+            padding: 40px;
             margin-bottom: 40px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.5);
         }
+        .hero-text {
+            flex: 1;
+        }
+        .hero-image-container {
+            flex: 1;
+            max-width: 450px;
+        }
+        .hero-image-container img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            border: 1px solid #333335;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.6);
+        }
         h1 {
-            font-size: 2.5em;
+            font-size: 2.6em;
             font-weight: 800;
             color: #ffffff;
             margin: 0 0 15px 0;
             letter-spacing: -0.5px;
         }
         .subtitle {
-            color: #aaaaaa;
-            font-size: 1.15em;
-            line-height: 1.6;
+            color: #dddddd;
+            font-size: 1.1em;
+            line-height: 1.7;
             margin: 0;
-            max-width: 900px;
         }
-        .content-section {
+        .content-columns {
+            display: flex;
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        .column {
+            flex: 1;
             background-color: #121216;
             border: 1px solid #1e1e24;
             border-radius: 12px;
-            padding: 35px;
-            margin-bottom: 40px;
+            padding: 30px;
             box-shadow: 0 10px 25px rgba(0,0,0,0.4);
         }
         h3 {
-            font-size: 1.5em;
+            font-size: 1.4em;
             color: #ffffff;
             margin-top: 0;
             margin-bottom: 20px;
             font-weight: 700;
+            border-bottom: 1px solid #222228;
+            padding-bottom: 10px;
         }
         p {
-            line-height: 1.75;
-            color: #dddddd;
-            font-size: 1.05em;
-            margin-bottom: 25px;
+            line-height: 1.7;
+            color: #cccccc;
+            font-size: 1em;
+            margin: 0 0 20px 0;
         }
-        .quote-card {
-            background: #1a1a22;
-            border-left: 4px solid #ce1126;
-            padding: 20px 25px;
-            margin: 30px 0;
-            border-radius: 0 8px 8px 0;
-        }
-        .quote-card p {
-            margin: 0;
-            font-style: italic;
-            color: #eeeeee;
-            font-size: 1.1em;
-        }
-        ul {
+        .highlight-list {
             list-style: none;
             padding: 0;
             margin: 0;
         }
-        li {
+        .highlight-list li {
             position: relative;
-            padding-left: 30px;
-            margin-bottom: 20px;
-            line-height: 1.7;
-            color: #dddddd;
-            font-size: 1.05em;
+            padding-left: 25px;
+            margin-bottom: 15px;
+            line-height: 1.6;
+            color: #cccccc;
         }
-        li::before {
+        .highlight-list li::before {
             content: "➔";
             position: absolute;
             left: 0;
             top: 0;
             color: #ce1126;
-            font-weight: 900;
-            font-size: 1.2em;
+            font-weight: bold;
         }
-        li strong {
-            color: #ffffff;
-            font-size: 1.1em;
-        }
-        .gallery-heading {
-            font-size: 1.6em;
-            font-weight: 800;
-            margin-bottom: 25px;
-            color: #ffffff;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-        .grid-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
-            gap: 30px;
-        }
-        .grid-item {
-            background: #121216;
+        .secondary-gallery {
+            background-color: #121216;
             border: 1px solid #1e1e24;
             border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.4);
-            transition: transform 0.3s ease, border-color 0.3s ease;
-        }
-        .grid-item:hover {
-            transform: translateY(-5px);
-            border-color: #ce1126;
-        }
-        .grid-item img {
-            width: 100%;
-            height: 240px;
-            object-fit: cover;
-            display: block;
-        }
-        .grid-item p {
-            padding: 15px 20px;
-            margin: 0;
-            font-size: 0.95em;
-            font-weight: 600;
-            color: #ffffff;
-            background: #16161a;
-            border-top: 1px solid #1e1e24;
+            padding: 30px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.4);
             text-align: center;
+        }
+        .secondary-gallery img {
+            width: 100%;
+            max-width: 650px;
+            height: auto;
+            border-radius: 8px;
+            border: 1px solid #222228;
+            margin-top: 15px;
         }
         footer {
             margin-top: 60px;
@@ -196,6 +176,18 @@
             text-align: center;
             font-size: 0.9em;
             color: #666666;
+        }
+        @media (max-width: 1024px) {
+            .hero-section {
+                flex-direction: column;
+                text-align: center;
+            }
+            .hero-image-container {
+                max-width: 100%;
+            }
+            .content-columns {
+                flex-direction: column;
+            }
         }
     </style>
 </head>
@@ -209,43 +201,49 @@
         </nav>
     </aside>
     <main>
-        <div class="header-banner">
-            <h1>Why I Like Hockey & The New Jersey Devils</h1>
-            <p class="subtitle">There is nothing on earth quite like live hockey. This is a look at the chaos, the speed, and the pure adrenaline that made me a die-hard New Jersey Devils fan.</p>
-        </div>
-
-        <div class="content-section">
-            <h3>Hooked on the Chaos</h3>
-            <p>If you have never seen a hockey game live from the glass, you are missing out on the most electric sport on the planet. Television does not do it justice. You have to be there to hear the skates cutting into the ice, the heavy impact of a clean body check against the boards, and the pure speed of the play. Guys are flying across the rink at twenty-five miles an hour on razor-sharp steel blades, dodging hits and threading a tiny rubber puck through defensive traffic in the blink of an eye. The game changes direction instantly. A broken play in the defensive zone becomes a massive breakaway chance at the other end of the ice a couple seconds later. It is fast, it is physical, and it keeps you on the edge of your seat until the final horn sounds.</p>
-
-            <div class="quote-card">
-                <p>"Hockey isn't just a sport you watch. It's a game you feel in your chest every time the puck drops and the crowd starts to roar."</p>
+        <!-- Hero Section with Title and the Rink Image side-by-side -->
+        <div class="hero-section">
+            <div class="hero-text">
+                <h1>Why I Like Hockey & The New Jersey Devils</h1>
+                <p class="subtitle">There is nothing on earth quite like live hockey. Television doesn't do it justice. You have to be there to hear the skates cutting into the ice, the heavy impact of a clean body check against the boards, and the pure, chaotic speed of the game.</p>
             </div>
-
-            <h3>Why the Devils Own the Ice</h3>
-            <ul>
-                <li><strong>A Legacy Built on Grit:</strong> The Devils did not just win; they forced the rest of the league to play on their terms. With three Stanley Cup banners hanging in the rafters from 1995, 2000, and 2003, this team proved that lockdown defense and unrelenting hard work win championships.</li>
-                <li><strong>The Pure Adrenaline of The Rock:</strong> Walking into the Prudential Center on game night is a total rush. The building layout puts the fans right on top of the rink, causing the hometown noise to trap opposing teams in a wall of sound every single period.</li>
-                <li><strong>The Next Generation of Speed:</strong> Watching the current roster attack the offensive zone is thrilling. The team plays a high-flying, explosive game style fueled by creative young playmakers who can break open a matchup out of absolutely nowhere.</li>
-            </ul>
-        </div>
-
-        <div class="content-section">
-            <h3>Welcome to Game Day in Newark</h3>
-            <p>The true magic of the franchise goes way beyond the historical record box scores. It is about the community energy that brings thousands of people out to Newark every week. Hours before the puck drops, the plaza outside fills with a sea of red and black jerseys. Once you cross the gates, the building is alive. The classic stadium organ pumps up the crowd during breaks, and the goal horn blasts with a deafening roar that sends the entire building into absolute madness whenever the home team scores.</p>
-            <p>The fans here bring a unique Jersey attitude that you will not find anywhere else in the league. Section groups like the "233 Crazies" orchestrate ruthless crowd chants that ring out from the stands, keeping the energy completely dialed in from start to finish. Between periods, the "NJ Devil" mascot skates onto the ice, firing up the kids and launching t-shirts into the crowd. It is a loud, rowdy, multi-generational family tradition that shows exactly what garden state hockey culture is all about.</p>
-        </div>
-
-        <h3 class="gallery-heading">Team Media & Fan Gallery</h3>
-        <div class="grid-container">
-            <div class="grid-item">
+            <div class="hero-image-container">
                 <img src="devils-rink.jpg" alt="Prudential Center Arena Ice Hockey Layout">
-                <p>Prudential Center Game Night Rink Configuration</p>
-            </div>
-            <div class="grid-item">
-                <img src="NicoJack.jpg" alt="Nico Hischier and Jack Hughes Hockey Celebration">
-                <p>Nico Hischier & Jack Hughes Game Celebration</p>
             </div>
         </div>
+
+        <!-- Two Column Content Layout -->
+        <div class="content-columns">
+            <!-- Left Column: The Game Adrenaline -->
+            <div class="column">
+                <h3>Hooked on the Adrenaline</h3>
+                <p>Guys are flying across the rink at twenty-five miles an hour on razor-sharp steel blades, dodging massive hits and threading a tiny rubber puck through defensive traffic in the blink of an eye. The game changes direction instantly. A broken play in your defensive zone can become a breakout scoring chance at the other end of the ice two seconds later. It keeps you on the edge of your seat until the final horn sounds.</p>
+                <p>Hockey isn't just a sport you sit and watch passively. It is a game you feel right in your chest every time the puck drops, the skates hit the boards, and the hometown arena crowd starts to roar.</p>
+            </div>
+
+            <!-- Right Column: The Franchise Culture -->
+            <div class="column">
+                <h3>The Jersey Attitude</h3>
+                <ul class="highlight-list">
+                    <li><strong>Legacy of Grit:</strong> The Devils didn't just win; they forced the league to play on their terms. Three Stanley Cup banners prove that lockdown defense and unrelenting hard work win championships.</li>
+                    <li><strong>The Prudential Center:</strong> The Rock puts the fans right on top of the rink, trapping opposing teams in a wall of crowd sound every single night.</li>
+                    <li><strong>Next-Gen Speed:</strong> Watching the current up-tempo squad attack the offensive zone with fast breaks and creative young playmakers is completely thrilling.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Fan Section with Celebration Photo -->
+        <div class="secondary-gallery">
+            <h3>Welcome to Game Day in Newark</h3>
+            <p style="max-width: 800px; margin: 0 auto 15px auto;">The true magic of this franchise goes way beyond historical box scores. It is about a loud, rowdy, multi-generational family tradition. From the booming rink pipe organ to the roaring horn that blasts whenever a goal hits the back of the net, everything is built for die-hard fan culture.</p>
+            <img src="NicoJack.jpg" alt="Nico Hischier and Jack Hughes Hockey Goal Celebration">
+        </div>
+
+        <footer>
+            <p>© 2026 Devils Hockey Fan Hub. Built using TextPad for local web project configurations. Team logos and marks remain property of the NHL.</p>
+        </footer>
+    </main>
+</body>
+</html>
 
 
