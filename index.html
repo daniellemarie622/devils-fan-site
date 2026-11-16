@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="A New Jersey Devils fan page about why hockey is exciting and what makes the Devils special.">
     <title>NJ Devils - Why I Like Hockey</title>
+
     <style>
         :root {
             --devils-red: #ce1126;
@@ -161,6 +163,11 @@
             border-radius: 8px;
             background: #191919;
             color: #dddddd;
+        }
+
+        /* Fixes duplicate image placeholders */
+        [hidden] {
+            display: none !important;
         }
 
         h1 {
@@ -365,11 +372,13 @@
         }
     </style>
 </head>
+
 <body>
     <a class="skip-link" href="#main-content">Skip to main content</a>
 
     <aside>
         <h2>Devils Hockey</h2>
+
         <nav aria-label="Main navigation">
             <a href="index.html" class="active" aria-current="page">Home (Why Hockey)</a>
             <a href="history.html">Devils History</a>
@@ -378,11 +387,20 @@
     </aside>
 
     <main id="main-content">
+
         <!-- Hero section -->
         <section class="hero-section" aria-labelledby="page-title">
+
             <div class="hero-text">
                 <h1 id="page-title">Why I Like Hockey &amp; The New Jersey Devils</h1>
-                <p class="subtitle">There is nothing on earth quite like live hockey. Television doesn't do it justice. You have to be there to hear the skates cutting into the ice, the heavy impact of a clean body check against the boards, and the pure, chaotic speed of the game.</p>
+
+                <p class="subtitle">
+                    There is nothing on earth quite like live hockey.
+                    Television doesn't do it justice. You have to be there
+                    to hear the skates cutting into the ice, the heavy impact
+                    of a clean body check against the boards, and the pure,
+                    chaotic speed of the game.
+                </p>
             </div>
 
             <div class="hero-image-container">
@@ -392,35 +410,81 @@
                     loading="lazy"
                     onerror="this.hidden=true; this.nextElementSibling.hidden=false;"
                 >
+
                 <div class="image-fallback" hidden>
                     <strong>Rink photo not found.</strong>
                     <span>Place devils-rink.jpg in the same folder as index.html.</span>
                 </div>
             </div>
+
         </section>
 
         <!-- Two-column content -->
         <section class="content-columns" aria-label="Why hockey and the Devils are exciting">
+
             <article class="column">
                 <h3>Hooked on the Adrenaline</h3>
-                <p>Guys are flying across the rink at twenty-five miles an hour on razor-sharp steel blades, dodging massive hits and threading a tiny rubber puck through defensive traffic in the blink of an eye. The game changes direction instantly. A broken play in your defensive zone can become a breakout scoring chance at the other end of the ice two seconds later. It keeps you on the edge of your seat until the final horn sounds.</p>
-                <p>Hockey isn't just a sport you sit and watch passively. It is a game you feel right in your chest every time the puck drops, the skates hit the boards, and the hometown arena crowd starts to roar.</p>
+
+                <p>
+                    Guys are flying across the rink at twenty-five miles an hour
+                    on razor-sharp steel blades, dodging massive hits and
+                    threading a tiny rubber puck through defensive traffic in
+                    the blink of an eye. The game changes direction instantly.
+                    A broken play in your defensive zone can become a breakout
+                    scoring chance at the other end of the ice two seconds later.
+                    It keeps you on the edge of your seat until the final horn sounds.
+                </p>
+
+                <p>
+                    Hockey isn't just a sport you sit and watch passively.
+                    It is a game you feel right in your chest every time the
+                    puck drops, the skates hit the boards, and the hometown
+                    arena crowd starts to roar.
+                </p>
             </article>
 
             <article class="column">
                 <h3>The Jersey Attitude</h3>
+
                 <ul class="highlight-list">
-                    <li><strong>Legacy of Grit:</strong> The Devils didn't just win; they forced the league to play on their terms. Three Stanley Cup banners prove that lockdown defense and unrelenting hard work win championships.</li>
-                    <li><strong>The Prudential Center:</strong> The Rock puts the fans right on top of the rink, trapping opposing teams in a wall of crowd sound every single night.</li>
-                    <li><strong>Next-Gen Speed:</strong> Watching the current up-tempo squad attack the offensive zone with fast breaks and creative young playmakers is completely thrilling.</li>
+                    <li>
+                        <strong>Legacy of Grit:</strong>
+                        The Devils didn't just win; they forced the league
+                        to play on their terms. Three Stanley Cup banners
+                        prove that lockdown defense and unrelenting hard work
+                        win championships.
+                    </li>
+
+                    <li>
+                        <strong>The Prudential Center:</strong>
+                        The Rock puts the fans right on top of the rink,
+                        trapping opposing teams in a wall of crowd sound
+                        every single night.
+                    </li>
+
+                    <li>
+                        <strong>Next-Gen Speed:</strong>
+                        Watching the current up-tempo squad attack the
+                        offensive zone with fast breaks and creative young
+                        playmakers is completely thrilling.
+                    </li>
                 </ul>
             </article>
+
         </section>
 
         <!-- Game day photo -->
         <section class="secondary-gallery" aria-labelledby="gameday-title">
+
             <h3 id="gameday-title">Welcome to Game Day in Newark</h3>
-            <p style="max-width: 800px; margin: 0 auto 15px auto;">The true magic of this franchise goes way beyond historical box scores. It is about a loud, rowdy, multi-generational family tradition. From the booming rink pipe organ to the roaring horn that blasts whenever a goal hits the back of the net, everything is built for die-hard fan culture.</p>
+
+            <p style="max-width: 800px; margin: 0 auto 15px auto;">
+                The true magic of this franchise goes way beyond historical
+                box scores. It is about a loud, rowdy, multi-generational
+                family tradition. From the booming rink pipe organ to the
+                roaring horn that blasts whenever a goal hits the back of
+                the net, everything is built for die-hard fan culture.
+            </p>
 
             <img
                 src="NicoJack.jpg"
@@ -428,15 +492,22 @@
                 loading="lazy"
                 onerror="this.hidden=true; this.nextElementSibling.hidden=false;"
             >
+
             <div class="image-fallback" hidden>
                 <strong>Game day photo not found.</strong>
                 <span>Place NicoJack.jpg in the same folder as index.html.</span>
             </div>
+
         </section>
 
         <footer>
-            <p>&copy; 2026 Devils Hockey Fan Hub. Built using TextPad for a local web project. Team logos and marks remain property of the NHL.</p>
+            <p>
+                &copy; 2026 Devils Hockey Fan Hub. Built using TextPad
+                for a local web project. Team logos and marks remain
+                property of the NHL.
+            </p>
         </footer>
+
     </main>
 </body>
 </html>
