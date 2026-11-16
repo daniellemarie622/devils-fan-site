@@ -1,201 +1,255 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Devils History</title>
-    <style>
-        body {
-            background-color: #111111;
-            color: #ffffff;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            min-height: 100vh;
-        }
-        aside {
-            width: 250px;
-            background-color: #000000;
-            border-right: 3px solid #ce1126;
-            padding: 30px 20px;
-            box-sizing: border-box;
-        }
-        aside h2 {
-            color: #ce1126;
-            font-size: 1.5em;
-            margin-bottom: 30px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-        nav {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-        }
-        nav a {
-            color: #ffffff;
-            text-decoration: none;
-            font-weight: bold;
-            padding: 12px;
-            border-left: 4px solid transparent;
-            transition: 0.3s ease;
-            border-radius: 0 4px 4px 0;
-        }
-        nav a:hover, nav a.active {
-            color: #ce1126;
-            border-left: 4px solid #ce1126;
-            background-color: #1c1c1c;
-        }
-        main {
-            flex: 1;
-            padding: 40px;
-            background-color: #161616;
-            overflow-y: auto;
-        }
-        h1 {
-            color: #ffffff;
-            border-bottom: 2px solid #ce1126;
-            padding-bottom: 10px;
-            margin-top: 0;
-        }
-        h2.section-title {
-            color: #ce1126;
-            font-size: 1.4em;
-            margin-top: 30px;
-            margin-bottom: 15px;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-        .info-card {
-            background: #1f1f1f;
-            border: 1px solid #333333;
-            border-radius: 8px;
-            padding: 25px;
-            margin-bottom: 30px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-        }
-        p {
-            line-height: 1.7;
-            color: #dddddd;
-            margin-bottom: 15px;
-        }
-        table {
-            width: 100%;
-            max-width: 800px;
-            border-collapse: collapse;
-            margin: 20px 0;
-            background-color: #111111;
-            border-radius: 6px;
-            overflow: hidden;
-        }
-        th, td {
-            padding: 14px;
-            text-align: left;
-            border-bottom: 1px solid #333333;
-        }
-        th {
-            background-color: #ce1126;
-            color: #ffffff;
-            text-transform: uppercase;
-            font-size: 0.9em;
-            letter-spacing: 0.5px;
-        }
-        tr:hover {
-            background-color: #222222;
-        }
-        .media-flex {
-            display: flex;
-            gap: 25px;
-            flex-wrap: wrap;
-            margin-top: 25px;
-        }
-        .media-box {
-            flex: 1;
-            min-width: 320px;
-            background-color: #1f1f1f;
-            padding: 20px;
-            border-top: 4px solid #ce1126;
-            border-radius: 6px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-        }
-        .media-box h3 {
-            margin-top: 0;
-            margin-bottom: 15px;
-            color: #ce1126;
-            font-size: 1.1em;
-            line-height: 1.4;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Explore the history of the New Jersey Devils, from the Kansas City Scouts and Colorado Rockies to the team's modern jerseys.">
+  <title>Devils History | Devils Hockey</title>
+  <style>
+    :root {
+      --red: #ce1126; --red-dark: #9d0d1d; --black: #090909;
+      --panel: #1b1b1b; --panel-2: #222; --line: #393939;
+      --white: #f7f7f7; --muted: #c8c8c8; --green: #176b3a;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0; min-height: 100vh; background: #111; color: var(--white);
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; line-height: 1.65;
+    }
+    a { color: #ff6878; }
+    a:focus-visible, button:focus-visible { outline: 3px solid #fff; outline-offset: 3px; }
+    .layout { display: flex; min-height: 100vh; }
+    aside {
+      width: 252px; flex: 0 0 252px; padding: 28px 18px;
+      background: #050505; border-right: 3px solid var(--red);
+    }
+    .brand { color: var(--red); font-size: 1.25rem; font-weight: 900; letter-spacing: .08em; margin: 0 10px 28px; }
+    nav { display: grid; gap: 8px; }
+    nav a {
+      display: block; color: #fff; text-decoration: none; font-weight: 650;
+      padding: 10px 12px; border-left: 4px solid transparent; border-radius: 0 5px 5px 0;
+    }
+    nav a:hover, nav a.active { color: #ff6979; background: #1b1b1b; border-left-color: var(--red); }
+    main { min-width: 0; flex: 1; padding: 38px clamp(18px, 4vw, 56px) 60px; }
+    .eyebrow { color: #ff7180; text-transform: uppercase; font-weight: 800; letter-spacing: .13em; font-size: .78rem; }
+    h1 { font-size: clamp(2rem, 4vw, 3.1rem); line-height: 1.1; margin: 8px 0 14px; padding-bottom: 18px; border-bottom: 3px solid var(--red); }
+    h2 { color: #ff596b; margin: 0 0 14px; font-size: 1.45rem; }
+    h3 { margin: 0 0 8px; font-size: 1.08rem; }
+    p { color: #ddd; margin: 0 0 14px; }
+    .intro { max-width: 900px; font-size: 1.06rem; }
+    .panel { background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: clamp(18px, 3vw, 28px); margin: 24px 0; box-shadow: 0 8px 24px #0004; }
+    .table-wrap { overflow-x: auto; }
+    table { width: 100%; min-width: 560px; border-collapse: collapse; margin-top: 14px; }
+    th, td { text-align: left; padding: 12px 14px; border-bottom: 1px solid var(--line); }
+    th { background: var(--red); color: white; text-transform: uppercase; font-size: .82rem; letter-spacing: .04em; }
+    tr:hover td { background: #282828; }
+    .toc { display: flex; flex-wrap: wrap; gap: 9px; margin: 18px 0 24px; }
+    .toc a, .link-button {
+      display: inline-block; padding: 8px 12px; border: 1px solid #7f2430;
+      border-radius: 7px; background: #2a1115; color: #fff; text-decoration: none; font-weight: 650;
+    }
+    .toc a:hover, .link-button:hover { background: var(--red); border-color: var(--red); }
+    .timeline { display: grid; gap: 18px; }
+    .era { border-left: 4px solid var(--red); padding: 2px 0 2px 18px; }
+    .era .date { color: #ff8995; font-weight: 800; font-size: .9rem; }
+    .jersey-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)); gap: 18px; margin-top: 18px; }
+    .jersey-card { background: #111; border: 1px solid var(--line); border-radius: 10px; overflow: hidden; display: flex; flex-direction: column; }
+    .jersey-art {
+      min-height: 210px; display: grid; place-items: center; padding: 16px;
+      background: radial-gradient(ellipse at center, #303030, #171717 70%);
+      border-bottom: 1px solid var(--line);
+    }
+    .sweater { width: 170px; height: 158px; position: relative; filter: drop-shadow(0 8px 7px #0009); }
+    .body-shirt {
+      position: absolute; left: 42px; top: 25px; width: 86px; height: 120px;
+      background: var(--shirt, #c8102e); border: 3px solid #111; border-radius: 12px 12px 18px 18px;
+    }
+    .sleeve {
+      position: absolute; top: 28px; width: 52px; height: 82px;
+      background: var(--shirt, #c8102e); border: 3px solid #111;
+    }
+    .sleeve.left { left: 5px; transform: rotate(22deg); border-radius: 13px 4px 12px 12px; }
+    .sleeve.right { right: 5px; transform: rotate(-22deg); border-radius: 4px 13px 12px 12px; }
+    .neck { position: absolute; z-index: 2; left: 70px; top: 21px; width: 30px; height: 15px; border: 5px solid var(--trim, #fff); border-top: 0; border-radius: 0 0 14px 14px; }
+    .stripe { position: absolute; left: 0; right: 0; height: 9px; background: var(--stripe, #fff); }
+    .stripe.one { top: 65px; } .stripe.two { top: 79px; } .stripe.three { top: 93px; }
+    .sleeve .stripe { left: 0; right: 0; height: 7px; }
+    .sleeve .stripe.one { top: 29px; } .sleeve .stripe.two { top: 41px; } .sleeve .stripe.three { top: 53px; }
+    .crest {
+      position: absolute; z-index: 3; top: 53px; left: 55px; width: 60px; text-align: center;
+      color: var(--crest, white); font-weight: 1000; font-size: 1.2rem; line-height: 1.1;
+      text-shadow: 1px 1px #111, -1px -1px #111;
+    }
+    .jersey-copy { padding: 16px; display: flex; flex-direction: column; flex: 1; }
+    .jersey-copy p { font-size: .92rem; flex: 1; }
+    .jersey-copy .link-row { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 6px; }
+    .link-button { font-size: .82rem; }
+    .tag { display: inline-block; margin: 0 0 8px; color: #ff9aa4; font-size: .73rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
+    .note { border-left: 4px solid #888; padding: 12px 16px; background: #151515; color: var(--muted); border-radius: 0 7px 7px 0; font-size: .9rem; }
+    footer { margin-top: 35px; padding-top: 20px; border-top: 1px solid var(--line); color: #aaa; font-size: .85rem; }
+    @media (max-width: 780px) {
+      .layout { display: block; }
+      aside { width: 100%; padding: 14px 16px; border-right: 0; border-bottom: 3px solid var(--red); }
+      .brand { margin: 0 0 10px; }
+      nav { display: flex; flex-wrap: wrap; gap: 5px; }
+      nav a { padding: 8px 10px; font-size: .9rem; }
+      main { padding: 26px 16px 45px; }
+    }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  </style>
 </head>
 <body>
-    <aside>
-        <h2>Devils Hockey</h2>
-        <nav>
-            <a href="index.html">Home (Why Hockey)</a>
-            <a href="history.html" class="active">Devils History</a>
-            <a href="team.html">Team Stats</a>
-        </nav>
-    </aside>
-    <main>
-        <h1>Historical Moments & Team Legacy</h1>
+<div class="layout">
+  <aside>
+    <p class="brand">DEVILS HOCKEY</p>
+    <nav aria-label="Main navigation">
+      <a href="index.html">Home (Why Hockey)</a>
+      <a href="history.html" class="active" aria-current="page">Devils History</a>
+      <a href="team.html">Team Stats</a>
+    </nav>
+  </aside>
 
-        <div class="info-card">
-            <p style="margin-top: 0;">The New Jersey Devils didn't just win championships; they redefined how modern defensive hockey is played. Through the architecture of general manager Lou Lamoriello and coach Jacques Lemaire, the franchise established a dominant culture built around structured systems, historic penalty kills, and legendary goaltending.</p>
+  <main>
+    <div class="eyebrow">New Jersey • Since 1982</div>
+    <h1>Historical Moments &amp; Team Legacy</h1>
+    <p class="intro">The New Jersey Devils built their identity through disciplined hockey, standout goaltending and three Stanley Cup championships. Their story began before New Jersey, however, with two earlier franchises: the Kansas City Scouts and the Colorado Rockies.</p>
 
-            <h3>Championship Timeline Summary</h3>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Championship Year</th>
-                        <th>Opponent Faced</th>
-                        <th>Series Final Record</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>1995</td>
-                        <td>Detroit Red Wings</td>
-                        <td>Won Series 4-0 (Franchise's First Stanley Cup)</td>
-                    </tr>
-                    <tr>
-                        <td>2000</td>
-                        <td>Dallas Stars</td>
-                        <td>Won Series 4-2 (Arnott Double-OT Winner)</td>
-                    </tr>
-                    <tr>
-                        <td>2003</td>
-                        <td>Anaheim Mighty Ducks</td>
-                        <td>Won Series 4-3 (Brodeur's Shutout Mastery)</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
+    <div class="toc" aria-label="On this page">
+      <a href="#cups">Stanley Cups</a><a href="#origins">Franchise origins</a>
+      <a href="#golden-era">Golden era</a><a href="#jerseys">Jersey gallery</a>
+    </div>
 
-        <div class="info-card">
-            <h2 class="section-title" style="margin-top:0;">1. The Pre-New Jersey Era (1974–1982)</h2>
-            <p>Before settling in the Garden State, the franchise traveled a rocky road through two different cities. The club was originally founded in 1974 as the <strong>Kansas City Scouts</strong>. Plagued by massive financial debt and a brutal 27-game winless streak, the owners relocated the club after only two seasons. In 1976, they became the <strong>Colorado Rockies</strong>, playing out of Denver. Instability continued to haunt the team, as they cycled through ten head coaches in just eight years. Shipping magnate John McMullen bought the struggling franchise in 1982, moving them east to start a fresh chapter at East Rutherford's Brendan Byrne Arena.</p>
+    <section class="panel" id="cups">
+      <h2>Stanley Cup Championship Timeline</h2>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Year</th><th>Final opponent</th><th>Series result</th><th>Moment</th></tr></thead>
+          <tbody>
+            <tr><td>1995</td><td>Detroit Red Wings</td><td>4–0</td><td>First championship in franchise history</td></tr>
+            <tr><td>2000</td><td>Dallas Stars</td><td>4–2</td><td>Jason Arnott scored the double-overtime Cup-winning goal</td></tr>
+            <tr><td>2003</td><td>Anaheim Mighty Ducks</td><td>4–3</td><td>Third championship in nine seasons</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
 
-            <h2 class="section-title">2. Building the Foundation & Gretzky's "Mickey Mouse" Comment</h2>
-            <p>Renamed the Devils after the legendary creature haunting the South Jersey Pine Barrens, the team struggled heavily to earn respect early on. On November 19, 1983, following a devastating 13-4 blowout loss, superstar Wayne Gretzky blasted the team in a post-game interview, stating they were "putting a Mickey Mouse operation on the ice." Rather than crushing the fan base, it ignited them. Jersey fans famously wore Mickey Mouse apparel to the arena when the Oilers returned, turning the insult into a badge of honor. Slowly, the team assembled its true home core, drafting foundational cornerstones like Ken Daneyko, John MacLean, Kirk Muller, and Pat Verbeek.</p>
+    <section class="panel" id="origins">
+      <h2>From Kansas City to New Jersey</h2>
+      <div class="timeline">
+        <article class="era"><div class="date">1974–1976 • Kansas City Scouts</div><p>The franchise entered the NHL as the Kansas City Scouts in 1974. After two seasons, the club relocated to Denver.</p></article>
+        <article class="era"><div class="date">1976–1982 • Colorado Rockies</div><p>In Colorado, the team became the Rockies. Financial and competitive struggles continued, and the franchise was sold and moved again in 1982.</p></article>
+        <article class="era"><div class="date">1982–present • New Jersey Devils</div><p>The team settled in New Jersey, adopted the Devils name and began playing at the Brendan Byrne Arena in East Rutherford. The name was selected through a fan poll and references the legendary Jersey Devil associated with the Pine Barrens.</p></article>
+      </div>
+    </section>
 
-            <h2 class="section-title">3. The Golden Era & The Neutral Zone Trap (1993–2003)</h2>
-            <p>Everything changed when the team hired head coach Jacques Lemaire. Lemaire implemented an ultra-disciplined defensive system known as the <strong>"Neutral Zone Trap."</strong> This tactic completely choked out opposing offenses by forcing constant turnovers in mid-ice, allowing the Devils to launch fast, lethal counter-attacks. While hockey purists and the media openly complained that the trap made the NHL "boring," it yielded unmatched results. Backed by the shutdown defensive pairings of Scott Stevens and Scott Niedermayer, along with the all-time legendary goaltending of Martin Brodeur, the Devils captured three Stanley Cups over an iconic nine-year window.</p>
+    <section class="panel">
+      <h2>The “Mickey Mouse” Comment</h2>
+      <p>On November 19, 1983, after the Devils lost 13–4 to the Edmonton Oilers, Wayne Gretzky criticized the club as a “Mickey Mouse operation.” Devils fans later embraced the remark, wearing Mickey Mouse gear when Edmonton returned to New Jersey. The episode became a memorable part of the team's early identity.</p>
+    </section>
 
-            <h2 class="section-title">4. Modern Rebuild & The Rise of the Core (2013–Present)</h2>
-            <p>Following the departure of long-time stars, the team entered a transitional era under the new Harris-Blitzer ownership group. The franchise focused heavily on drafting high-end, dynamic offensive talent to move away from the old trapping system into an aggressive, up-tempo modern style. Securing two first-overall draft lottery selections allowed the Devils to draft center <strong>Nico Hischier</strong> (2017) and elite playmaker <strong>Jack Hughes</strong> (2019). This shift culminated in a historic, record-breaking 2022-23 regular season where the young squad captured a franchise-record 52 wins and 112 points, highlighted by a thrilling seven-game first-round playoff elimination of their cross-river rivals, the New York Rangers.</p>
-        </div>
+    <section class="panel" id="golden-era">
+      <h2>The Golden Era &amp; the Neutral Zone Trap (1993–2003)</h2>
+      <p>Under head coach Jacques Lemaire, the Devils became known for a structured defensive system often called the Neutral Zone Trap. The approach clogged the middle of the ice, disrupted opponents' transitions and created counterattack opportunities.</p>
+      <p>With leaders such as Scott Stevens, Scott Niedermayer and goaltender Martin Brodeur, New Jersey became one of the NHL's dominant teams of the era and won the Stanley Cup in 1995, 2000 and 2003.</p>
+    </section>
 
-        <div class="media-flex">
-            <div class="media-box">
-                <h3>June 10, 2000: The New Jersey Devils captured their second Stanley Cup in franchise history</h3>
-                <iframe width="100%" height="315" src="https://www.youtube.com/embed/K_ZTCmP4KmA?si=1Wp2D0cfD8Mww0BX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </div>
-            <div class="media-box">
-                <h3>Team History Documentation</h3>
-                <iframe src="https://en.wikipedia.org/wiki/History_of_the_New_Jersey_Devils" title="Devils History" width="100%" height="315" style="border:none; border-radius:4px; background:#ffffff;"></iframe>
-            </div>
-        </div>
-    </main>
+    <section class="panel" id="jerseys">
+      <h2>Jersey Evolution: A Visual Gallery</h2>
+      <p>Explore the major franchise uniforms and special-edition Devils jerseys below. The sweater drawings are simplified color-and-stripe illustrations to help distinguish each design; use the “See actual jersey” links for photographs and full uniform details.</p>
+      <p class="note">The gallery includes the franchise's Kansas City and Colorado years as well as Devils-era home, away, heritage, alternate and special-event designs. Some special jerseys were worn for only a season or a handful of games.</p>
+
+      <h3 style="margin-top:24px">Franchise roots</h3>
+      <div class="jersey-grid">
+        <article class="jersey-card">
+          <div class="jersey-art"><div class="sweater" style="--shirt:#c8102e;--stripe:#f2c744;--trim:#f2c744;--crest:#f2c744"><div class="sleeve left"><i class="stripe one"></i><i class="stripe two"></i><i class="stripe three"></i></div><div class="sleeve right"><i class="stripe one"></i><i class="stripe two"></i><i class="stripe three"></i></div><div class="body-shirt"><i class="stripe one"></i><i class="stripe two"></i><i class="stripe three"></i></div><div class="neck"></div><div class="crest">KC</div></div></div>
+          <div class="jersey-copy"><span class="tag">1974–1976</span><h3>Kansas City Scouts</h3><p>Red, gold and blue franchise-origin colors with bold striping. The Scouts were the first identity of the club that eventually became the Devils.</p><div class="link-row"><a class="link-button" href="https://www.nhl.com/devils/team/history/jerseys" target="_blank" rel="noopener">See actual jersey ↗</a><a class="link-button" href="https://thekitarchive.com/hockey/new-jersey-devils-jerseys-t6666/" target="_blank" rel="noopener">Jersey archive ↗</a></div></div>
+        </article>
+        <article class="jersey-card">
+          <div class="jersey-art"><div class="sweater" style="--shirt:#1b315d;--stripe:#d6a52d;--trim:#d6a52d;--crest:#fff"><div class="sleeve left"><i class="stripe one"></i><i class="stripe two"></i><i class="stripe three"></i></div><div class="sleeve right"><i class="stripe one"></i><i class="stripe two"></i><i class="stripe three"></i></div><div class="body-shirt"><i class="stripe one"></i><i class="stripe two"></i><i class="stripe three"></i></div><div class="neck"></div><div class="crest">CR</div></div></div>
+          <div class="jersey-copy"><span class="tag">1976–1982</span><h3>Colorado Rockies</h3><p>Navy blue, burgundy and gold became the Rockies' recognizable palette. This chapter preceded the team's move to New Jersey.</p><div class="link-row"><a class="link-button" href="https://www.nhl.com/devils/team/history/jerseys" target="_blank" rel="noopener">See actual jersey ↗</a><a class="link-button" href="https://thekitarchive.com/hockey/new-jersey-devils-jerseys-t6666/" target="_blank" rel="noopener">Jersey archive ↗</a></div></div>
+        </article>
+      </div>
+
+      <h3 style="margin-top:28px">New Jersey Devils core uniforms</h3>
+      <div class="jersey-grid">
+        <article class="jersey-card">
+          <div class="jersey-art"><div class="sweater" style="--shirt:#c8102e;--stripe:#176b3a;--trim:#176b3a;--crest:#fff"><div class="sleeve left"><i class="stripe one"></i><i class="stripe two"></i></div><div class="sleeve right"><i class="stripe one"></i><i class="stripe two"></i></div><div class="body-shirt"><i class="stripe one"></i><i class="stripe two"></i></div><div class="neck"></div><div class="crest">NJ</div></div></div>
+          <div class="jersey-copy"><span class="tag">1982–1992</span><h3>Original “Christmas” jersey</h3><p>The first Devils sweaters paired red, green and white. The green accents nodded to New Jersey's Garden State identity.</p><div class="link-row"><a class="link-button" href="https://www.nhl.com/devils/team/history/jerseys" target="_blank" rel="noopener">See actual jersey ↗</a><a class="link-button" href="https://thekitarchive.com/hockey/new-jersey-devils-jerseys-t6666/" target="_blank" rel="noopener">Jersey archive ↗</a></div></div>
+        </article>
+        <article class="jersey-card">
+          <div class="jersey-art"><div class="sweater" style="--shirt:#c8102e;--stripe:#111;--trim:#111;--crest:#fff"><div class="sleeve left"><i class="stripe one"></i><i class="stripe two"></i><i class="stripe three"></i></div><div class="sleeve right"><i class="stripe one"></i><i class="stripe two"></i><i class="stripe three"></i></div><div class="body-shirt"><i class="stripe one"></i><i class="stripe two"></i><i class="stripe three"></i></div><div class="neck"></div><div class="crest">NJ</div></div></div>
+          <div class="jersey-copy"><span class="tag">1992–2007</span><h3>Classic red-and-black</h3><p>Green was replaced with black, creating the familiar red, black and white look worn during the team's three Cup wins.</p><div class="link-row"><a class="link-button" href="https://www.nhl.com/devils/team/history/jerseys" target="_blank" rel="noopener">See actual jersey ↗</a><a class="link-button" href="https://thekitarchive.com/hockey/new-jersey-devils-jerseys-t6666/" target="_blank" rel="noopener">Jersey archive ↗</a></div></div>
+        </article>
+        <article class="jersey-card">
+          <div class="jersey-art"><div class="sweater" style="--shirt:#fff;--stripe:#c8102e;--trim:#111;--crest:#c8102e"><div class="sleeve left"><i class="stripe one"></i><i class="stripe two"></i><i class="stripe three"></i></div><div class="sleeve right"><i class="stripe one"></i><i class="stripe two"></i><i class="stripe three"></i></div><div class="body-shirt"><i class="stripe one"></i><i class="stripe two"></i><i class="stripe three"></i></div><div class="neck"></div><div class="crest">NJ</div></div></div>
+          <div class="jersey-copy"><span class="tag">1992–2007 • Away</span><h3>Classic white road jersey</h3><p>The white counterpart used the same black shoulder treatment and red/black striping as the classic home sweater.</p><div class="link-row"><a class="link-button" href="https://www.nhl.com/devils/team/history/jerseys" target="_blank" rel="noopener">See actual jersey ↗</a><a class="link-button" href="https://thekitarchive.com/hockey/new-jersey-devils-jerseys-t6666/" target="_blank" rel="noopener">Jersey archive ↗</a></div></div>
+        </article>
+        <article class="jersey-card">
+          <div class="jersey-art"><div class="sweater" style="--shirt:#c8102e;--stripe:#111;--trim:#111;--crest:#fff"><div class="sleeve left"><i class="stripe one"></i><i class="stripe two"></i><i class="stripe three"></i></div><div class="sleeve right"><i class="stripe one"></i><i class="stripe two"></i><i class="stripe three"></i></div><div class="body-shirt"><i class="stripe one"></i><i class="stripe two"></i><i class="stripe three"></i></div><div class="neck"></div><div class="crest">NJ</div></div></div>
+          <div class="jersey-copy"><span class="tag">2007–2017</span><h3>Reebok Edge era</h3><p>The Devils carried their established design into the Reebok Edge uniform system, with a revised athletic cut and small construction changes.</p><div class="link-row"><a class="link-button" href="https://www.nhl.com/devils/team/history/jerseys" target="_blank" rel="noopener">See actual jersey ↗</a><a class="link-button" href="https://www.nhluniforms.com/Mobile/Devils/Devils.html" target="_blank" rel="noopener">Uniform database ↗</a></div></div>
+        </article>
+        <article class="jersey-card">
+          <div class="jersey-art"><div class="sweater" style="--shirt:#c8102e;--stripe:#111;--trim:#111;--crest:#fff"><div class="sleeve left"><i class="stripe one"></i><i class="stripe two"></i><i class="stripe three"></i></div><div class="sleeve right"><i class="stripe one"></i><i class="stripe two"></i><i class="stripe three"></i></div><div class="body-shirt"><i class="stripe one"></i><i class="stripe two"></i></div><div class="neck"></div><div class="crest">NJ</div></div></div>
+          <div class="jersey-copy"><span class="tag">2017–2024 • Adidas</span><h3>Adidas-era home jersey</h3><p>The 2017 redesign refined the striping, including a single black hem stripe, and added details honoring the franchise's history.</p><div class="link-row"><a class="link-button" href="https://www.nhl.com/devils/team/history/jerseys" target="_blank" rel="noopener">See actual jersey ↗</a><a class="link-button" href="https://www.nhluniforms.com/Mobile/Devils/Devils.html" target="_blank" rel="noopener">Uniform database ↗</a></div></div>
+        </article>
+        <article class="jersey-card">
+          <div class="jersey-art"><div class="sweater" style="--shirt:#fff;--stripe:#c8102e;--trim:#111;--crest:#c8102e"><div class="sleeve left"><i class="stripe one"></i><i class="stripe two"></i><i class="stripe three"></i></div><div class="sleeve right"><i class="stripe one"></i><i class="stripe two"></i><i class="stripe three"></i></div><div class="body-shirt"><i class="stripe one"></i><i class="stripe two"></i></div><div class="neck"></div><div class="crest">NJ</div></div></div>
+          <div class="jersey-copy"><span class="tag">2017–2024 • Adidas</span><h3>Adidas-era away jersey</h3><p>The white road version used the same updated striping and shoulder details as the red home sweater.</p><div class="link-row"><a class="link-button" href="https://www.nhl.com/devils/team/history/jerseys" target="_blank" rel="noopener">See actual jersey ↗</a><a class="link-button" href="https://www.nhluniforms.com/Mobile/Devils/Devils.html" target="_blank" rel="noopener">Uniform database ↗</a></div></div>
+        </article>
+        <article class="jersey-card">
+          <div class="jersey-art"><div class="sweater" style="--shirt:#c8102e;--stripe:#111;--trim:#111;--crest:#fff"><div class="sleeve left"><i class="stripe one"></i><i class="stripe two"></i><i class="stripe three"></i></div><div class="sleeve right"><i class="stripe one"></i><i class="stripe two"></i><i class="stripe three"></i></div><div class="body-shirt"><i class="stripe one"></i><i class="stripe two"></i></div><div class="neck"></div><div class="crest">NJ</div></div></div>
+          <div class="jersey-copy"><span class="tag">2024–2026 • Fanatics</span><h3>Fanatics-era home and away</h3><p>The Fanatics transition retained the Devils' established red/black/white uniform identity. The official archive provides the team's season-by-season uniform history.</p><div class="link-row"><a class="link-button" href="https://www.nhl.com/devils/team/history/jerseys" target="_blank" rel="noopener">See actual jersey ↗</a><a class="link-button" href="https://thekitarchive.com/hockey/new-jersey-devils-jerseys-t6666/" target="_blank" rel="noopener">Jersey archive ↗</a></div></div>
+        </article>
+      </div>
+
+      <h3 style="margin-top:30px">Heritage, alternate &amp; special-event jerseys</h3>
+      <div class="jersey-grid">
+        <article class="jersey-card">
+          <div class="jersey-art"><div class="sweater" style="--shirt:#fff;--stripe:#176b3a;--trim:#176b3a;--crest:#c8102e"><div class="sleeve left"><i class="stripe one"></i><i class="stripe two"></i></div><div class="sleeve right"><i class="stripe one"></i><i class="stripe two"></i></div><div class="body-shirt"><i class="stripe one"></i><i class="stripe two"></i></div><div class="neck"></div><div class="crest">NJ</div></div></div>
+          <div class="jersey-copy"><span class="tag">2009–2017 • Special event</span><h3>St. Patrick's Day / Heritage throwback</h3><p>A throwback to the original green-trimmed Devils look, worn for selected St. Patrick's Day games and the 2014 Stadium Series.</p><div class="link-row"><a class="link-button" href="https://www.nhluniforms.com/Mobile/Devils/Devils.html" target="_blank" rel="noopener">See actual jersey ↗</a></div></div>
+        </article>
+        <article class="jersey-card">
+          <div class="jersey-art"><div class="sweater" style="--shirt:#fff;--stripe:#176b3a;--trim:#176b3a;--crest:#c8102e"><div class="sleeve left"><i class="stripe one"></i><i class="stripe two"></i></div><div class="sleeve right"><i class="stripe one"></i><i class="stripe two"></i></div><div class="body-shirt"><i class="stripe one"></i><i class="stripe two"></i></div><div class="neck"></div><div class="crest">NJ</div></div></div>
+          <div class="jersey-copy"><span class="tag">2018–present • Heritage</span><h3>White Heritage jersey</h3><p>Introduced for the 2018–19 season, this white throwback revisits the team's inaugural New Jersey uniform design.</p><div class="link-row"><a class="link-button" href="https://www.nhl.com/devils/news/devils-announce-four-home-game-dates-to-wear-heritage-jersey-303115514" target="_blank" rel="noopener">Official story &amp; photos ↗</a></div></div>
+        </article>
+        <article class="jersey-card">
+          <div class="jersey-art"><div class="sweater" style="--shirt:#176b3a;--stripe:#c8102e;--trim:#c8102e;--crest:#fff"><div class="sleeve left"><i class="stripe one"></i><i class="stripe two"></i></div><div class="sleeve right"><i class="stripe one"></i><i class="stripe two"></i></div><div class="body-shirt"><i class="stripe one"></i><i class="stripe two"></i></div><div class="neck"></div><div class="crest">NJ</div></div></div>
+          <div class="jersey-copy"><span class="tag">2020–2021 • Reverse Retro</span><h3>Green Reverse Retro</h3><p>The team's first primarily green jersey reversed the colors of the 1982–92 design, celebrating the Pine Barrens and the original Devils palette.</p><div class="link-row"><a class="link-button" href="https://www.nhl.com/devils/news/release-devils-unveil-adidas-reverse-retro-jersey-319641392" target="_blank" rel="noopener">Official reveal &amp; photos ↗</a></div></div>
+        </article>
+        <article class="jersey-card">
+          <div class="jersey-art"><div class="sweater" style="--shirt:#1b315d;--stripe:#d6a52d;--trim:#d6a52d;--crest:#fff"><div class="sleeve left"><i class="stripe one"></i><i class="stripe two"></i><i class="stripe three"></i></div><div class="sleeve right"><i class="stripe one"></i><i class="stripe two"></i><i class="stripe three"></i></div><div class="body-shirt"><i class="stripe one"></i><i class="stripe two"></i><i class="stripe three"></i></div><div class="neck"></div><div class="crest">NJ</div></div></div>
+          <div class="jersey-copy"><span class="tag">2022–2023 • Reverse Retro</span><h3>Colorado Rockies-inspired Reverse Retro</h3><p>This design used the Rockies' colors and a pattern inspired by the original Devils white jersey, connecting the team's two earlier cities.</p><div class="link-row"><a class="link-button" href="https://www.nhl.com/devils/team/history/jerseys" target="_blank" rel="noopener">Official jersey history ↗</a><a class="link-button" href="https://thekitarchive.com/hockey/new-jersey-devils-jerseys-t6666/" target="_blank" rel="noopener">Jersey archive ↗</a></div></div>
+        </article>
+        <article class="jersey-card">
+          <div class="jersey-art"><div class="sweater" style="--shirt:#090909;--stripe:#c8102e;--trim:#c8102e;--crest:#fff"><div class="sleeve left"><i class="stripe one"></i><i class="stripe two"></i></div><div class="sleeve right"><i class="stripe one"></i><i class="stripe two"></i></div><div class="body-shirt"><i class="stripe one"></i><i class="stripe two"></i></div><div class="neck"></div><div class="crest">JERSEY</div></div></div>
+          <div class="jersey-copy"><span class="tag">2021–2026 • Third jersey</span><h3>“Jersey” black alternate</h3><p>The franchise's first official third jersey used a black base with red-shadowed details and “Jersey” script. Martin Brodeur helped guide its design.</p><div class="link-row"><a class="link-button" href="https://www.nhl.com/devils/team/history/jerseys" target="_blank" rel="noopener">Official jersey history ↗</a><a class="link-button" href="https://thekitarchive.com/hockey/new-jersey-devils-jerseys-t6666/" target="_blank" rel="noopener">Jersey archive ↗</a></div></div>
+        </article>
+        <article class="jersey-card">
+          <div class="jersey-art"><div class="sweater" style="--shirt:#c8102e;--stripe:#090909;--trim:#090909;--crest:#090909"><div class="sleeve left"><i class="stripe one"></i><i class="stripe two"></i></div><div class="sleeve right"><i class="stripe one"></i><i class="stripe two"></i></div><div class="body-shirt"><i class="stripe one"></i><i class="stripe two"></i></div><div class="neck"></div><div class="crest">NJ</div></div></div>
+          <div class="jersey-copy"><span class="tag">2024 • Stadium Series</span><h3>MetLife Stadium Series</h3><p>Worn outdoors against Philadelphia on February 17, 2024. The red jersey featured an oversized black horns-and-tail logo without its usual circle.</p><div class="link-row"><a class="link-button" href="https://www.nhl.com/devils/team/history/jerseys" target="_blank" rel="noopener">Official jersey history ↗</a></div></div>
+        </article>
+        <article class="jersey-card">
+          <div class="jersey-art"><div class="sweater" style="--shirt:#090909;--stripe:#c8102e;--trim:#c8102e;--crest:#c8102e"><div class="sleeve left"><i class="stripe one"></i><i class="stripe two"></i></div><div class="sleeve right"><i class="stripe one"></i><i class="stripe two"></i></div><div class="body-shirt"><i class="stripe one"></i><i class="stripe two"></i></div><div class="neck"></div><div class="crest">NJ</div></div></div>
+          <div class="jersey-copy"><span class="tag">2026–present • Alternate</span><h3>Hometown Remix</h3><p>Unveiled in November 2026, this black-based alternate brings back the enlarged horns-and-tail logo in red, drawing inspiration from the 2024 Stadium Series design.</p><div class="link-row"><a class="link-button" href="https://www.nhl.com/devils/news/topic/10-takeaways/devils-unveil-hometown-remix-jersey-blog-11-2-26" target="_blank" rel="noopener">Official reveal &amp; photos ↗</a><a class="link-button" href="https://thekitarchive.com/hockey/new-jersey-devils-2026-27-hometown-remix-jersey-86487/" target="_blank" rel="noopener">Jersey archive ↗</a></div></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>Sources &amp; Further Jersey Viewing</h2>
+      <p>For the most reliable photographs and uniform descriptions, start with the official Devils jersey-history page. The uniform database and Hockey Jersey Archive are useful for comparing individual seasons and special-edition designs.</p>
+      <div class="link-row">
+        <a class="link-button" href="https://www.nhl.com/devils/team/history/jerseys" target="_blank" rel="noopener">Official Devils jersey history ↗</a>
+        <a class="link-button" href="https://www.nhluniforms.com/Mobile/Devils/Devils.html" target="_blank" rel="noopener">NHL Uniform Database ↗</a>
+        <a class="link-button" href="https://thekitarchive.com/hockey/new-jersey-devils-jerseys-t6666/" target="_blank" rel="noopener">Hockey Jersey Archive ↗</a>
+      </div>
+    </section>
+
+    <footer>
+      <p>Devils Hockey • History page. Jersey illustrations are original simplified diagrams, not official product photographs or exact reproductions.</p>
+    </footer>
+  </main>
+</div>
 </body>
 </html>
