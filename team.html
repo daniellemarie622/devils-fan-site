@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Devils Current Roster & Stats</title>
+    <meta name="description" content="New Jersey Devils roster, player statistics, goaltending numbers, and injury updates.">
+    <title>Devils Current Roster &amp; Stats</title>
     <style>
         body {
             background-color: #111111;
@@ -154,37 +155,137 @@
             color: #ffd966;
             border: 1px solid #b38f00;
         }
+        * {
+            box-sizing: border-box;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        a:focus-visible {
+            outline: 3px solid #ffffff;
+            outline-offset: 3px;
+        }
+        .skip-link {
+            position: absolute;
+            left: -9999px;
+            top: 10px;
+            z-index: 10;
+            background: #ffffff;
+            color: #000000;
+            padding: 10px 14px;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        .skip-link:focus {
+            left: 10px;
+        }
+        main {
+            min-width: 0;
+        }
+        .table-wrapper {
+            width: 100%;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            border-radius: 6px;
+        }
+        table {
+            min-width: 760px;
+        }
+        .table-wrapper table {
+            margin-bottom: 8px;
+        }
+        .table-hint {
+            color: #aaaaaa;
+            font-size: 0.85em;
+            margin: 6px 0 12px;
+        }
         @media (max-width: 768px) {
             body {
-                flex-direction: column;
+                display: block;
             }
             aside {
                 width: 100%;
                 border-right: none;
                 border-bottom: 3px solid #ce1126;
-                padding: 20px;
+                padding: 18px 16px;
+            }
+            aside h2 {
+                margin: 0 0 12px;
+                font-size: 1.25em;
             }
             nav {
                 flex-direction: row;
                 flex-wrap: wrap;
+                gap: 7px;
+            }
+            nav a {
+                padding: 10px 12px;
+                font-size: 0.9em;
             }
             main {
-                padding: 20px;
+                padding: 22px 16px;
+            }
+            .summary-flex {
+                display: grid;
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                gap: 12px;
+            }
+            .stat-card {
+                min-width: 0;
+                padding: 13px 9px;
+            }
+            .stat-card p {
+                font-size: 1.2em;
+            }
+            h1 {
+                font-size: 1.8em;
+                line-height: 1.2;
+            }
+            h3 {
+                font-size: 1.2em;
+            }
+            th, td {
+                padding: 10px 12px;
+                white-space: nowrap;
+            }
+        }
+        @media (max-width: 420px) {
+            main {
+                padding: 18px 12px;
+            }
+            .summary-flex {
+                grid-template-columns: 1fr 1fr;
+            }
+            .stat-card p {
+                font-size: 1.05em;
+            }
+            nav a {
+                padding: 9px 10px;
+                font-size: 0.82em;
+            }
+        }
+        @media (prefers-reduced-motion: reduce) {
+            html {
+                scroll-behavior: auto;
+            }
+            nav a {
+                transition: none;
             }
         }
     </style>
 </head>
 <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
     <aside>
         <h2>Devils Hockey</h2>
-        <nav>
+        <nav aria-label="Main navigation">
             <a href="index.html">Home (Why Hockey)</a>
             <a href="history.html">Devils History</a>
             <a href="team.html" class="active">Team Stats</a>
         </nav>
     </aside>
-    <main>
-        <h1>2026-27 Roster & Player Standings</h1>
+    <main id="main-content">
+        <h1>2026-27 Roster &amp; Player Standings</h1>
         <p>Full active skater roster, goaltending tandem metrics, and current injury designations under head coach Sheldon Keefe (through 21 games).</p>
 
         <div class="summary-flex">
@@ -207,7 +308,8 @@
         </div>
 
         <h3>Active Roster — Skater Statistics</h3>
-        <div class="table-wrapper">
+        <p class="table-hint">On a phone or small screen, swipe left or right to view all table columns.</p>
+        <div class="table-wrapper" role="region" aria-label="Skater statistics table" tabindex="0">
             <table>
                 <thead>
                     <tr>
@@ -505,7 +607,7 @@
         </div>
 
         <h3>Active Roster — Goaltending Tandem</h3>
-        <div class="table-wrapper">
+        <div class="table-wrapper" role="region" aria-label="Goaltending statistics table" tabindex="0">
             <table>
                 <thead>
                     <tr>
@@ -551,7 +653,7 @@
         </div>
 
         <h3>Team Injuries &amp; Reserve List</h3>
-        <div class="table-wrapper">
+        <div class="table-wrapper" role="region" aria-label="Team injuries and reserve list table" tabindex="0">
             <table>
                 <thead>
                     <tr>
