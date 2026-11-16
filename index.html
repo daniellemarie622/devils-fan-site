@@ -6,114 +6,196 @@
     <title>NJ Devils - Why I Like Hockey</title>
     <style>
         body {
-            background-color: #111111;
-            color: #ffffff;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #0b0b0b;
+            color: #eeeeee;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
             margin: 0;
             padding: 0;
             display: flex;
             min-height: 100vh;
         }
         aside {
-            width: 250px;
+            width: 260px;
             background-color: #000000;
-            border-right: 3px solid #ce1126;
-            padding: 30px 20px;
+            border-right: 2px solid #ce1126;
+            padding: 40px 20px;
             box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
         }
         aside h2 {
-            color: #ce1126;
-            font-size: 1.5em;
-            margin-bottom: 30px;
+            color: #ffffff;
+            font-size: 1.4em;
+            margin: 0;
             text-transform: uppercase;
-            letter-spacing: 1px;
+            letter-spacing: 2px;
+            font-weight: 900;
+            text-align: center;
+            border-bottom: 2px solid #ce1126;
+            padding-bottom: 15px;
         }
         nav {
             display: flex;
             flex-direction: column;
-            gap: 15px;
+            gap: 12px;
         }
         nav a {
-            color: #ffffff;
+            color: #bbbbbb;
             text-decoration: none;
-            font-weight: bold;
-            padding: 12px;
-            border-left: 4px solid transparent;
-            transition: 0.3s ease;
-            border-radius: 0 4px 4px 0;
+            font-weight: 600;
+            padding: 14px 18px;
+            transition: all 0.3s ease;
+            border-radius: 6px;
+            font-size: 0.95em;
+            letter-spacing: 0.5px;
         }
-        nav a:hover, nav a.active {
-            color: #ce1126;
-            border-left: 4px solid #ce1126;
-            background-color: #1c1c1c;
+        nav a:hover {
+            color: #ffffff;
+            background-color: #1a1a1a;
+        }
+        nav a.active {
+            color: #ffffff;
+            background: linear-gradient(135deg, #ce1126, #8b0b18);
+            box-shadow: 0 4px 12px rgba(206, 17, 38, 0.3);
         }
         main {
             flex: 1;
-            padding: 40px;
-            background-color: #161616;
+            padding: 50px;
+            background-color: #0f0f12;
             overflow-y: auto;
         }
+        .header-banner {
+            background: linear-gradient(135deg, #16161a, #000000);
+            border: 1px solid #222225;
+            border-left: 5px solid #ce1126;
+            border-radius: 12px;
+            padding: 35px;
+            margin-bottom: 40px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
         h1 {
+            font-size: 2.5em;
+            font-weight: 800;
             color: #ffffff;
-            border-bottom: 2px solid #ce1126;
-            padding-bottom: 10px;
+            margin: 0 0 15px 0;
+            letter-spacing: -0.5px;
+        }
+        .subtitle {
+            color: #aaaaaa;
+            font-size: 1.15em;
+            line-height: 1.6;
+            margin: 0;
+            max-width: 900px;
+        }
+        .content-section {
+            background-color: #121216;
+            border: 1px solid #1e1e24;
+            border-radius: 12px;
+            padding: 35px;
+            margin-bottom: 40px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+        }
+        h3 {
+            font-size: 1.5em;
+            color: #ffffff;
             margin-top: 0;
+            margin-bottom: 20px;
+            font-weight: 700;
         }
-        .showcase-card {
-            background: #1f1f1f;
-            border: 1px solid #333333;
-            border-radius: 8px;
-            padding: 25px;
-            margin-bottom: 30px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+        p {
+            line-height: 1.75;
+            color: #dddddd;
+            font-size: 1.05em;
+            margin-bottom: 25px;
         }
-        .feature-box {
+        .quote-card {
+            background: #1a1a22;
             border-left: 4px solid #ce1126;
-            background: #111111;
-            padding: 15px 20px;
-            margin: 20px 0;
-            border-radius: 0 6px 6px 0;
+            padding: 20px 25px;
+            margin: 30px 0;
+            border-radius: 0 8px 8px 0;
+        }
+        .quote-card p {
+            margin: 0;
+            font-style: italic;
+            color: #eeeeee;
+            font-size: 1.1em;
         }
         ul {
-            padding-left: 20px;
+            list-style: none;
+            padding: 0;
+            margin: 0;
         }
         li {
-            margin-bottom: 15px;
-            line-height: 1.6;
+            position: relative;
+            padding-left: 30px;
+            margin-bottom: 20px;
+            line-height: 1.7;
+            color: #dddddd;
+            font-size: 1.05em;
+        }
+        li::before {
+            content: "➔";
+            position: absolute;
+            left: 0;
+            top: 0;
+            color: #ce1126;
+            font-weight: 900;
+            font-size: 1.2em;
+        }
+        li strong {
+            color: #ffffff;
+            font-size: 1.1em;
+        }
+        .gallery-heading {
+            font-size: 1.6em;
+            font-weight: 800;
+            margin-bottom: 25px;
+            color: #ffffff;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
         .grid-container {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 20px;
-            margin-top: 25px;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 30px;
         }
         .grid-item {
-            background: #111111;
-            border: 1px solid #333333;
-            border-radius: 6px;
+            background: #121216;
+            border: 1px solid #1e1e24;
+            border-radius: 12px;
             overflow: hidden;
-            text-align: center;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+        .grid-item:hover {
+            transform: translateY(-5px);
+            border-color: #ce1126;
         }
         .grid-item img {
             width: 100%;
-            height: 220px;
+            height: 240px;
             object-fit: cover;
             display: block;
         }
         .grid-item p {
-            padding: 10px;
+            padding: 15px 20px;
             margin: 0;
-            font-size: 0.9em;
-            background: #1f1f1f;
-            border-top: 1px solid #333333;
+            font-size: 0.95em;
+            font-weight: 600;
+            color: #ffffff;
+            background: #16161a;
+            border-top: 1px solid #1e1e24;
+            text-align: center;
         }
         footer {
-            margin-top: 40px;
-            padding-top: 20px;
-            border-top: 1px solid #333333;
+            margin-top: 60px;
+            padding-top: 30px;
+            border-top: 1px solid #1e1e24;
             text-align: center;
-            font-size: 0.85em;
-            color: #888888;
+            font-size: 0.9em;
+            color: #666666;
         }
     </style>
 </head>
@@ -127,31 +209,34 @@
         </nav>
     </aside>
     <main>
-        <h1>Why I Like Hockey & The New Jersey Devils</h1>
+        <div class="header-banner">
+            <h1>Why I Like Hockey & The New Jersey Devils</h1>
+            <p class="subtitle">There is nothing on earth quite like live hockey. This is a look at the chaos, the speed, and the pure adrenaline that made me a die-hard New Jersey Devils fan.</p>
+        </div>
 
-        <div class="showcase-card">
-            <h3>The Appeal of the Game</h3>
-            <p style="font-size: 1.1em; line-height: 1.6; margin-top: 0;">Ice hockey stands as the ultimate combination of speed, strategy, and pure physical skill. My deep appreciation for this game grew entirely from watching the high-velocity, high-stakes matches of the New Jersey Devils live inside the arena. The sheer speed of a live hockey game is unlike any other major professional sport. Players glide across the sheet at over twenty miles per hour while handling a small rubber puck with complete precision. The game transitions from defense to offense in fractions of a second, requiring intense focus and split-second decision-making from every player on the ice. The combination of heavy physical contact, complex tactical positioning, and raw individual athleticism makes it a beautiful sport to watch.</p>
+        <div class="content-section">
+            <h3>Hooked on the Chaos</h3>
+            <p>If you have never seen a hockey game live from the glass, you are missing out on the most electric sport on the planet. Television does not do it justice. You have to be there to hear the skates cutting into the ice, the heavy impact of a clean body check against the boards, and the pure speed of the play. Guys are flying across the rink at twenty-five miles an hour on razor-sharp steel blades, dodging hits and threading a tiny rubber puck through defensive traffic in the blink of an eye. The game changes direction instantly. A broken play in the defensive zone becomes a massive breakaway chance at the other end of the ice a couple seconds later. It is fast, it is physical, and it keeps you on the edge of your seat until the final horn sounds.</p>
 
-            <div class="feature-box">
-                <p style="margin: 0; font-style: italic; color: #e5e5e5;">"Some people skate to where the puck is going to be. The New Jersey Devils play an up-tempo transitional style that captures exactly where the speed of modern hockey is headed."</p>
+            <div class="quote-card">
+                <p>"Hockey isn't just a sport you watch. It's a game you feel in your chest every time the puck drops and the crowd starts to roar."</p>
             </div>
 
-            <h3>3 Core Reasons the Devils Make Hockey Great</h3>
+            <h3>Why the Devils Own the Ice</h3>
             <ul>
-                <li><strong>Championship Identity:</strong> The franchise boasts a legacy built upon structured defensive play and legendary grit, resulting in three unforgettable Stanley Cup championship titles in 1995, 2000, and 2003. This proud history establishes a culture of hard work and winning that defines the team identity.</li>
-                <li><strong>The Rock Energy:</strong> Attending home matchups live at the Prudential Center in Newark provides an incredible fan experience. The arena layout keeps everyone close to the action, creating an intimate and thunderous environment where every hit and goal echoes through the seating bowl.</li>
-                <li><strong>Dynamic Elite Speed:</strong> Watching franchise centerpieces command the ice with explosive skating, crisp passing accuracy, and high-intensity attacking setups makes every single period thrilling to track. The modern team relies on creativity and fast breaks that keep opponents constantly off balance.</li>
+                <li><strong>A Legacy Built on Grit:</strong> The Devils did not just win; they forced the rest of the league to play on their terms. With three Stanley Cup banners hanging in the rafters from 1995, 2000, and 2003, this team proved that lockdown defense and unrelenting hard work win championships.</li>
+                <li><strong>The Pure Adrenaline of The Rock:</strong> Walking into the Prudential Center on game night is a total rush. The building layout puts the fans right on top of the rink, causing the hometown noise to trap opposing teams in a wall of sound every single period.</li>
+                <li><strong>The Next Generation of Speed:</strong> Watching the current roster attack the offensive zone is thrilling. The team plays a high-flying, explosive game style fueled by creative young playmakers who can break open a matchup out of absolutely nowhere.</li>
             </ul>
         </div>
 
-        <div class="showcase-card">
-            <h3>The Prudential Center Experience & Fan Culture</h3>
-            <p style="line-height: 1.6; margin-top: 0;">Beyond the historical record, it is the modern gameday tradition that keeps fans returning to Newark. The atmosphere builds long before puck drop, with fans gathering around Championship Plaza dressed in red and black. Once inside, the environment is engineered for true hockey enthusiasts. The arena fills with unique sensory traditions, from the deep resonance of the traditional arena pipe organ to the roaring horn that sounds after every home goal.</p>
-            <p style="line-height: 1.6; margin-bottom: 0;">The fan base itself brings an immense amount of localized pride and community passion to the stands. Dedicated supporter groups like the "233 Crazies" and the rowdy sections behind the goals lead traditional crowd chants that rattle opposing goaltenders throughout the night. The iconic "NJ Devil" mascot adds to the fun, flying down the ice between periods, high-fiving fans in the concourses, and tossing t-shirts into the upper decks. It is this mix of intense hockey knowledge, multi-generational family loyalty, and pure garden state pride that makes attending a live match an unforgettable event.</p>
+        <div class="content-section">
+            <h3>Welcome to Game Day in Newark</h3>
+            <p>The true magic of the franchise goes way beyond the historical record box scores. It is about the community energy that brings thousands of people out to Newark every week. Hours before the puck drops, the plaza outside fills with a sea of red and black jerseys. Once you cross the gates, the building is alive. The classic stadium organ pumps up the crowd during breaks, and the goal horn blasts with a deafening roar that sends the entire building into absolute madness whenever the home team scores.</p>
+            <p>The fans here bring a unique Jersey attitude that you will not find anywhere else in the league. Section groups like the "233 Crazies" orchestrate ruthless crowd chants that ring out from the stands, keeping the energy completely dialed in from start to finish. Between periods, the "NJ Devil" mascot skates onto the ice, firing up the kids and launching t-shirts into the crowd. It is a loud, rowdy, multi-generational family tradition that shows exactly what garden state hockey culture is all about.</p>
         </div>
 
-        <h3>Team Media & Fan Gallery</h3>
+        <h3 class="gallery-heading">Team Media & Fan Gallery</h3>
         <div class="grid-container">
             <div class="grid-item">
                 <img src="devils-rink.jpg" alt="Prudential Center Arena Ice Hockey Layout">
@@ -163,9 +248,4 @@
             </div>
         </div>
 
-        <footer>
-            <p>© 2026 Devils Hockey Fan Hub. Built using TextPad for local web project configurations. Team logos and marks remain property of the NHL.</p>
-        </footer>
-    </main>
-</body>
-</html>
+
