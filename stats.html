@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Devils History & Media</title>
+    <style>
+        body {
+            background-color: #111111;
+            color: #ffffff;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            min-height: 100vh;
+        }
+        aside {
+            width: 250px;
+            background-color: #000000;
+            border-right: 3px solid #ce1126;
+            padding: 30px 20px;
+            box-sizing: border-box;
+        }
+        aside h2 {
+            color: #ce1126;
+            font-size: 1.5em;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        nav {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 12px;
+            border-left: 4px solid transparent;
+            transition: 0.3s ease;
+            border-radius: 0 4px 4px 0;
+        }
+        nav a:hover, nav a.active {
+            color: #ce1126;
+            border-left: 4px solid #ce1126;
+            background-color: #1c1c1c;
+        }
+        main {
+            flex: 1;
+            padding: 40px;
+            background-color: #161616;
+            overflow-y: auto;
+        }
+        h1 {
+            color: #ffffff;
+            border-bottom: 2px solid #ce1126;
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+        .info-card {
+            background: #1f1f1f;
+            border: 1px solid #333333;
+            border-radius: 8px;
+            padding: 25px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+        }
+        table {
+            width: 100%;
+            max-width: 800px;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background-color: #111111;
+            border-radius: 6px;
+            overflow: hidden;
+        }
+        th, td {
+            padding: 14px;
+            text-align: left;
+            border-bottom: 1px solid #333333;
+        }
+        th {
+            background-color: #ce1126;
+            color: #ffffff;
+            text-transform: uppercase;
+            font-size: 0.9em;
+            letter-spacing: 0.5px;
+        }
+        tr:hover {
+            background-color: #222222;
+        }
+        .media-flex {
+            display: flex;
+            gap: 25px;
+            flex-wrap: wrap;
+            margin-top: 25px;
+        }
+        .media-box {
+            flex: 1;
+            min-width: 320px;
+            background-color: #1f1f1f;
+            padding: 20px;
+            border-top: 4px solid #ce1126;
+            border-radius: 6px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+        .media-box h3 {
+            margin-top: 0;
+            color: #ce1126;
+            font-size: 1.1em;
+            line-height: 1.4;
+            min-height: 44px;
+        }
+        .backup-link {
+            display: block;
+            margin-top: 15px;
+            color: #ce1126;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 0.9em;
+        }
+        .backup-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <aside>
+        <h2>Devils Hockey</h2>
+        <nav>
+            <a href="index.html">Home (Why Hockey)</a>
+            <a href="stats.html" class="active">Devils Stats & Media</a>
+            <a href="contact.html">Tickets</a>
+        </nav>
+    </aside>
+    <main>
+        <h1>Historical Metrics & Highlights</h1>
+
+        <div class="info-card">
+            <p style="margin-top: 0; line-height: 1.6;">The Devils have set a high standard for tactical defensive systems, historic penalty kills, and elite goaltending in the NHL. Below is a record of their championship history.</p>
+
+            <h3>Championship Timeline Summary</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Championship Year</th>
+                        <th>Opponent Faced</th>
+                        <th>Series Final Record</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1995</td>
+                        <td>Detroit Red Wings</td>
+                        <td>Won Series 4-0</td>
+                    </tr>
+                    <tr>
+                        <td>2000</td>
+                        <td>Dallas Stars</td>
+                        <td>Won Series 4-2</td>
+                    </tr>
+                    <tr>
+                        <td>2003</td>
+                        <td>Anaheim Mighty Ducks</td>
+                        <td>Won Series 4-3</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="media-flex">
+            <div class="media-box">
+                <h3>June 10, 2000: The New Jersey Devils captured their second Stanley Cup in franchise history</h3>
+                <iframe width="100%" height="240" src="https://youtube.com" title="YouTube video player" style="border: none; border-radius: 4px;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <a class="backup-link" href="https://youtube.com" target="_blank">➔ Click here to watch directly on YouTube if embed is blocked locally</a>
+            </div>
+            <div class="media-box">
+                <h3>Team History</h3>
+                <iframe src="https://en.wikipedia.org/wiki/History_of_the_New_Jersey_Devils" title="Devils History" width="100%" height="240px" style="border:none; border-radius:4px; background:#ffffff;"></iframe>
+
+            </div>
+        </div>
+    </main>
+</body>
+</html>
