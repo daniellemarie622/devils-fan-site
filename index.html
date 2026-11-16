@@ -3,28 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A New Jersey Devils fan page about why hockey is exciting and what makes the Devils special.">
     <title>NJ Devils - Why I Like Hockey</title>
     <style>
+        :root {
+            --devils-red: #ce1126;
+            --devils-dark-red: #8b0b18;
+            --page-black: #0b0b0b;
+            --panel: #121216;
+            --panel-border: #292930;
+            --text: #eeeeee;
+            --muted: #cccccc;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
-            background-color: #0b0b0b;
-            color: #eeeeee;
+            background-color: var(--page-black);
+            color: var(--text);
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
             margin: 0;
             padding: 0;
-            display: flex;
             min-height: 100vh;
+            display: flex;
         }
+
+        a {
+            color: inherit;
+        }
+
+        a:focus-visible {
+            outline: 3px solid #ffffff;
+            outline-offset: 4px;
+        }
+
+        .skip-link {
+            position: absolute;
+            left: -9999px;
+            top: 10px;
+            z-index: 10;
+            background: #ffffff;
+            color: #000000;
+            padding: 10px 14px;
+            border-radius: 5px;
+            font-weight: 700;
+        }
+
+        .skip-link:focus {
+            left: 10px;
+        }
+
         aside {
             width: 260px;
             background-color: #000000;
-            border-right: 2px solid #ce1126;
+            border-right: 2px solid var(--devils-red);
             padding: 40px 20px;
-            box-sizing: border-box;
             display: flex;
             flex-direction: column;
             gap: 40px;
             flex-shrink: 0;
         }
+
         aside h2 {
             color: #ffffff;
             font-size: 1.4em;
@@ -33,91 +78,123 @@
             letter-spacing: 2px;
             font-weight: 900;
             text-align: center;
-            border-bottom: 2px solid #ce1126;
+            border-bottom: 2px solid var(--devils-red);
             padding-bottom: 15px;
         }
+
         nav {
             display: flex;
             flex-direction: column;
             gap: 12px;
         }
+
         nav a {
             color: #bbbbbb;
             text-decoration: none;
             font-weight: 600;
             padding: 14px 18px;
-            transition: all 0.3s ease;
+            transition: background-color 0.3s ease, color 0.3s ease;
             border-radius: 6px;
             font-size: 0.95em;
             letter-spacing: 0.5px;
         }
+
         nav a:hover {
             color: #ffffff;
             background-color: #1a1a1a;
         }
+
         nav a.active {
             color: #ffffff;
-            background: linear-gradient(135deg, #ce1126, #8b0b18);
+            background: linear-gradient(135deg, var(--devils-red), var(--devils-dark-red));
             box-shadow: 0 4px 12px rgba(206, 17, 38, 0.3);
         }
+
         main {
             flex: 1;
+            min-width: 0;
             padding: 50px;
             background-color: #0f0f12;
-            overflow-y: auto;
         }
+
         .hero-section {
             display: flex;
             gap: 40px;
             align-items: center;
             background: linear-gradient(135deg, #16161a, #000000);
             border: 1px solid #222225;
-            border-left: 5px solid #ce1126;
+            border-left: 5px solid var(--devils-red);
             border-radius: 12px;
             padding: 40px;
             margin-bottom: 40px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
         }
+
         .hero-text {
-            flex: 1;
+            flex: 1 1 0;
+            min-width: 0;
         }
+
         .hero-image-container {
-            flex: 1;
+            flex: 1 1 0;
+            min-width: 0;
             max-width: 450px;
         }
-        .hero-image-container img {
+
+        .hero-image-container img,
+        .secondary-gallery img {
+            display: block;
             width: 100%;
             height: auto;
             border-radius: 8px;
             border: 1px solid #333335;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.6);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
         }
+
+        .image-fallback {
+            min-height: 180px;
+            padding: 25px;
+            display: grid;
+            place-content: center;
+            text-align: center;
+            border: 1px dashed #777777;
+            border-radius: 8px;
+            background: #191919;
+            color: #dddddd;
+        }
+
         h1 {
-            font-size: 2.6em;
+            font-size: clamp(2rem, 4vw, 2.6em);
             font-weight: 800;
             color: #ffffff;
             margin: 0 0 15px 0;
             letter-spacing: -0.5px;
+            line-height: 1.15;
         }
+
         .subtitle {
             color: #dddddd;
             font-size: 1.1em;
             line-height: 1.7;
             margin: 0;
         }
+
         .content-columns {
             display: flex;
             gap: 30px;
             margin-bottom: 40px;
         }
+
         .column {
-            flex: 1;
-            background-color: #121216;
+            flex: 1 1 0;
+            min-width: 0;
+            background-color: var(--panel);
             border: 1px solid #1e1e24;
             border-radius: 12px;
             padding: 30px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
         }
+
         h3 {
             font-size: 1.4em;
             color: #ffffff;
@@ -127,123 +204,239 @@
             border-bottom: 1px solid #222228;
             padding-bottom: 10px;
         }
+
         p {
             line-height: 1.7;
-            color: #cccccc;
+            color: var(--muted);
             font-size: 1em;
             margin: 0 0 20px 0;
         }
+
         .highlight-list {
             list-style: none;
             padding: 0;
             margin: 0;
         }
+
         .highlight-list li {
             position: relative;
             padding-left: 25px;
             margin-bottom: 15px;
             line-height: 1.6;
-            color: #cccccc;
+            color: var(--muted);
         }
+
         .highlight-list li::before {
             content: "➔";
             position: absolute;
             left: 0;
             top: 0;
-            color: #ce1126;
+            color: var(--devils-red);
             font-weight: bold;
         }
+
         .secondary-gallery {
-            background-color: #121216;
+            background-color: var(--panel);
             border: 1px solid #1e1e24;
             border-radius: 12px;
             padding: 30px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
             text-align: center;
         }
+
         .secondary-gallery img {
-            width: 100%;
             max-width: 650px;
-            height: auto;
-            border-radius: 8px;
-            border: 1px solid #222228;
-            margin-top: 15px;
+            margin: 15px auto 0;
         }
+
         footer {
             margin-top: 60px;
             padding-top: 30px;
             border-top: 1px solid #1e1e24;
             text-align: center;
             font-size: 0.9em;
-            color: #666666;
+            color: #888888;
         }
+
+        footer p {
+            color: #888888;
+            margin-bottom: 0;
+        }
+
         @media (max-width: 1024px) {
+            main {
+                padding: 35px;
+            }
+
+            .hero-section {
+                gap: 25px;
+                padding: 30px;
+            }
+        }
+
+        @media (max-width: 800px) {
+            body {
+                display: block;
+            }
+
+            aside {
+                width: 100%;
+                padding: 18px 16px;
+                border-right: 0;
+                border-bottom: 2px solid var(--devils-red);
+                gap: 15px;
+            }
+
+            aside h2 {
+                font-size: 1.2em;
+                padding-bottom: 10px;
+            }
+
+            nav {
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 6px;
+            }
+
+            nav a {
+                padding: 10px 12px;
+                font-size: 0.88em;
+            }
+
+            main {
+                padding: 25px 18px;
+            }
+
             .hero-section {
                 flex-direction: column;
                 text-align: center;
+                padding: 25px 20px;
             }
+
             .hero-image-container {
-                max-width: 100%;
+                width: 100%;
+                max-width: 650px;
             }
+
             .content-columns {
                 flex-direction: column;
+                gap: 20px;
+            }
+
+            .column,
+            .secondary-gallery {
+                padding: 22px;
+            }
+
+            footer {
+                margin-top: 40px;
+            }
+        }
+
+        @media (max-width: 420px) {
+            main {
+                padding: 18px 12px;
+            }
+
+            .hero-section {
+                padding: 20px 15px;
+            }
+
+            .column,
+            .secondary-gallery {
+                padding: 18px;
+            }
+
+            nav a {
+                padding: 9px 10px;
+                font-size: 0.82em;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            html {
+                scroll-behavior: auto;
+            }
+
+            nav a {
+                transition: none;
             }
         }
     </style>
 </head>
 <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
     <aside>
         <h2>Devils Hockey</h2>
-        <nav>
-            <a href="index.html" class="active">Home (Why Hockey)</a>
+        <nav aria-label="Main navigation">
+            <a href="index.html" class="active" aria-current="page">Home (Why Hockey)</a>
             <a href="history.html">Devils History</a>
             <a href="team.html">Team Stats</a>
         </nav>
     </aside>
-    <main>
-        <!-- Hero Section with Title and the Rink Image side-by-side -->
-        <div class="hero-section">
+
+    <main id="main-content">
+        <!-- Hero section -->
+        <section class="hero-section" aria-labelledby="page-title">
             <div class="hero-text">
-                <h1>Why I Like Hockey & The New Jersey Devils</h1>
+                <h1 id="page-title">Why I Like Hockey &amp; The New Jersey Devils</h1>
                 <p class="subtitle">There is nothing on earth quite like live hockey. Television doesn't do it justice. You have to be there to hear the skates cutting into the ice, the heavy impact of a clean body check against the boards, and the pure, chaotic speed of the game.</p>
             </div>
-            <div class="hero-image-container">
-                <img src="devils-rink.jpg" alt="Prudential Center Arena Ice Hockey Layout">
-            </div>
-        </div>
 
-        <!-- Two Column Content Layout -->
-        <div class="content-columns">
-            <!-- Left Column: The Game Adrenaline -->
-            <div class="column">
+            <div class="hero-image-container">
+                <img
+                    src="devils-rink.jpg"
+                    alt="The ice rink at a New Jersey Devils home game"
+                    loading="lazy"
+                    onerror="this.hidden=true; this.nextElementSibling.hidden=false;"
+                >
+                <div class="image-fallback" hidden>
+                    <strong>Rink photo not found.</strong>
+                    <span>Place devils-rink.jpg in the same folder as index.html.</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Two-column content -->
+        <section class="content-columns" aria-label="Why hockey and the Devils are exciting">
+            <article class="column">
                 <h3>Hooked on the Adrenaline</h3>
                 <p>Guys are flying across the rink at twenty-five miles an hour on razor-sharp steel blades, dodging massive hits and threading a tiny rubber puck through defensive traffic in the blink of an eye. The game changes direction instantly. A broken play in your defensive zone can become a breakout scoring chance at the other end of the ice two seconds later. It keeps you on the edge of your seat until the final horn sounds.</p>
                 <p>Hockey isn't just a sport you sit and watch passively. It is a game you feel right in your chest every time the puck drops, the skates hit the boards, and the hometown arena crowd starts to roar.</p>
-            </div>
+            </article>
 
-            <!-- Right Column: The Franchise Culture -->
-            <div class="column">
+            <article class="column">
                 <h3>The Jersey Attitude</h3>
                 <ul class="highlight-list">
                     <li><strong>Legacy of Grit:</strong> The Devils didn't just win; they forced the league to play on their terms. Three Stanley Cup banners prove that lockdown defense and unrelenting hard work win championships.</li>
                     <li><strong>The Prudential Center:</strong> The Rock puts the fans right on top of the rink, trapping opposing teams in a wall of crowd sound every single night.</li>
                     <li><strong>Next-Gen Speed:</strong> Watching the current up-tempo squad attack the offensive zone with fast breaks and creative young playmakers is completely thrilling.</li>
                 </ul>
-            </div>
-        </div>
+            </article>
+        </section>
 
-        <!-- Fan Section with Celebration Photo -->
-        <div class="secondary-gallery">
-            <h3>Welcome to Game Day in Newark</h3>
+        <!-- Game day photo -->
+        <section class="secondary-gallery" aria-labelledby="gameday-title">
+            <h3 id="gameday-title">Welcome to Game Day in Newark</h3>
             <p style="max-width: 800px; margin: 0 auto 15px auto;">The true magic of this franchise goes way beyond historical box scores. It is about a loud, rowdy, multi-generational family tradition. From the booming rink pipe organ to the roaring horn that blasts whenever a goal hits the back of the net, everything is built for die-hard fan culture.</p>
-            <img src="NicoJack.jpg" alt="Nico Hischier and Jack Hughes Hockey Goal Celebration">
-        </div>
+
+            <img
+                src="NicoJack.jpg"
+                alt="New Jersey Devils players Nico Hischier and Jack Hughes celebrating together"
+                loading="lazy"
+                onerror="this.hidden=true; this.nextElementSibling.hidden=false;"
+            >
+            <div class="image-fallback" hidden>
+                <strong>Game day photo not found.</strong>
+                <span>Place NicoJack.jpg in the same folder as index.html.</span>
+            </div>
+        </section>
 
         <footer>
-            <p>© 2026 Devils Hockey Fan Hub. Built using TextPad for local web project configurations. Team logos and marks remain property of the NHL.</p>
+            <p>&copy; 2026 Devils Hockey Fan Hub. Built using TextPad for a local web project. Team logos and marks remain property of the NHL.</p>
         </footer>
     </main>
 </body>
 </html>
-
-
