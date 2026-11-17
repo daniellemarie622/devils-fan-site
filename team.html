@@ -1,11 +1,21 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="New Jersey Devils roster, player statistics, goaltending numbers, and injury updates.">
+    <meta name="description" content="New Jersey Devils 2026-27 roster, player statistics, goaltending numbers, injuries, call-ups, and roster transactions.">
     <title>Devils Current Roster &amp; Stats</title>
+
     <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
             background-color: #111111;
             color: #ffffff;
@@ -15,14 +25,15 @@
             display: flex;
             min-height: 100vh;
         }
+
         aside {
             width: 250px;
             background-color: #000000;
             border-right: 3px solid #ce1126;
             padding: 30px 20px;
-            box-sizing: border-box;
             flex-shrink: 0;
         }
+
         aside h2 {
             color: #ce1126;
             font-size: 1.5em;
@@ -30,11 +41,13 @@
             text-transform: uppercase;
             letter-spacing: 1px;
         }
+
         nav {
             display: flex;
             flex-direction: column;
             gap: 15px;
         }
+
         nav a {
             color: #ffffff;
             text-decoration: none;
@@ -44,35 +57,53 @@
             transition: 0.3s ease;
             border-radius: 0 4px 4px 0;
         }
-        nav a:hover, nav a.active {
+
+        nav a:hover,
+        nav a.active {
             color: #ce1126;
             border-left: 4px solid #ce1126;
             background-color: #1c1c1c;
         }
+
         main {
             flex: 1;
+            min-width: 0;
             padding: 40px;
             background-color: #161616;
             overflow-y: auto;
         }
+
         h1 {
             color: #ffffff;
             border-bottom: 2px solid #ce1126;
             padding-bottom: 10px;
             margin-top: 0;
         }
+
         h3 {
             margin-top: 35px;
             margin-bottom: 10px;
             color: #f0f0f0;
             letter-spacing: 0.5px;
         }
+
+        p {
+            line-height: 1.6;
+        }
+
+        .update-note {
+            color: #aaaaaa;
+            font-size: 0.9em;
+            margin-bottom: 25px;
+        }
+
         .summary-flex {
             display: flex;
             gap: 20px;
             margin-bottom: 30px;
             flex-wrap: wrap;
         }
+
         .stat-card {
             flex: 1;
             min-width: 180px;
@@ -83,35 +114,46 @@
             text-align: center;
             box-shadow: 0 4px 10px rgba(0,0,0,0.2);
         }
+
         .stat-card h4 {
-            margin: 0 0 5px 0;
+            margin: 0 0 5px;
             color: #aaaaaa;
             text-transform: uppercase;
             font-size: 0.8em;
         }
+
         .stat-card p {
             margin: 0;
             font-size: 1.4em;
             font-weight: bold;
             color: #ce1126;
         }
+
         .table-wrapper {
+            width: 100%;
             overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            border-radius: 6px;
         }
+
         table {
             width: 100%;
+            min-width: 760px;
             border-collapse: collapse;
             margin-top: 10px;
+            margin-bottom: 8px;
             background-color: #1f1f1f;
             border-radius: 6px;
             overflow: hidden;
             box-shadow: 0 4px 10px rgba(0,0,0,0.2);
         }
+
         th, td {
             padding: 12px 15px;
             text-align: left;
             border-bottom: 1px solid #333333;
         }
+
         th {
             background-color: #ce1126;
             color: #ffffff;
@@ -119,14 +161,17 @@
             font-size: 0.85em;
             letter-spacing: 0.5px;
         }
+
         tr:hover {
             background-color: #262626;
         }
+
         .num-col {
             color: #888888;
             font-size: 0.9em;
             width: 40px;
         }
+
         .pos-tag {
             display: inline-block;
             padding: 2px 6px;
@@ -135,6 +180,7 @@
             font-size: 0.8em;
             font-weight: bold;
         }
+
         .status-tag {
             display: inline-block;
             margin-left: 8px;
@@ -145,26 +191,81 @@
             vertical-align: middle;
             text-transform: uppercase;
         }
+
         .status-ir {
             background: #5c1919;
             color: #ff9999;
             border: 1px solid #ce1126;
         }
+
         .status-dtd {
             background: #4a3b12;
             color: #ffd966;
             border: 1px solid #b38f00;
         }
-        * {
-            box-sizing: border-box;
+
+        .status-active {
+            background: #163d27;
+            color: #8ce0a8;
+            border: 1px solid #27864b;
         }
-        html {
-            scroll-behavior: smooth;
+
+        .status-callup {
+            background: #173b50;
+            color: #8ed8ff;
+            border: 1px solid #267da6;
         }
-        a:focus-visible {
-            outline: 3px solid #ffffff;
-            outline-offset: 3px;
+
+        .table-hint {
+            color: #aaaaaa;
+            font-size: 0.85em;
+            margin: 6px 0 12px;
         }
+
+        .news-card {
+            background-color: #1f1f1f;
+            border-left: 4px solid #ce1126;
+            border-radius: 5px;
+            padding: 15px 18px;
+            margin: 12px 0;
+        }
+
+        .news-card h4 {
+            color: #ce1126;
+            margin: 0 0 6px;
+        }
+
+        .news-card p {
+            margin: 0;
+            color: #dddddd;
+        }
+
+        .unit-card {
+            background-color: #1f1f1f;
+            border: 1px solid #333333;
+            border-radius: 6px;
+            padding: 18px;
+            margin-bottom: 15px;
+        }
+
+        .unit-card h4 {
+            color: #ce1126;
+            margin-top: 0;
+        }
+
+        .unit-card p {
+            margin-bottom: 0;
+        }
+
+        .source-list a {
+            color: #ff7777;
+            text-decoration: none;
+        }
+
+        .source-list a:hover {
+            text-decoration: underline;
+        }
+
         .skip-link {
             position: absolute;
             left: -9999px;
@@ -176,539 +277,903 @@
             border-radius: 5px;
             font-weight: bold;
         }
+
         .skip-link:focus {
             left: 10px;
         }
-        main {
-            min-width: 0;
+
+        a:focus-visible {
+            outline: 3px solid #ffffff;
+            outline-offset: 3px;
         }
-        .table-wrapper {
-            width: 100%;
-            overflow-x: auto;
-            -webkit-overflow-scrolling: touch;
-            border-radius: 6px;
-        }
-        table {
-            min-width: 760px;
-        }
-        .table-wrapper table {
-            margin-bottom: 8px;
-        }
-        .table-hint {
-            color: #aaaaaa;
-            font-size: 0.85em;
-            margin: 6px 0 12px;
-        }
+
         @media (max-width: 768px) {
             body {
                 display: block;
             }
+
             aside {
                 width: 100%;
                 border-right: none;
                 border-bottom: 3px solid #ce1126;
                 padding: 18px 16px;
             }
+
             aside h2 {
                 margin: 0 0 12px;
                 font-size: 1.25em;
             }
+
             nav {
                 flex-direction: row;
                 flex-wrap: wrap;
                 gap: 7px;
             }
+
             nav a {
                 padding: 10px 12px;
                 font-size: 0.9em;
             }
+
             main {
                 padding: 22px 16px;
             }
+
             .summary-flex {
                 display: grid;
                 grid-template-columns: repeat(2, minmax(0, 1fr));
                 gap: 12px;
             }
+
             .stat-card {
                 min-width: 0;
                 padding: 13px 9px;
             }
+
             .stat-card p {
                 font-size: 1.2em;
             }
+
             h1 {
                 font-size: 1.8em;
                 line-height: 1.2;
             }
+
             h3 {
                 font-size: 1.2em;
             }
+
             th, td {
                 padding: 10px 12px;
                 white-space: nowrap;
             }
         }
+
         @media (max-width: 420px) {
             main {
                 padding: 18px 12px;
             }
-            .summary-flex {
-                grid-template-columns: 1fr 1fr;
-            }
+
             .stat-card p {
                 font-size: 1.05em;
             }
+
             nav a {
                 padding: 9px 10px;
                 font-size: 0.82em;
             }
         }
+
         @media (prefers-reduced-motion: reduce) {
             html {
                 scroll-behavior: auto;
             }
+
             nav a {
                 transition: none;
             }
         }
     </style>
 </head>
+
 <body>
-    <a class="skip-link" href="#main-content">Skip to main content</a>
-    <aside>
-        <h2>Devils Hockey</h2>
-        <nav aria-label="Main navigation">
-            <a href="index.html">Home (Why Hockey)</a>
-            <a href="history.html">Devils History</a>
-            <a href="team.html" class="active">Team Stats</a>
-        </nav>
-    </aside>
-    <main id="main-content">
-        <h1>2026-27 Roster &amp; Player Standings</h1>
-        <p>Full active skater roster, goaltending tandem metrics, and current injury designations under head coach Sheldon Keefe (through 21 games).</p>
 
-        <div class="summary-flex">
-            <div class="stat-card">
-                <h4>Team Record</h4>
-                <p>15 - 6 - 0</p>
-            </div>
-            <div class="stat-card">
-                <h4>Division Rank</h4>
-                <p>2nd Metro</p>
-            </div>
-            <div class="stat-card">
-                <h4>Points Leader</h4>
-                <p>J. Hughes (27)</p>
-            </div>
-            <div class="stat-card">
-                <h4>Goals For / Against</h4>
-                <p>79 GF / 61 GA</p>
-            </div>
+<a class="skip-link" href="#main-content">Skip to main content</a>
+
+<aside>
+    <h2>Devils Hockey</h2>
+
+    <nav aria-label="Main navigation">
+        <a href="index.html">Home (Why Hockey)</a>
+        <a href="history.html">Devils History</a>
+        <a href="team.html" class="active">Team Stats</a>
+    </nav>
+</aside>
+
+<main id="main-content">
+
+    <h1>2026-27 Roster &amp; Player Standings</h1>
+
+    <p>
+        Updated November 17, 2026. Follow the New Jersey Devils'
+        active roster, player statistics, goaltending numbers,
+        injuries, call-ups, and roster transactions.
+        The team is coached by Sheldon Keefe.
+    </p>
+
+    <p class="update-note">
+        Team record and player statistics below reflect the
+        21-game statistical snapshot in the original page.
+        Roster news and injury information are updated through
+        November 17, 2026.
+    </p>
+
+    <!-- TEAM SUMMARY -->
+
+    <div class="summary-flex">
+
+        <div class="stat-card">
+            <h4>Team Record</h4>
+            <p>15 - 6 - 0</p>
         </div>
 
-        <h3>Active Roster — Skater Statistics</h3>
-        <p class="table-hint">On a phone or small screen, swipe left or right to view all table columns.</p>
-        <div class="table-wrapper" role="region" aria-label="Skater statistics table" tabindex="0">
-            <table>
-                <thead>
-                    <tr>
-                        <th>#</th>
-                        <th>Player</th>
-                        <th>Pos</th>
-                        <th>GP</th>
-                        <th>G</th>
-                        <th>A</th>
-                        <th>PTS</th>
-                        <th>+/-</th>
-                        <th>PIM</th>
-                        <th>TOI/G</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td class="num-col">86</td>
-                        <td><strong>Jack Hughes</strong></td>
-                        <td><span class="pos-tag">C</span></td>
-                        <td>21</td>
-                        <td>10</td>
-                        <td>17</td>
-                        <td><strong>27</strong></td>
-                        <td>+12</td>
-                        <td>2</td>
-                        <td>20:42</td>
-                    </tr>
-                    <tr>
-                        <td class="num-col">63</td>
-                        <td><strong>Jesper Bratt</strong></td>
-                        <td><span class="pos-tag">LW</span></td>
-                        <td>21</td>
-                        <td>4</td>
-                        <td>17</td>
-                        <td><strong>21</strong></td>
-                        <td>+11</td>
-                        <td>0</td>
-                        <td>17:26</td>
-                    </tr>
-                    <tr>
-                        <td class="num-col">81</td>
-                        <td><strong>Arseny Gritsyuk</strong></td>
-                        <td><span class="pos-tag">RW</span></td>
-                        <td>21</td>
-                        <td>8</td>
-                        <td>9</td>
-                        <td><strong>17</strong></td>
-                        <td>+11</td>
-                        <td>2</td>
-                        <td>15:40</td>
-                    </tr>
-                    <tr>
-                        <td class="num-col">13</td>
-                        <td><strong>Nico Hischier (C)</strong></td>
-                        <td><span class="pos-tag">C</span></td>
-                        <td>21</td>
-                        <td>9</td>
-                        <td>5</td>
-                        <td><strong>14</strong></td>
-                        <td>+4</td>
-                        <td>6</td>
-                        <td>18:26</td>
-                    </tr>
-                    <tr>
-                        <td class="num-col">43</td>
-                        <td><strong>Luke Hughes</strong></td>
-                        <td><span class="pos-tag">D</span></td>
-                        <td>21</td>
-                        <td>6</td>
-                        <td>8</td>
-                        <td><strong>14</strong></td>
-                        <td>+11</td>
-                        <td>12</td>
-                        <td>24:19</td>
-                    </tr>
-                    <tr>
-                        <td class="num-col">17</td>
-                        <td><strong>Evan Rodrigues</strong></td>
-                        <td><span class="pos-tag">C</span></td>
-                        <td>21</td>
-                        <td>6</td>
-                        <td>5</td>
-                        <td><strong>11</strong></td>
-                        <td>-1</td>
-                        <td>8</td>
-                        <td>15:27</td>
-                    </tr>
-                    <tr>
-                        <td class="num-col">77</td>
-                        <td><strong>Luke Evangelista</strong></td>
-                        <td><span class="pos-tag">RW</span></td>
-                        <td>18</td>
-                        <td>4</td>
-                        <td>7</td>
-                        <td><strong>11</strong></td>
-                        <td>+1</td>
-                        <td>8</td>
-                        <td>17:06</td>
-                    </tr>
-                    <tr>
-                        <td class="num-col">70</td>
-                        <td><strong>Jesper Boqvist</strong></td>
-                        <td><span class="pos-tag">C</span></td>
-                        <td>19</td>
-                        <td>6</td>
-                        <td>4</td>
-                        <td><strong>10</strong></td>
-                        <td>+3</td>
-                        <td>0</td>
-                        <td>11:38</td>
-                    </tr>
-                    <tr>
-                        <td class="num-col">16</td>
-                        <td><strong>Connor Brown</strong></td>
-                        <td><span class="pos-tag">RW</span></td>
-                        <td>13</td>
-                        <td>5</td>
-                        <td>5</td>
-                        <td><strong>10</strong></td>
-                        <td>+8</td>
-                        <td>0</td>
-                        <td>15:24</td>
-                    </tr>
-                    <tr>
-                        <td class="num-col">39</td>
-                        <td><strong>Anthony Mantha</strong><span class="status-tag status-ir">LTIR</span></td>
-                        <td><span class="pos-tag">RW</span></td>
-                        <td>17</td>
-                        <td>5</td>
-                        <td>5</td>
-                        <td><strong>10</strong></td>
-                        <td>-3</td>
-                        <td>9</td>
-                        <td>13:28</td>
-                    </tr>
-                    <tr>
-                        <td class="num-col">7</td>
-                        <td><strong>Dougie Hamilton</strong></td>
-                        <td><span class="pos-tag">D</span></td>
-                        <td>21</td>
-                        <td>2</td>
-                        <td>8</td>
-                        <td><strong>10</strong></td>
-                        <td>+3</td>
-                        <td>4</td>
-                        <td>20:37</td>
-                    </tr>
-                    <tr>
-                        <td class="num-col">28</td>
-                        <td><strong>Timo Meier</strong></td>
-                        <td><span class="pos-tag">RW</span></td>
-                        <td>21</td>
-                        <td>4</td>
-                        <td>5</td>
-                        <td><strong>9</strong></td>
-                        <td>0</td>
-                        <td>27</td>
-                        <td>16:59</td>
-                    </tr>
-                    <tr>
-                        <td class="num-col">22</td>
-                        <td><strong>Brett Pesce</strong><span class="status-tag status-dtd">Day-to-Day</span></td>
-                        <td><span class="pos-tag">D</span></td>
-                        <td>19</td>
-                        <td>1</td>
-                        <td>7</td>
-                        <td><strong>8</strong></td>
-                        <td>+15</td>
-                        <td>12</td>
-                        <td>20:59</td>
-                    </tr>
-                    <tr>
-                        <td class="num-col">12</td>
-                        <td><strong>Cody Glass</strong></td>
-                        <td><span class="pos-tag">C</span></td>
-                        <td>21</td>
-                        <td>2</td>
-                        <td>4</td>
-                        <td><strong>6</strong></td>
-                        <td>+2</td>
-                        <td>2</td>
-                        <td>11:23</td>
-                    </tr>
-                    <tr>
-                        <td class="num-col">47</td>
-                        <td><strong>Declan Chisholm</strong></td>
-                        <td><span class="pos-tag">D</span></td>
-                        <td>19</td>
-                        <td>2</td>
-                        <td>3</td>
-                        <td><strong>5</strong></td>
-                        <td>+3</td>
-                        <td>6</td>
-                        <td>14:21</td>
-                    </tr>
-                    <tr>
-                        <td class="num-col">29</td>
-                        <td><strong>Lenni Hämeenaho</strong></td>
-                        <td><span class="pos-tag">RW</span></td>
-                        <td>2</td>
-                        <td>2</td>
-                        <td>2</td>
-                        <td><strong>4</strong></td>
-                        <td>+2</td>
-                        <td>0</td>
-                        <td>9:14</td>
-                    </tr>
-                    <tr>
-                        <td class="num-col">11</td>
-                        <td><strong>Stefan Noesen</strong></td>
-                        <td><span class="pos-tag">RW</span></td>
-                        <td>7</td>
-                        <td>2</td>
-                        <td>2</td>
-                        <td><strong>4</strong></td>
-                        <td>+3</td>
-                        <td>0</td>
-                        <td>9:47</td>
-                    </tr>
-                    <tr>
-                        <td class="num-col">93</td>
-                        <td><strong>Amadeus Lombardi</strong></td>
-                        <td><span class="pos-tag">C</span></td>
-                        <td>17</td>
-                        <td>0</td>
-                        <td>4</td>
-                        <td><strong>4</strong></td>
-                        <td>-2</td>
-                        <td>10</td>
-                        <td>11:15</td>
-                    </tr>
-                    <tr>
-                        <td class="num-col">71</td>
-                        <td><strong>Jonas Siegenthaler</strong></td>
-                        <td><span class="pos-tag">D</span></td>
-                        <td>21</td>
-                        <td>0</td>
-                        <td>3</td>
-                        <td><strong>3</strong></td>
-                        <td>-1</td>
-                        <td>4</td>
-                        <td>18:58</td>
-                    </tr>
-                    <tr>
-                        <td class="num-col">8</td>
-                        <td><strong>Johnathan Kovacevic</strong><span class="status-tag status-ir">IR</span></td>
-                        <td><span class="pos-tag">D</span></td>
-                        <td>13</td>
-                        <td>0</td>
-                        <td>2</td>
-                        <td><strong>2</strong></td>
-                        <td>+2</td>
-                        <td>9</td>
-                        <td>16:12</td>
-                    </tr>
-                    <tr>
-                        <td class="num-col">18</td>
-                        <td><strong>Vladislav Kolyachonok</strong><span class="status-tag status-dtd">Day-to-Day</span></td>
-                        <td><span class="pos-tag">D</span></td>
-                        <td>1</td>
-                        <td>1</td>
-                        <td>0</td>
-                        <td><strong>1</strong></td>
-                        <td>+2</td>
-                        <td>0</td>
-                        <td>12:04</td>
-                    </tr>
-                    <tr>
-                        <td class="num-col">5</td>
-                        <td><strong>Brenden Dillon</strong></td>
-                        <td><span class="pos-tag">D</span></td>
-                        <td>12</td>
-                        <td>0</td>
-                        <td>1</td>
-                        <td><strong>1</strong></td>
-                        <td>+2</td>
-                        <td>16</td>
-                        <td>15:50</td>
-                    </tr>
-                    <tr>
-                        <td class="num-col">52</td>
-                        <td><strong>Anton Silayev</strong></td>
-                        <td><span class="pos-tag">D</span></td>
-                        <td>1</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td><strong>0</strong></td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>11:45</td>
-                    </tr>
-                </tbody>
-            </table>
+        <div class="stat-card">
+            <h4>Division Rank</h4>
+            <p>2nd Metro</p>
         </div>
 
-        <h3>Active Roster — Goaltending Tandem</h3>
-        <div class="table-wrapper" role="region" aria-label="Goaltending statistics table" tabindex="0">
-            <table>
-                <thead>
-                    <tr>
-                        <th>#</th>
-                        <th>Goalie</th>
-                        <th>GP</th>
-                        <th>GS</th>
-                        <th>W</th>
-                        <th>L</th>
-                        <th>OTL</th>
-                        <th>GAA</th>
-                        <th>SV%</th>
-                        <th>SO</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td class="num-col">37</td>
-                        <td><strong>Connor Hellebuyck</strong></td>
-                        <td>7</td>
-                        <td>7</td>
-                        <td>7</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td><strong>2.25</strong></td>
-                        <td><strong>.916</strong></td>
-                        <td>1</td>
-                    </tr>
-                    <tr>
-                        <td class="num-col">34</td>
-                        <td><strong>Jake Allen</strong></td>
-                        <td>10</td>
-                        <td>10</td>
-                        <td>6</td>
-                        <td>4</td>
-                        <td>0</td>
-                        <td><strong>3.19</strong></td>
-                        <td><strong>.881</strong></td>
-                        <td>0</td>
-                    </tr>
-                </tbody>
-            </table>
+        <div class="stat-card">
+            <h4>Points Leader</h4>
+            <p>J. Hughes (27)</p>
         </div>
 
-        <h3>Team Injuries &amp; Reserve List</h3>
-        <div class="table-wrapper" role="region" aria-label="Team injuries and reserve list table" tabindex="0">
-            <table>
-                <thead>
-                    <tr>
-                        <th>#</th>
-                        <th>Player</th>
-                        <th>Pos</th>
-                        <th>Status</th>
-                        <th>Injury / Reason</th>
-                        <th>Notes &amp; Timeline</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td class="num-col">39</td>
-                        <td><strong>Anthony Mantha</strong></td>
-                        <td><span class="pos-tag">RW</span></td>
-                        <td><span class="status-tag status-ir">LTIR</span></td>
-                        <td>Neck</td>
-                        <td>Placed on LTIR Nov. 11; expected out until at least Dec. 5.</td>
-                    </tr>
-                    <tr>
-                        <td class="num-col">24</td>
-                        <td><strong>Seamus Casey</strong></td>
-                        <td><span class="pos-tag">D</span></td>
-                        <td><span class="status-tag status-ir">LTIR</span></td>
-                        <td>Knee</td>
-                        <td>Injured in preseason (Sept. 28); placed on LTIR Nov. 13 (eligible Nov. 21).</td>
-                    </tr>
-                    <tr>
-                        <td class="num-col">8</td>
-                        <td><strong>Johnathan Kovacevic</strong></td>
-                        <td><span class="pos-tag">D</span></td>
-                        <td><span class="status-tag status-ir">IR</span></td>
-                        <td>Ankle</td>
-                        <td>Placed on IR Nov. 13; expected out until at least Nov. 18.</td>
-                    </tr>
-                    <tr>
-                        <td class="num-col">22</td>
-                        <td><strong>Brett Pesce</strong></td>
-                        <td><span class="pos-tag">D</span></td>
-                        <td><span class="status-tag status-dtd">Day-to-Day</span></td>
-                        <td>Illness</td>
-                        <td>Missed Saturday's (Nov. 14) win in Washington.</td>
-                    </tr>
-                    <tr>
-                        <td class="num-col">18</td>
-                        <td><strong>Vladislav Kolyachonok</strong></td>
-                        <td><span class="pos-tag">D</span></td>
-                        <td><span class="status-tag status-dtd">Day-to-Day</span></td>
-                        <td>Illness</td>
-                        <td>Scratched due to illness on Nov. 14 vs. Washington.</td>
-                    </tr>
-                </tbody>
-            </table>
+        <div class="stat-card">
+            <h4>Goals For / Against</h4>
+            <p>79 GF / 61 GA</p>
         </div>
-    </main>
+
+    </div>
+
+    <!-- SKATER STATISTICS -->
+
+    <h3>Active Roster — Skater Statistics</h3>
+
+    <p class="table-hint">
+        On a phone or small screen, swipe left or right to view
+        all table columns.
+    </p>
+
+    <div class="table-wrapper" role="region"
+         aria-label="Skater statistics table" tabindex="0">
+
+        <table>
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Player</th>
+                    <th>Pos</th>
+                    <th>GP</th>
+                    <th>G</th>
+                    <th>A</th>
+                    <th>PTS</th>
+                    <th>+/-</th>
+                    <th>PIM</th>
+                    <th>TOI/G</th>
+                </tr>
+            </thead>
+
+            <tbody>
+
+                <tr>
+                    <td class="num-col">86</td>
+                    <td><strong>Jack Hughes</strong></td>
+                    <td><span class="pos-tag">C</span></td>
+                    <td>21</td><td>10</td><td>17</td>
+                    <td><strong>27</strong></td><td>+12</td>
+                    <td>2</td><td>20:42</td>
+                </tr>
+
+                <tr>
+                    <td class="num-col">63</td>
+                    <td><strong>Jesper Bratt</strong></td>
+                    <td><span class="pos-tag">LW</span></td>
+                    <td>21</td><td>4</td><td>17</td>
+                    <td><strong>21</strong></td><td>+11</td>
+                    <td>0</td><td>17:26</td>
+                </tr>
+
+                <tr>
+                    <td class="num-col">81</td>
+                    <td><strong>Arseny Gritsyuk</strong></td>
+                    <td><span class="pos-tag">RW</span></td>
+                    <td>21</td><td>8</td><td>9</td>
+                    <td><strong>17</strong></td><td>+11</td>
+                    <td>2</td><td>15:40</td>
+                </tr>
+
+                <tr>
+                    <td class="num-col">13</td>
+                    <td><strong>Nico Hischier (C)</strong></td>
+                    <td><span class="pos-tag">C</span></td>
+                    <td>21</td><td>9</td><td>5</td>
+                    <td><strong>14</strong></td><td>+4</td>
+                    <td>6</td><td>18:26</td>
+                </tr>
+
+                <tr>
+                    <td class="num-col">43</td>
+                    <td><strong>Luke Hughes</strong></td>
+                    <td><span class="pos-tag">D</span></td>
+                    <td>21</td><td>6</td><td>8</td>
+                    <td><strong>14</strong></td><td>+11</td>
+                    <td>12</td><td>24:19</td>
+                </tr>
+
+                <tr>
+                    <td class="num-col">17</td>
+                    <td><strong>Evan Rodrigues</strong></td>
+                    <td><span class="pos-tag">C</span></td>
+                    <td>21</td><td>6</td><td>5</td>
+                    <td><strong>11</strong></td><td>-1</td>
+                    <td>8</td><td>15:27</td>
+                </tr>
+
+                <tr>
+                    <td class="num-col">77</td>
+                    <td><strong>Luke Evangelista</strong></td>
+                    <td><span class="pos-tag">RW</span></td>
+                    <td>18</td><td>4</td><td>7</td>
+                    <td><strong>11</strong></td><td>+1</td>
+                    <td>8</td><td>17:06</td>
+                </tr>
+
+                <tr>
+                    <td class="num-col">70</td>
+                    <td><strong>Jesper Boqvist</strong></td>
+                    <td><span class="pos-tag">C</span></td>
+                    <td>19</td><td>6</td><td>4</td>
+                    <td><strong>10</strong></td><td>+3</td>
+                    <td>0</td><td>11:38</td>
+                </tr>
+
+                <tr>
+                    <td class="num-col">16</td>
+                    <td><strong>Connor Brown</strong></td>
+                    <td><span class="pos-tag">RW</span></td>
+                    <td>13</td><td>5</td><td>5</td>
+                    <td><strong>10</strong></td><td>+8</td>
+                    <td>0</td><td>15:24</td>
+                </tr>
+
+                <tr>
+                    <td class="num-col">39</td>
+                    <td><strong>Anthony Mantha</strong>
+                        <span class="status-tag status-ir">LTIR</span>
+                    </td>
+                    <td><span class="pos-tag">RW</span></td>
+                    <td>17</td><td>5</td><td>5</td>
+                    <td><strong>10</strong></td><td>-3</td>
+                    <td>9</td><td>13:28</td>
+                </tr>
+
+                <tr>
+                    <td class="num-col">7</td>
+                    <td><strong>Dougie Hamilton</strong></td>
+                    <td><span class="pos-tag">D</span></td>
+                    <td>21</td><td>2</td><td>8</td>
+                    <td><strong>10</strong></td><td>+3</td>
+                    <td>4</td><td>20:37</td>
+                </tr>
+
+                <tr>
+                    <td class="num-col">28</td>
+                    <td><strong>Timo Meier</strong></td>
+                    <td><span class="pos-tag">RW</span></td>
+                    <td>21</td><td>4</td><td>5</td>
+                    <td><strong>9</strong></td><td>0</td>
+                    <td>27</td><td>16:59</td>
+                </tr>
+
+                <tr>
+                    <td class="num-col">22</td>
+                    <td><strong>Brett Pesce</strong>
+                        <span class="status-tag status-active">Available</span>
+                    </td>
+                    <td><span class="pos-tag">D</span></td>
+                    <td>19</td><td>1</td><td>7</td>
+                    <td><strong>8</strong></td><td>+15</td>
+                    <td>12</td><td>20:59</td>
+                </tr>
+
+                <tr>
+                    <td class="num-col">12</td>
+                    <td><strong>Cody Glass</strong></td>
+                    <td><span class="pos-tag">C</span></td>
+                    <td>21</td><td>2</td><td>4</td>
+                    <td><strong>6</strong></td><td>+2</td>
+                    <td>2</td><td>11:23</td>
+                </tr>
+
+                <tr>
+                    <td class="num-col">47</td>
+                    <td><strong>Declan Chisholm</strong></td>
+                    <td><span class="pos-tag">D</span></td>
+                    <td>19</td><td>2</td><td>3</td>
+                    <td><strong>5</strong></td><td>+3</td>
+                    <td>6</td><td>14:21</td>
+                </tr>
+
+                <tr>
+                    <td class="num-col">29</td>
+                    <td><strong>Lenni Hämeenaho</strong>
+                        <span class="status-tag status-callup">Recalled</span>
+                    </td>
+                    <td><span class="pos-tag">RW</span></td>
+                    <td>2</td><td>2</td><td>2</td>
+                    <td><strong>4</strong></td><td>+2</td>
+                    <td>0</td><td>9:14</td>
+                </tr>
+
+                <tr>
+                    <td class="num-col">11</td>
+                    <td><strong>Stefan Noesen</strong>
+                        <span class="status-tag status-callup">Recalled</span>
+                    </td>
+                    <td><span class="pos-tag">RW</span></td>
+                    <td>7</td><td>2</td><td>2</td>
+                    <td><strong>4</strong></td><td>+3</td>
+                    <td>0</td><td>9:47</td>
+                </tr>
+
+                <tr>
+                    <td class="num-col">93</td>
+                    <td><strong>Amadeus Lombardi</strong></td>
+                    <td><span class="pos-tag">C</span></td>
+                    <td>17</td><td>0</td><td>4</td>
+                    <td><strong>4</strong></td><td>-2</td>
+                    <td>10</td><td>11:15</td>
+                </tr>
+
+                <tr>
+                    <td class="num-col">71</td>
+                    <td><strong>Jonas Siegenthaler</strong></td>
+                    <td><span class="pos-tag">D</span></td>
+                    <td>21</td><td>0</td><td>3</td>
+                    <td><strong>3</strong></td><td>-1</td>
+                    <td>4</td><td>18:58</td>
+                </tr>
+
+                <tr>
+                    <td class="num-col">8</td>
+                    <td><strong>Johnathan Kovacevic</strong>
+                        <span class="status-tag status-ir">IR</span>
+                    </td>
+                    <td><span class="pos-tag">D</span></td>
+                    <td>13</td><td>0</td><td>2</td>
+                    <td><strong>2</strong></td><td>+2</td>
+                    <td>9</td><td>16:12</td>
+                </tr>
+
+                <tr>
+                    <td class="num-col">18</td>
+                    <td><strong>Vladislav Kolyachonok</strong>
+                        <span class="status-tag status-callup">Recalled</span>
+                    </td>
+                    <td><span class="pos-tag">D</span></td>
+                    <td>1</td><td>1</td><td>0</td>
+                    <td><strong>1</strong></td><td>+2</td>
+                    <td>0</td><td>12:04</td>
+                </tr>
+
+                <tr>
+                    <td class="num-col">5</td>
+                    <td><strong>Brenden Dillon</strong></td>
+                    <td><span class="pos-tag">D</span></td>
+                    <td>12</td><td>0</td><td>1</td>
+                    <td><strong>1</strong></td><td>+2</td>
+                    <td>16</td><td>15:50</td>
+                </tr>
+
+                <tr>
+                    <td class="num-col">52</td>
+                    <td><strong>Anton Silayev</strong>
+                        <span class="status-tag status-callup">Recalled</span>
+                    </td>
+                    <td><span class="pos-tag">D</span></td>
+                    <td>1</td><td>0</td><td>0</td>
+                    <td><strong>0</strong></td><td>0</td>
+                    <td>0</td><td>11:45</td>
+                </tr>
+
+            </tbody>
+        </table>
+    </div>
+
+    <!-- GOALTENDERS -->
+
+    <h3>Active Roster — Goaltending Tandem</h3>
+
+    <div class="table-wrapper" role="region"
+         aria-label="Goaltending statistics table" tabindex="0">
+
+        <table>
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Goalie</th>
+                    <th>GP</th>
+                    <th>GS</th>
+                    <th>W</th>
+                    <th>L</th>
+                    <th>OTL</th>
+                    <th>GAA</th>
+                    <th>SV%</th>
+                    <th>SO</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td class="num-col">37</td>
+                    <td><strong>Connor Hellebuyck</strong></td>
+                    <td>7</td><td>7</td><td>7</td>
+                    <td>0</td><td>0</td>
+                    <td><strong>2.25</strong></td>
+                    <td><strong>.916</strong></td>
+                    <td>1</td>
+                </tr>
+
+                <tr>
+                    <td class="num-col">34</td>
+                    <td><strong>Jake Allen</strong></td>
+                    <td>10</td><td>10</td><td>6</td>
+                    <td>4</td><td>0</td>
+                    <td><strong>3.19</strong></td>
+                    <td><strong>.881</strong></td>
+                    <td>0</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- CURRENT PRACTICE LINES -->
+
+    <h3>Latest Practice Lines — November 17</h3>
+
+    <p>
+        These are the forward and defensive combinations reported
+        at the Devils' November 17 practice. Practice lines can
+        change before game time.
+    </p>
+
+    <div class="unit-card">
+        <h4>Forward Lines</h4>
+        <p>
+            <strong>Line 1:</strong> Arseny Gritsyuk – Jack Hughes – Jesper Bratt
+        </p>
+        <p>
+            <strong>Line 2:</strong> Timo Meier – Nico Hischier – Luke Evangelista
+        </p>
+        <p>
+            <strong>Line 3:</strong> Stefan Noesen – Evan Rodrigues – Connor Brown
+        </p>
+        <p>
+            <strong>Line 4:</strong> Jesper Boqvist – Cody Glass – Lenni Hämeenaho
+        </p>
+        <p>
+            <strong>Extra forward:</strong> Amadeus Lombardi
+        </p>
+    </div>
+
+    <div class="unit-card">
+        <h4>Defensive Pairings</h4>
+        <p><strong>Pair 1:</strong> Luke Hughes – Brett Pesce</p>
+        <p><strong>Pair 2:</strong> Jonas Siegenthaler – Dougie Hamilton</p>
+        <p><strong>Pair 3:</strong> Declan Chisholm – Brenden Dillon</p>
+        <p><strong>Pair 4:</strong> Anton Silayev – Vladislav Kolyachonok</p>
+    </div>
+
+    <div class="unit-card">
+        <h4>Goaltenders</h4>
+        <p>Connor Hellebuyck</p>
+        <p>Jake Allen</p>
+    </div>
+
+    <!-- POWER PLAY -->
+
+    <h3>Power Play Units — November 17</h3>
+
+    <div class="unit-card">
+        <h4>Power Play 1</h4>
+        <p>
+            Luke Hughes, Jack Hughes, Nico Hischier,
+            Connor Brown, and Arseny Gritsyuk.
+        </p>
+    </div>
+
+    <div class="unit-card">
+        <h4>Power Play 2</h4>
+        <p>
+            Dougie Hamilton, Timo Meier, Jesper Bratt,
+            Evan Rodrigues, and Luke Evangelista.
+        </p>
+    </div>
+
+    <!-- INJURIES -->
+
+    <h3>Team Injuries &amp; Reserve List</h3>
+
+    <div class="table-wrapper" role="region"
+         aria-label="Team injuries table" tabindex="0">
+
+        <table>
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Player</th>
+                    <th>Pos</th>
+                    <th>Status</th>
+                    <th>Injury</th>
+                    <th>Notes &amp; Timeline</th>
+                </tr>
+            </thead>
+
+            <tbody>
+
+                <tr>
+                    <td class="num-col">39</td>
+                    <td><strong>Anthony Mantha</strong></td>
+                    <td><span class="pos-tag">RW</span></td>
+                    <td>
+                        <span class="status-tag status-ir">LTIR</span>
+                    </td>
+                    <td>Throat fracture</td>
+                    <td>
+                        Underwent surgery November 16.
+                        Expected to miss approximately one month.
+                        Return depends on when he can safely resume contact.
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="num-col">24</td>
+                    <td><strong>Seamus Casey</strong></td>
+                    <td><span class="pos-tag">D</span></td>
+                    <td>
+                        <span class="status-tag status-ir">LTIR</span>
+                    </td>
+                    <td>Knee</td>
+                    <td>
+                        Underwent knee surgery. Skated individually
+                        on November 17. No confirmed return date.
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="num-col">8</td>
+                    <td><strong>Johnathan Kovacevic</strong></td>
+                    <td><span class="pos-tag">D</span></td>
+                    <td>
+                        <span class="status-tag status-ir">IR</span>
+                    </td>
+                    <td>High ankle sprain</td>
+                    <td>
+                        Placed on injured reserve November 13.
+                        Expected to miss approximately 4-6 weeks.
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+    </div>
+
+    <!-- RECENT ROSTER TRANSACTIONS -->
+
+    <h3>Recent Roster Transactions &amp; Call-Ups</h3>
+
+    <p>
+        The following section tracks the Devils' reported player
+        movements between the NHL roster and the Utica Comets
+        during the 2026-27 season.
+    </p>
+
+    <div class="table-wrapper" role="region"
+         aria-label="Roster transactions table" tabindex="0">
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Player</th>
+                    <th>Transaction</th>
+                    <th>Details</th>
+                </tr>
+            </thead>
+
+            <tbody>
+
+                <tr>
+                    <td>Nov. 13</td>
+                    <td><strong>Anton Silayev</strong></td>
+                    <td>
+                        <span class="status-tag status-callup">Called Up</span>
+                    </td>
+                    <td>
+                        Recalled from Utica. Made his NHL debut
+                        against Washington on November 14.
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Nov. 13</td>
+                    <td><strong>Johnathan Kovacevic</strong></td>
+                    <td>
+                        <span class="status-tag status-ir">Placed on IR</span>
+                    </td>
+                    <td>
+                        Placed on injured reserve with an ankle injury,
+                        retroactive to November 10.
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Nov. 12</td>
+                    <td><strong>Vladislav Kolyachonok</strong></td>
+                    <td>
+                        <span class="status-tag status-callup">Called Up</span>
+                    </td>
+                    <td>
+                        Recalled from the Utica Comets.
+                        Recorded three assists in 12 games with Utica
+                        before his recall.
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Nov. 11</td>
+                    <td><strong>Lenni Hämeenaho</strong></td>
+                    <td>
+                        <span class="status-tag status-callup">Called Up</span>
+                    </td>
+                    <td>
+                        Recalled from Utica. Had nine points
+                        (6 goals, 3 assists) in 11 games with the Comets.
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Nov. 11</td>
+                    <td><strong>Stefan Noesen</strong></td>
+                    <td>
+                        <span class="status-tag status-callup">Called Up</span>
+                    </td>
+                    <td>
+                        Recalled from Utica to add forward depth
+                        following Mantha's injury.
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Nov. 11</td>
+                    <td><strong>Riley Tufte</strong></td>
+                    <td>
+                        <span class="status-tag status-ir">Loaned to Utica</span>
+                    </td>
+                    <td>
+                        Returned to the Utica Comets after joining
+                        the Devils' road trip.
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Nov. 11</td>
+                    <td><strong>Anthony Mantha</strong></td>
+                    <td>
+                        <span class="status-tag status-ir">Placed on LTIR</span>
+                    </td>
+                    <td>
+                        Placed on long-term injured reserve
+                        retroactive to November 7.
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Nov. 9</td>
+                    <td><strong>Riley Tufte</strong></td>
+                    <td>
+                        <span class="status-tag status-callup">Called Up</span>
+                    </td>
+                    <td>
+                        Recalled from Utica to provide additional
+                        forward depth.
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Oct. 23</td>
+                    <td><strong>Connor Hellebuyck</strong></td>
+                    <td>
+                        <span class="status-tag status-callup">Acquired</span>
+                    </td>
+                    <td>
+                        Acquired from the Winnipeg Jets in a major trade.
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Oct. 20</td>
+                    <td><strong>Stefan Noesen</strong></td>
+                    <td>
+                        <span class="status-tag status-ir">Loaned to Utica</span>
+                    </td>
+                    <td>
+                        Loaned to Utica after Connor Brown returned
+                        from injured reserve.
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Oct. 12</td>
+                    <td><strong>Stefan Noesen</strong></td>
+                    <td>
+                        <span class="status-tag status-callup">Called Up</span>
+                    </td>
+                    <td>
+                        Recalled from Utica after Connor Brown
+                        was placed on injured reserve.
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Oct. 12</td>
+                    <td><strong>Connor Brown</strong></td>
+                    <td>
+                        <span class="status-tag status-ir">Placed on IR</span>
+                    </td>
+                    <td>
+                        Placed on injured reserve.
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Oct. 10</td>
+                    <td><strong>Johnathan Kovacevic</strong></td>
+                    <td>
+                        <span class="status-tag status-active">Activated</span>
+                    </td>
+                    <td>
+                        Activated from injured reserve.
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Oct. 9</td>
+                    <td><strong>Stefan Noesen</strong></td>
+                    <td>
+                        <span class="status-tag status-ir">Loaned to Utica</span>
+                    </td>
+                    <td>
+                        Loaned to the Utica Comets.
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Oct. 2</td>
+                    <td><strong>Seamus Casey</strong></td>
+                    <td>
+                        <span class="status-tag status-ir">Injury Update</span>
+                    </td>
+                    <td>
+                        Ruled out for 8-10 weeks following knee surgery.
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+    </div>
+
+    <!-- OTHER TEAM NEWS -->
+
+    <h3>Latest Devils Team News</h3>
+
+    <div class="news-card">
+        <h4>November 17 — Gritsyuk Gets a Power Play Opportunity</h4>
+        <p>
+            Arseny Gritsyuk moved onto the first power-play unit
+            with Jack Hughes, Luke Hughes, Nico Hischier, and
+            Connor Brown. Jesper Bratt moved to the second unit.
+        </p>
+    </div>
+
+    <div class="news-card">
+        <h4>November 17 — Injury Practice Updates</h4>
+        <p>
+            Brett Pesce and Vladislav Kolyachonok returned to
+            practice after missing a game due to illness.
+            Seamus Casey skated individually as he continues
+            recovering from knee surgery.
+        </p>
+    </div>
+
+    <div class="news-card">
+        <h4>November 14 — Anton Silayev Makes NHL Debut</h4>
+        <p>
+            Defenseman Anton Silayev made his NHL debut against
+            the Washington Capitals after being recalled from Utica.
+        </p>
+    </div>
+
+    <div class="news-card">
+        <h4>November 13 — Call-Ups Help Devils Defeat Washington</h4>
+        <p>
+            Stefan Noesen, Lenni Hämeenaho, and Vladislav
+            Kolyachonok contributed after joining the Devils'
+            lineup during the team's injury-related roster changes.
+        </p>
+    </div>
+
+    <div class="news-card">
+        <h4>October 23 — Connor Hellebuyck Joins New Jersey</h4>
+        <p>
+            The Devils acquired goaltender Connor Hellebuyck
+            from the Winnipeg Jets in a major trade.
+        </p>
+    </div>
+
+    <!-- SOURCES -->
+
+    <h3>Sources &amp; Further Reading</h3>
+
+    <p>
+        The following official team reports were used for the
+        roster transactions and injury updates.
+    </p>
+
+    <ul class="source-list">
+        <li>
+            <a href="https://www.nhl.com/devils/news/topic/transactions/"
+               target="_blank" rel="noopener noreferrer">
+                New Jersey Devils — Official Transactions
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.nhl.com/devils/news/keefe-provides-updates-on-mantha-kovacevic-casey-injury-report-11-17-26"
+               target="_blank" rel="noopener noreferrer">
+                November 17 — Mantha, Kovacevic and Casey Injury Updates
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.nhl.com/devils/news/silaev-recalled-transactions-11-13-26"
+               target="_blank" rel="noopener noreferrer">
+                November 13 — Silayev Recalled, Kovacevic to IR
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.nhl.com/devils/news/topic/transactions/hameenaho-noesen-recalled-blog-11-11-26"
+               target="_blank" rel="noopener noreferrer">
+                November 11 — Mantha to LTIR, Hameenaho and Noesen Recalled
+            </a>
+        </li>
+
+        <li>
+            <a href="https://www.nhl.com/devils/news/topic/10-takeaways/devils-notebook-11-17-26"
+               target="_blank" rel="noopener noreferrer">
+                November 17 — Practice Lines and Power Play Units
+            </a>
+        </li>
+    </ul>
+
+    <p class="update-note">
+        Last roster and injury update: November 17, 2026.
+        Player statistics are retained from the original
+        21-game snapshot and should be refreshed separately
+        as additional games are played.
+    </p>
+
+</main>
+
 </body>
 </html>
