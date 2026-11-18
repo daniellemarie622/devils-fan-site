@@ -1,0 +1,17 @@
+{
+  "updatedAt": null,
+  "team": "New Jersey Devils",
+  "season": "2026-27",
+  "standings": {},
+  "skaters": [],
+  "goalies": [],
+  "news": [],
+  "transactions": [],
+  "injuryReports": [],
+  "practiceNotes": [],
+  "rosterChanges": {
+    "baselineExists": false,
+    "newlyListed": [],
+    "noLongerListed": []
+  }
+}
