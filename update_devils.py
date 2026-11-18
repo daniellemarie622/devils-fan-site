@@ -36,11 +36,47 @@ def text_value(value):
     return value or ""
 
 
+def average_time_on_ice(game_log):
+    """Return average TOI per game as MM:SS from the player's current-season game log."""
+    seconds = []
+    for game in game_log:
+        value = game.get("toi") or game.get("timeOnIce") or game.get("timeOnIcePerGame")
+        if not isinstance(value, str) or not value.strip():
+            continue
+        parts = value.strip().split(":")
+        try:
+            if len(parts) == 2:
+                total = int(parts[0]) * 60 + int(parts[1])
+            elif len(parts) == 3:
+                total = int(parts[0]) * 3600 + int(parts[1]) * 60 + int(parts[2])
+            else:
+                continue
+            seconds.append(total)
+        except ValueError:
+            continue
+
+    if not seconds:
+        return None
+
+    average = round(sum(seconds) / len(seconds))
+    return f"{average // 60}:{average % 60:02d}"
+
+
 def get_player_stats(player_id):
     try:
         data = fetch_json(f"{API}/player/{player_id}/landing")
         featured = data.get("featuredStats", {}).get("regularSeason", {})
         stats = featured.get("subSeason", {}) or {}
+
+        # The player landing endpoint does not consistently expose average TOI.
+        # Use the current-season game log and average the per-game ice-time values.
+        try:
+            game_log_data = fetch_json(f"{API}/player/{player_id}/game-log/20262027/2")
+            stats["timeOnIce"] = average_time_on_ice(game_log_data.get("gameLog", []))
+        except Exception as error:
+            print(f"Could not retrieve TOI for player {player_id}: {error}")
+            stats["timeOnIce"] = None
+
         return stats
     except Exception as error:
         print(f"Could not retrieve stats for player {player_id}: {error}")
@@ -195,11 +231,7 @@ def main():
                 "points": stats.get("points"),
                 "plusMinus": stats.get("plusMinus"),
                 "pim": stats.get("pim"),
-                "timeOnIce": (
-                    stats.get("avgToi")
-                    or stats.get("avgTimeOnIcePerGame")
-                    or stats.get("avgTimeOnIce")
-                )
+                "timeOnIce": stats.get("timeOnIce")
             })
 
     skaters.sort(
