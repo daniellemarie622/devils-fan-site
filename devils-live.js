@@ -173,13 +173,23 @@
             setText("team-record",
                 [standings.wins, standings.losses, standings.overtimeLosses]
                     .map(value => value ?? "—").join(" - "));
+            const rank = Number(standings.divisionRank);
+            const rankSuffix = rank % 100 >= 11 && rank % 100 <= 13
+                ? "th"
+                : ({ 1: "st", 2: "nd", 3: "rd" }[rank % 10] || "th");
             setText("division-rank",
-                standings.divisionRank ? standings.divisionRank + " " +
-                    (standings.division || "Division") : "—");
+                Number.isFinite(rank) && rank > 0 ? rank + rankSuffix : "—");
+            const divisionDetail = document.querySelector("#division-rank")
+                ?.closest(".stat-card")?.querySelector(".stat-detail");
+            if (divisionDetail) {
+                divisionDetail.textContent = standings.division
+                    ? standings.division + " Division"
+                    : "Division standing";
+            }
             setText("team-points", standings.points ?? "—");
             setText("team-goals",
-                (standings.goalsFor ?? "—") + " GF / " +
-                (standings.goalsAgainst ?? "—") + " GA");
+                (standings.goalsFor ?? "—") + " / " +
+                (standings.goalsAgainst ?? "—"));
 
             renderSkaters(data.skaters || []);
             renderGoalies(data.goalies || []);
