@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-18T01:37:42.325349+00:00",
+  "updatedAt": "2026-11-18T01:38:12.222963+00:00",
   "team": "New Jersey Devils",
   "season": "2026-27",
   "standings": {
@@ -20,7 +20,7 @@
       "name": "Jack Hughes",
       "position": "C",
       "group": "forwards",
-      "games": null,
+      "games": 21,
       "goals": 10,
       "assists": 17,
       "points": 27,
@@ -32,9 +32,9 @@
       "id": 8479407,
       "number": 63,
       "name": "Jesper Bratt",
-      "position": "L",
+      "position": "LW",
       "group": "forwards",
-      "games": null,
+      "games": 21,
       "goals": 4,
       "assists": 17,
       "points": 21,
@@ -46,9 +46,9 @@
       "id": 8481721,
       "number": 81,
       "name": "Arseny Gritsyuk",
-      "position": "R",
+      "position": "RW",
       "group": "forwards",
-      "games": null,
+      "games": 21,
       "goals": 8,
       "assists": 9,
       "points": 17,
@@ -62,7 +62,7 @@
       "name": "Nico Hischier",
       "position": "C",
       "group": "forwards",
-      "games": null,
+      "games": 21,
       "goals": 9,
       "assists": 5,
       "points": 14,
@@ -76,7 +76,7 @@
       "name": "Luke Hughes",
       "position": "D",
       "group": "defensemen",
-      "games": null,
+      "games": 21,
       "goals": 6,
       "assists": 8,
       "points": 14,
@@ -88,9 +88,9 @@
       "id": 8482146,
       "number": 77,
       "name": "Luke Evangelista",
-      "position": "R",
+      "position": "RW",
       "group": "forwards",
-      "games": null,
+      "games": 18,
       "goals": 4,
       "assists": 7,
       "points": 11,
@@ -104,7 +104,7 @@
       "name": "Evan Rodrigues",
       "position": "C",
       "group": "forwards",
-      "games": null,
+      "games": 21,
       "goals": 6,
       "assists": 5,
       "points": 11,
@@ -118,7 +118,7 @@
       "name": "Jesper Boqvist",
       "position": "C",
       "group": "forwards",
-      "games": null,
+      "games": 19,
       "goals": 6,
       "assists": 4,
       "points": 10,
@@ -130,9 +130,9 @@
       "id": 8477015,
       "number": 16,
       "name": "Connor Brown",
-      "position": "R",
+      "position": "RW",
       "group": "forwards",
-      "games": null,
+      "games": 13,
       "goals": 5,
       "assists": 5,
       "points": 10,
@@ -144,9 +144,9 @@
       "id": 8477511,
       "number": 39,
       "name": "Anthony Mantha",
-      "position": "R",
+      "position": "RW",
       "group": "forwards",
-      "games": null,
+      "games": 17,
       "goals": 5,
       "assists": 5,
       "points": 10,
@@ -160,7 +160,7 @@
       "name": "Dougie Hamilton",
       "position": "D",
       "group": "defensemen",
-      "games": null,
+      "games": 21,
       "goals": 2,
       "assists": 8,
       "points": 10,
@@ -172,9 +172,9 @@
       "id": 8478414,
       "number": 28,
       "name": "Timo Meier",
-      "position": "R",
+      "position": "RW",
       "group": "forwards",
-      "games": null,
+      "games": 21,
       "goals": 4,
       "assists": 5,
       "points": 9,
@@ -188,7 +188,7 @@
       "name": "Brett Pesce",
       "position": "D",
       "group": "defensemen",
-      "games": null,
+      "games": 19,
       "goals": 1,
       "assists": 7,
       "points": 8,
@@ -202,7 +202,7 @@
       "name": "Cody Glass",
       "position": "C",
       "group": "forwards",
-      "games": null,
+      "games": 21,
       "goals": 2,
       "assists": 4,
       "points": 6,
@@ -216,7 +216,7 @@
       "name": "Declan Chisholm",
       "position": "D",
       "group": "defensemen",
-      "games": null,
+      "games": 19,
       "goals": 2,
       "assists": 3,
       "points": 5,
@@ -228,9 +228,9 @@
       "id": 8484177,
       "number": 29,
       "name": "Lenni Hameenaho",
-      "position": "R",
+      "position": "RW",
       "group": "forwards",
-      "games": null,
+      "games": 2,
       "goals": 2,
       "assists": 2,
       "points": 4,
@@ -244,7 +244,7 @@
       "name": "Amadeus Lombardi",
       "position": "C",
       "group": "forwards",
-      "games": null,
+      "games": 17,
       "goals": 0,
       "assists": 4,
       "points": 4,
@@ -256,9 +256,9 @@
       "id": 8476474,
       "number": 11,
       "name": "Stefan Noesen",
-      "position": "R",
+      "position": "RW",
       "group": "forwards",
-      "games": null,
+      "games": 7,
       "goals": 2,
       "assists": 2,
       "points": 4,
@@ -272,7 +272,7 @@
       "name": "Jonas Siegenthaler",
       "position": "D",
       "group": "defensemen",
-      "games": null,
+      "games": 21,
       "goals": 0,
       "assists": 3,
       "points": 3,
@@ -286,7 +286,7 @@
       "name": "Johnathan Kovacevic",
       "position": "D",
       "group": "defensemen",
-      "games": null,
+      "games": 13,
       "goals": 0,
       "assists": 2,
       "points": 2,
@@ -300,7 +300,7 @@
       "name": "Brenden Dillon",
       "position": "D",
       "group": "defensemen",
-      "games": null,
+      "games": 12,
       "goals": 0,
       "assists": 1,
       "points": 1,
@@ -314,7 +314,7 @@
       "name": "Anton Silaev",
       "position": "D",
       "group": "defensemen",
-      "games": null,
+      "games": 1,
       "goals": 0,
       "assists": 0,
       "points": 0,
@@ -330,7 +330,7 @@
       "name": "Jake Allen",
       "position": "G",
       "group": "goalies",
-      "games": null,
+      "games": 10,
       "wins": 6,
       "losses": 4,
       "overtimeLosses": 0,
@@ -344,7 +344,7 @@
       "name": "Connor Hellebuyck",
       "position": "G",
       "group": "goalies",
-      "games": null,
+      "games": 7,
       "wins": 7,
       "losses": 0,
       "overtimeLosses": 0,
@@ -354,36 +354,6 @@
     }
   ],
   "news": [
-    {
-      "title": "Features",
-      "url": "https://www.nhl.com/devils/news/topic/features",
-      "date": ""
-    },
-    {
-      "title": "Notebook",
-      "url": "https://www.nhl.com/devils/news/topic/devils-notebook/index",
-      "date": ""
-    },
-    {
-      "title": "Transactions",
-      "url": "https://www.nhl.com/devils/news/topic/transactions",
-      "date": ""
-    },
-    {
-      "title": "Press Releases",
-      "url": "https://www.nhl.com/devils/news/topic/press-releases",
-      "date": ""
-    },
-    {
-      "title": "10 Takeaways",
-      "url": "https://www.nhl.com/devils/news/topic/10-takeaways/index",
-      "date": ""
-    },
-    {
-      "title": "Big Reads",
-      "url": "https://www.nhl.com/devils/news/topic/big-reads/index",
-      "date": ""
-    },
     {
       "title": "Home(town Remix) vs the Habs | PREVIEW The Devils to debut Hometown Remix jerseys against Montreal Nov 17, 2026",
       "url": "https://www.nhl.com/devils/news/preview-2026020345",
@@ -428,6 +398,36 @@
       "title": "Silaev Recalled from Utica, Kovacevic to IR | TRANSACTIONS Nov 13, 2026",
       "url": "https://www.nhl.com/devils/news/silaev-recalled-transactions-11-13-26",
       "date": "Nov 13, 2026"
+    },
+    {
+      "title": "Call-Ups Lead Devils to 5-2 Win Over Capitals | GAME STORY Nov 13, 2026",
+      "url": "https://www.nhl.com/devils/news/game-story-2026020303",
+      "date": "Nov 13, 2026"
+    },
+    {
+      "title": "QUICK RECAP: Devils 5, Capitals 2 Nov 12, 2026",
+      "url": "https://www.nhl.com/devils/news/live-updates-2026020303",
+      "date": "Nov 12, 2026"
+    },
+    {
+      "title": "Devils Scored First! Now You Score From Chick-Fil-A Nov 12, 2026",
+      "url": "https://www.nhl.com/devils/news/devils-scored-first-now-you-score-from-chick-fil-a",
+      "date": "Nov 12, 2026"
+    },
+    {
+      "title": "Important Notice on Ticket Transfers for Tonight's Game (11/12/26) Nov 12, 2026",
+      "url": "https://www.nhl.com/devils/news/important-notice-on-ticket-transfers-for-tonight-s-game-11-12-26",
+      "date": "Nov 12, 2026"
+    },
+    {
+      "title": "Devils Recall Kolyachonok from Utica | TRANSACTION Nov 12, 2026",
+      "url": "https://www.nhl.com/devils/news/devils-recall-kolyachonok-from-utica-transaction-11-12-26",
+      "date": "Nov 12, 2026"
+    },
+    {
+      "title": "Mantha to LTIR, Hameenaho, Noesen Recalled | BLOG Nov 11, 2026",
+      "url": "https://www.nhl.com/devils/news/hameenaho-noesen-recalled-blog-11-11-26",
+      "date": "Nov 11, 2026"
     }
   ],
   "transactions": [
@@ -497,39 +497,9 @@
       "title": "Bjugstad, Kovacevic Updates | INJURY REPORT Sep 17, 2026",
       "url": "https://www.nhl.com/devils/news/topic/injury-reports/bjugstad-kovacevic-injury-report-9-17-26",
       "date": "Sep 17, 2026"
-    },
-    {
-      "title": "Luke Hughes, Bratt Undergo Shoulder Surgery | INJURY UPDATE May 05, 2025",
-      "url": "https://www.nhl.com/devils/news/topic/injury-reports/luke-hughes-bratt-undergo-shoulder-surgery-injury-update-5-5-25",
-      "date": "May 05, 2025"
-    },
-    {
-      "title": "Hamilton to Miss Rest of Regular Season | INJURY UPDATEÂ Mar 13, 2025",
-      "url": "https://www.nhl.com/devils/news/topic/injury-reports/hamilton-to-miss-rest-of-regular-season-injury-update-3-13-25",
-      "date": "Mar 13, 2025"
-    },
-    {
-      "title": "Siegenthaler Out for Regular Season | INJURY UPDATE Mar 08, 2025",
-      "url": "https://www.nhl.com/devils/news/topic/injury-reports/siegenthaler-out-for-regular-season-injury-update-3-7-25",
-      "date": "Mar 08, 2025"
-    },
-    {
-      "title": "Jack Hughes Undergoes Shoulder Surgery | INJURY UPDATEÂ Mar 05, 2025",
-      "url": "https://www.nhl.com/devils/news/topic/injury-reports/jack-hughes-injury-update-injury-update-3-5-25",
-      "date": "Mar 05, 2025"
-    },
-    {
-      "title": "Hamilton Hurt in Dallas | INJURY UPDATEÂ Mar 05, 2025",
-      "url": "https://www.nhl.com/devils/news/topic/injury-reports/hamilton-hurt-in-dallas-injury-update-3-4-25",
-      "date": "Mar 05, 2025"
     }
   ],
   "practiceNotes": [
-    {
-      "title": "Notebook",
-      "url": "https://www.nhl.com/devils/news/topic/devils-notebook/index",
-      "date": ""
-    },
     {
       "title": "Gritsyuk Gets a Chance on Top Power Play Unit | NOTEBOOK With two days off following a tiring 10-games-in-19-days stretch, the Devils were back on the ice and prepared for Montreal Nov 17, 2026",
       "url": "https://www.nhl.com/devils/news/devils-notebook-11-17-26",
@@ -542,7 +512,7 @@
     }
   ],
   "rosterChanges": {
-    "baselineExists": false,
+    "baselineExists": true,
     "newlyListed": [],
     "noLongerListed": []
   }
