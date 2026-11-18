@@ -64,9 +64,13 @@ def parse_articles(url, limit=15):
 
             full_url = urljoin("https://www.nhl.com", href)
 
-            if full_url in seen:
+            # The general news landing page contains links to topic indexes.
+            # Exclude those from the news feed; transaction and injury feeds
+            # are parsed separately from their official topic pages.
+            if url == NEWS_URL and "/news/topic/" in full_url:
                 continue
-            if "/news/topic/" in full_url and full_url.rstrip("/").endswith("/news/topic"):
+
+            if full_url in seen:
                 continue
 
             seen.add(full_url)
@@ -146,7 +150,10 @@ def main():
                 "id": player.get("id"),
                 "number": player.get("sweaterNumber"),
                 "name": (first + " " + last).strip(),
-                "position": player.get("positionCode", ""),
+                "position": {
+                    "L": "LW",
+                    "R": "RW"
+                }.get(player.get("positionCode", ""), player.get("positionCode", "")),
                 "group": group_name
             })
 
@@ -167,7 +174,7 @@ def main():
         if player["group"] == "goalies":
             goalies.append({
                 **player,
-                "games": stats.get("games"),
+                "games": stats.get("gamesPlayed"),
                 "wins": stats.get("wins"),
                 "losses": stats.get("losses"),
                 "overtimeLosses": stats.get("otLosses"),
@@ -182,13 +189,17 @@ def main():
         else:
             skaters.append({
                 **player,
-                "games": stats.get("games"),
+                "games": stats.get("gamesPlayed"),
                 "goals": stats.get("goals"),
                 "assists": stats.get("assists"),
                 "points": stats.get("points"),
                 "plusMinus": stats.get("plusMinus"),
                 "pim": stats.get("pim"),
-                "timeOnIce": stats.get("avgToi")
+                "timeOnIce": (
+                    stats.get("avgToi")
+                    or stats.get("avgTimeOnIcePerGame")
+                    or stats.get("avgTimeOnIce")
+                )
             })
 
     skaters.sort(
@@ -223,6 +234,11 @@ def main():
     injury_reports = [
         article for article in injury_reports
         if any(term in article["title"].lower() for term in injury_terms)
+        and (
+            not article.get("date")
+            or datetime.strptime(article["date"], "%b %d, %Y").date()
+               >= datetime(2026, 7, 1).date()
+        )
     ]
 
     practice_terms = ("notebook", "practice", "morning skate", "line")
