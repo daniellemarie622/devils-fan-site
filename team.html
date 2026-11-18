@@ -43,19 +43,77 @@
         p { line-height: 1.6; }
         .update-note { color: #aaaaaa; font-size: .9em; margin-bottom: 25px; }
         .summary-flex {
-            display: grid; grid-template-columns: repeat(4, minmax(0, 1fr));
-            gap: 16px; margin: 25px 0 30px;
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: 18px;
+            margin: 25px 0 32px;
         }
         .stat-card {
-            min-width: 0; background: #1f1f1f; border: 1px solid #333333;
-            border-radius: 6px; padding: 15px; text-align: center;
-            box-shadow: 0 4px 10px rgba(0,0,0,.2);
+            position: relative;
+            min-width: 0;
+            min-height: 142px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 12px;
+            overflow: hidden;
+            background: linear-gradient(145deg, #252525 0%, #191919 100%);
+            border: 1px solid #393939;
+            border-top: 4px solid #ce1126;
+            border-radius: 10px;
+            padding: 20px 21px;
+            text-align: left;
+            box-shadow: 0 7px 18px rgba(0,0,0,.24);
+            transition: transform .2s ease, border-color .2s ease, box-shadow .2s ease;
+        }
+        .stat-card::after {
+            content: "";
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            right: -35px;
+            bottom: -48px;
+            border: 14px solid rgba(206,17,38,.09);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+        .stat-card:hover {
+            transform: translateY(-3px);
+            border-color: #555555;
+            border-top-color: #ed1c2e;
+            box-shadow: 0 11px 24px rgba(0,0,0,.32);
         }
         .stat-card h4 {
-            margin: 0 0 5px; color: #aaaaaa; text-transform: uppercase;
-            font-size: .8em;
+            margin: 0;
+            color: #b7b7b7;
+            text-transform: uppercase;
+            font-size: .76em;
+            font-weight: 700;
+            letter-spacing: 1.25px;
         }
-        .stat-card p { margin: 0; font-size: 1.35em; font-weight: bold; color: #ce1126; }
+        .stat-card p {
+            position: relative;
+            z-index: 1;
+            margin: 0;
+            color: #ffffff;
+            font-size: clamp(1.55em, 2.1vw, 2em);
+            line-height: 1.1;
+            font-weight: 800;
+            letter-spacing: -.5px;
+            font-variant-numeric: tabular-nums;
+        }
+        .stat-card .stat-detail {
+            position: relative;
+            z-index: 1;
+            margin-top: -5px;
+            color: #999999;
+            font-size: .78em;
+            line-height: 1.35;
+            font-weight: 500;
+            letter-spacing: .2px;
+        }
+        .stat-card .stat-accent { color: #ff4b5c; }
         .table-wrapper {
             width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch;
             border-radius: 6px; margin-bottom: 18px;
@@ -144,10 +202,26 @@
     <p class="update-note" id="last-updated" aria-live="polite">Loading the latest NHL data...</p>
 
     <div class="summary-flex" aria-label="Live team summary">
-        <div class="stat-card"><h4>Team Record</h4><p id="team-record">—</p></div>
-        <div class="stat-card"><h4>Division Rank</h4><p id="division-rank">—</p></div>
-        <div class="stat-card"><h4>Team Points</h4><p id="team-points">—</p></div>
-        <div class="stat-card"><h4>Goals For / Against</h4><p id="team-goals">—</p></div>
+        <div class="stat-card">
+            <h4>Team Record</h4>
+            <p id="team-record">—</p>
+            <span class="stat-detail">Wins <span class="stat-accent">/</span> Losses <span class="stat-accent">/</span> OT Losses</span>
+        </div>
+        <div class="stat-card">
+            <h4>Division Rank</h4>
+            <p id="division-rank">—</p>
+            <span class="stat-detail">Metropolitan Division</span>
+        </div>
+        <div class="stat-card">
+            <h4>Team Points</h4>
+            <p><span id="team-points">—</span><span class="stat-accent"> PTS</span></p>
+            <span class="stat-detail">Points earned this season</span>
+        </div>
+        <div class="stat-card">
+            <h4>Goals For / Against</h4>
+            <p id="team-goals">—</p>
+            <span class="stat-detail">Goals scored <span class="stat-accent">/</span> Goals allowed</span>
+        </div>
     </div>
 
     <h3>Current Roster — Skater Statistics</h3>
