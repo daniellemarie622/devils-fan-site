@@ -1,14 +1,546 @@
 {
-  "updatedAt": null,
+  "updatedAt": "2026-11-18T01:37:42.325349+00:00",
   "team": "New Jersey Devils",
   "season": "2026-27",
-  "standings": {},
-  "skaters": [],
-  "goalies": [],
-  "news": [],
-  "transactions": [],
-  "injuryReports": [],
-  "practiceNotes": [],
+  "standings": {
+    "wins": 15,
+    "losses": 6,
+    "overtimeLosses": 0,
+    "points": 30,
+    "gamesPlayed": 21,
+    "division": "Metropolitan",
+    "divisionRank": 2,
+    "goalsFor": 80,
+    "goalsAgainst": 61
+  },
+  "skaters": [
+    {
+      "id": 8481559,
+      "number": 86,
+      "name": "Jack Hughes",
+      "position": "C",
+      "group": "forwards",
+      "games": null,
+      "goals": 10,
+      "assists": 17,
+      "points": 27,
+      "plusMinus": 12,
+      "pim": 2,
+      "timeOnIce": null
+    },
+    {
+      "id": 8479407,
+      "number": 63,
+      "name": "Jesper Bratt",
+      "position": "L",
+      "group": "forwards",
+      "games": null,
+      "goals": 4,
+      "assists": 17,
+      "points": 21,
+      "plusMinus": 11,
+      "pim": 0,
+      "timeOnIce": null
+    },
+    {
+      "id": 8481721,
+      "number": 81,
+      "name": "Arseny Gritsyuk",
+      "position": "R",
+      "group": "forwards",
+      "games": null,
+      "goals": 8,
+      "assists": 9,
+      "points": 17,
+      "plusMinus": 11,
+      "pim": 2,
+      "timeOnIce": null
+    },
+    {
+      "id": 8480002,
+      "number": 13,
+      "name": "Nico Hischier",
+      "position": "C",
+      "group": "forwards",
+      "games": null,
+      "goals": 9,
+      "assists": 5,
+      "points": 14,
+      "plusMinus": 4,
+      "pim": 6,
+      "timeOnIce": null
+    },
+    {
+      "id": 8482684,
+      "number": 43,
+      "name": "Luke Hughes",
+      "position": "D",
+      "group": "defensemen",
+      "games": null,
+      "goals": 6,
+      "assists": 8,
+      "points": 14,
+      "plusMinus": 11,
+      "pim": 12,
+      "timeOnIce": null
+    },
+    {
+      "id": 8482146,
+      "number": 77,
+      "name": "Luke Evangelista",
+      "position": "R",
+      "group": "forwards",
+      "games": null,
+      "goals": 4,
+      "assists": 7,
+      "points": 11,
+      "plusMinus": 1,
+      "pim": 8,
+      "timeOnIce": null
+    },
+    {
+      "id": 8478542,
+      "number": 17,
+      "name": "Evan Rodrigues",
+      "position": "C",
+      "group": "forwards",
+      "games": null,
+      "goals": 6,
+      "assists": 5,
+      "points": 11,
+      "plusMinus": -1,
+      "pim": 8,
+      "timeOnIce": null
+    },
+    {
+      "id": 8480003,
+      "number": 70,
+      "name": "Jesper Boqvist",
+      "position": "C",
+      "group": "forwards",
+      "games": null,
+      "goals": 6,
+      "assists": 4,
+      "points": 10,
+      "plusMinus": 3,
+      "pim": 0,
+      "timeOnIce": null
+    },
+    {
+      "id": 8477015,
+      "number": 16,
+      "name": "Connor Brown",
+      "position": "R",
+      "group": "forwards",
+      "games": null,
+      "goals": 5,
+      "assists": 5,
+      "points": 10,
+      "plusMinus": 8,
+      "pim": 0,
+      "timeOnIce": null
+    },
+    {
+      "id": 8477511,
+      "number": 39,
+      "name": "Anthony Mantha",
+      "position": "R",
+      "group": "forwards",
+      "games": null,
+      "goals": 5,
+      "assists": 5,
+      "points": 10,
+      "plusMinus": -3,
+      "pim": 9,
+      "timeOnIce": null
+    },
+    {
+      "id": 8476462,
+      "number": 7,
+      "name": "Dougie Hamilton",
+      "position": "D",
+      "group": "defensemen",
+      "games": null,
+      "goals": 2,
+      "assists": 8,
+      "points": 10,
+      "plusMinus": 3,
+      "pim": 4,
+      "timeOnIce": null
+    },
+    {
+      "id": 8478414,
+      "number": 28,
+      "name": "Timo Meier",
+      "position": "R",
+      "group": "forwards",
+      "games": null,
+      "goals": 4,
+      "assists": 5,
+      "points": 9,
+      "plusMinus": 0,
+      "pim": 27,
+      "timeOnIce": null
+    },
+    {
+      "id": 8477488,
+      "number": 22,
+      "name": "Brett Pesce",
+      "position": "D",
+      "group": "defensemen",
+      "games": null,
+      "goals": 1,
+      "assists": 7,
+      "points": 8,
+      "plusMinus": 15,
+      "pim": 12,
+      "timeOnIce": null
+    },
+    {
+      "id": 8479996,
+      "number": 12,
+      "name": "Cody Glass",
+      "position": "C",
+      "group": "forwards",
+      "games": null,
+      "goals": 2,
+      "assists": 4,
+      "points": 6,
+      "plusMinus": 2,
+      "pim": 2,
+      "timeOnIce": null
+    },
+    {
+      "id": 8480990,
+      "number": 47,
+      "name": "Declan Chisholm",
+      "position": "D",
+      "group": "defensemen",
+      "games": null,
+      "goals": 2,
+      "assists": 3,
+      "points": 5,
+      "plusMinus": 3,
+      "pim": 6,
+      "timeOnIce": null
+    },
+    {
+      "id": 8484177,
+      "number": 29,
+      "name": "Lenni Hameenaho",
+      "position": "R",
+      "group": "forwards",
+      "games": null,
+      "goals": 2,
+      "assists": 2,
+      "points": 4,
+      "plusMinus": 2,
+      "pim": 0,
+      "timeOnIce": null
+    },
+    {
+      "id": 8483695,
+      "number": 93,
+      "name": "Amadeus Lombardi",
+      "position": "C",
+      "group": "forwards",
+      "games": null,
+      "goals": 0,
+      "assists": 4,
+      "points": 4,
+      "plusMinus": -2,
+      "pim": 10,
+      "timeOnIce": null
+    },
+    {
+      "id": 8476474,
+      "number": 11,
+      "name": "Stefan Noesen",
+      "position": "R",
+      "group": "forwards",
+      "games": null,
+      "goals": 2,
+      "assists": 2,
+      "points": 4,
+      "plusMinus": 3,
+      "pim": 0,
+      "timeOnIce": null
+    },
+    {
+      "id": 8478399,
+      "number": 71,
+      "name": "Jonas Siegenthaler",
+      "position": "D",
+      "group": "defensemen",
+      "games": null,
+      "goals": 0,
+      "assists": 3,
+      "points": 3,
+      "plusMinus": -1,
+      "pim": 4,
+      "timeOnIce": null
+    },
+    {
+      "id": 8480192,
+      "number": 8,
+      "name": "Johnathan Kovacevic",
+      "position": "D",
+      "group": "defensemen",
+      "games": null,
+      "goals": 0,
+      "assists": 2,
+      "points": 2,
+      "plusMinus": 2,
+      "pim": 9,
+      "timeOnIce": null
+    },
+    {
+      "id": 8475455,
+      "number": 5,
+      "name": "Brenden Dillon",
+      "position": "D",
+      "group": "defensemen",
+      "games": null,
+      "goals": 0,
+      "assists": 1,
+      "points": 1,
+      "plusMinus": 2,
+      "pim": 16,
+      "timeOnIce": null
+    },
+    {
+      "id": 8484987,
+      "number": 52,
+      "name": "Anton Silaev",
+      "position": "D",
+      "group": "defensemen",
+      "games": null,
+      "goals": 0,
+      "assists": 0,
+      "points": 0,
+      "plusMinus": 0,
+      "pim": 0,
+      "timeOnIce": null
+    }
+  ],
+  "goalies": [
+    {
+      "id": 8474596,
+      "number": 34,
+      "name": "Jake Allen",
+      "position": "G",
+      "group": "goalies",
+      "games": null,
+      "wins": 6,
+      "losses": 4,
+      "overtimeLosses": 0,
+      "goalsAgainstAverage": 3.189545,
+      "savePercentage": "0.881",
+      "shutouts": 0
+    },
+    {
+      "id": 8476945,
+      "number": 37,
+      "name": "Connor Hellebuyck",
+      "position": "G",
+      "group": "goalies",
+      "games": null,
+      "wins": 7,
+      "losses": 0,
+      "overtimeLosses": 0,
+      "goalsAgainstAverage": 2.253786,
+      "savePercentage": "0.915",
+      "shutouts": 1
+    }
+  ],
+  "news": [
+    {
+      "title": "Features",
+      "url": "https://www.nhl.com/devils/news/topic/features",
+      "date": ""
+    },
+    {
+      "title": "Notebook",
+      "url": "https://www.nhl.com/devils/news/topic/devils-notebook/index",
+      "date": ""
+    },
+    {
+      "title": "Transactions",
+      "url": "https://www.nhl.com/devils/news/topic/transactions",
+      "date": ""
+    },
+    {
+      "title": "Press Releases",
+      "url": "https://www.nhl.com/devils/news/topic/press-releases",
+      "date": ""
+    },
+    {
+      "title": "10 Takeaways",
+      "url": "https://www.nhl.com/devils/news/topic/10-takeaways/index",
+      "date": ""
+    },
+    {
+      "title": "Big Reads",
+      "url": "https://www.nhl.com/devils/news/topic/big-reads/index",
+      "date": ""
+    },
+    {
+      "title": "Home(town Remix) vs the Habs | PREVIEW The Devils to debut Hometown Remix jerseys against Montreal Nov 17, 2026",
+      "url": "https://www.nhl.com/devils/news/preview-2026020345",
+      "date": "Nov 17, 2026"
+    },
+    {
+      "title": "Gritsyuk Gets a Chance on Top Power Play Unit | NOTEBOOK With two days off following a tiring 10-games-in-19-days stretch, the Devils were back on the ice and prepared for Montreal Nov 17, 2026",
+      "url": "https://www.nhl.com/devils/news/devils-notebook-11-17-26",
+      "date": "Nov 17, 2026"
+    },
+    {
+      "title": "Keefe Provides Updates on Mantha, Kovacevic | INJURY REPORT Nov 17, 2026",
+      "url": "https://www.nhl.com/devils/news/keefe-provides-updates-on-mantha-kovacevic-casey-injury-report-11-17-26",
+      "date": "Nov 17, 2026"
+    },
+    {
+      "title": "RWJBarnabas Health Announces Luke Hughes as Brand Ambassador | RELEASE Nov 16, 2026",
+      "url": "https://www.nhl.com/devils/news/rwjbarnabas-health-announces-luke-hughes-as-brand-ambassador-release-11-16-26",
+      "date": "Nov 16, 2026"
+    },
+    {
+      "title": "Newark Takes the Stage at Devils Game Wednesday | FEATURE Nov 15, 2026",
+      "url": "https://www.nhl.com/devils/news/newark-takes-the-stage-at-devils-game-wednesday-feature-11-15-26",
+      "date": "Nov 15, 2026"
+    },
+    {
+      "title": "Devils Sweep Caps Home-and-Home | GAME STORY Nov 15, 2026",
+      "url": "https://www.nhl.com/devils/news/game-story-2026020318",
+      "date": "Nov 15, 2026"
+    },
+    {
+      "title": "QUICK RECAP: Devils 7, Capitals 4 Nov 14, 2026",
+      "url": "https://www.nhl.com/devils/news/live-updates-2026020318",
+      "date": "Nov 14, 2026"
+    },
+    {
+      "title": "Silaev to Make NHL Debut in Washington | MORNING SKATE Nov 14, 2026",
+      "url": "https://www.nhl.com/devils/news/preview-2026020318",
+      "date": "Nov 14, 2026"
+    },
+    {
+      "title": "Silaev Recalled from Utica, Kovacevic to IR | TRANSACTIONS Nov 13, 2026",
+      "url": "https://www.nhl.com/devils/news/silaev-recalled-transactions-11-13-26",
+      "date": "Nov 13, 2026"
+    }
+  ],
+  "transactions": [
+    {
+      "title": "Silaev Recalled from Utica, Kovacevic to IR | TRANSACTIONS Nov 13, 2026",
+      "url": "https://www.nhl.com/devils/news/topic/transactions/silaev-recalled-transactions-11-13-26",
+      "date": "Nov 13, 2026"
+    },
+    {
+      "title": "Devils Recall Kolyachonok from Utica | TRANSACTION Nov 12, 2026",
+      "url": "https://www.nhl.com/devils/news/topic/transactions/devils-recall-kolyachonok-from-utica-transaction-11-12-26",
+      "date": "Nov 12, 2026"
+    },
+    {
+      "title": "Mantha to LTIR, Hameenaho, Noesen Recalled | BLOG Nov 11, 2026",
+      "url": "https://www.nhl.com/devils/news/topic/transactions/hameenaho-noesen-recalled-blog-11-11-26",
+      "date": "Nov 11, 2026"
+    },
+    {
+      "title": "Devils Recall Tufte from Utica | TRANSACTION Nov 09, 2026",
+      "url": "https://www.nhl.com/devils/news/topic/transactions/devils-recall-tufte-from-utica-transaction-11-9-26",
+      "date": "Nov 09, 2026"
+    },
+    {
+      "title": "Hellebuyck Acquired by Devils | RELEASE Oct 23, 2026",
+      "url": "https://www.nhl.com/devils/news/topic/transactions/hellebuyck-acquired-by-devils-release-10-23-26",
+      "date": "Oct 23, 2026"
+    },
+    {
+      "title": "Noesen Loaned to Utica, Brown Off IR | TRANSACTION Oct 20, 2026",
+      "url": "https://www.nhl.com/devils/news/topic/transactions/noesen-loaned-to-utica-brown-off-ir-transaction-10-20-26",
+      "date": "Oct 20, 2026"
+    },
+    {
+      "title": "Brown to IR, Noesen Recalled | TRANSACTION Oct 12, 2026",
+      "url": "https://www.nhl.com/devils/news/topic/transactions/brown-to-ir-noesen-recalled-transaction-10-12-26",
+      "date": "Oct 12, 2026"
+    },
+    {
+      "title": "Kovacevic Activated | TRANSACTION Oct 10, 2026",
+      "url": "https://www.nhl.com/devils/news/topic/transactions/kovacevic-activated-transaction-10-10-26",
+      "date": "Oct 10, 2026"
+    },
+    {
+      "title": "Noesen Loaned to Utica | TRANSACTION Oct 09, 2026",
+      "url": "https://www.nhl.com/devils/news/topic/transactions/noesen-utica-transaction-10-9-26",
+      "date": "Oct 09, 2026"
+    }
+  ],
+  "injuryReports": [
+    {
+      "title": "Keefe Provides Updates on Mantha, Kovacevic | INJURY REPORT Nov 17, 2026",
+      "url": "https://www.nhl.com/devils/news/topic/injury-reports/keefe-provides-updates-on-mantha-kovacevic-casey-injury-report-11-17-26",
+      "date": "Nov 17, 2026"
+    },
+    {
+      "title": "Mantha Out with Throat Injury | INJURY REPORT Nov 08, 2026",
+      "url": "https://www.nhl.com/devils/news/topic/injury-reports/mantha-out-injury-report-11-8-26",
+      "date": "Nov 08, 2026"
+    },
+    {
+      "title": "Casey Out 8-10 Weeks Following Knee Surgery | INJURY REPORT Oct 02, 2026",
+      "url": "https://www.nhl.com/devils/news/topic/injury-reports/seamus-casey-injury-report-10-2-26",
+      "date": "Oct 02, 2026"
+    },
+    {
+      "title": "Bjugstad, Kovacevic Updates | INJURY REPORT Sep 17, 2026",
+      "url": "https://www.nhl.com/devils/news/topic/injury-reports/bjugstad-kovacevic-injury-report-9-17-26",
+      "date": "Sep 17, 2026"
+    },
+    {
+      "title": "Luke Hughes, Bratt Undergo Shoulder Surgery | INJURY UPDATE May 05, 2025",
+      "url": "https://www.nhl.com/devils/news/topic/injury-reports/luke-hughes-bratt-undergo-shoulder-surgery-injury-update-5-5-25",
+      "date": "May 05, 2025"
+    },
+    {
+      "title": "Hamilton to Miss Rest of Regular Season | INJURY UPDATEÂ Mar 13, 2025",
+      "url": "https://www.nhl.com/devils/news/topic/injury-reports/hamilton-to-miss-rest-of-regular-season-injury-update-3-13-25",
+      "date": "Mar 13, 2025"
+    },
+    {
+      "title": "Siegenthaler Out for Regular Season | INJURY UPDATE Mar 08, 2025",
+      "url": "https://www.nhl.com/devils/news/topic/injury-reports/siegenthaler-out-for-regular-season-injury-update-3-7-25",
+      "date": "Mar 08, 2025"
+    },
+    {
+      "title": "Jack Hughes Undergoes Shoulder Surgery | INJURY UPDATEÂ Mar 05, 2025",
+      "url": "https://www.nhl.com/devils/news/topic/injury-reports/jack-hughes-injury-update-injury-update-3-5-25",
+      "date": "Mar 05, 2025"
+    },
+    {
+      "title": "Hamilton Hurt in Dallas | INJURY UPDATEÂ Mar 05, 2025",
+      "url": "https://www.nhl.com/devils/news/topic/injury-reports/hamilton-hurt-in-dallas-injury-update-3-4-25",
+      "date": "Mar 05, 2025"
+    }
+  ],
+  "practiceNotes": [
+    {
+      "title": "Notebook",
+      "url": "https://www.nhl.com/devils/news/topic/devils-notebook/index",
+      "date": ""
+    },
+    {
+      "title": "Gritsyuk Gets a Chance on Top Power Play Unit | NOTEBOOK With two days off following a tiring 10-games-in-19-days stretch, the Devils were back on the ice and prepared for Montreal Nov 17, 2026",
+      "url": "https://www.nhl.com/devils/news/devils-notebook-11-17-26",
+      "date": "Nov 17, 2026"
+    },
+    {
+      "title": "Silaev to Make NHL Debut in Washington | MORNING SKATE Nov 14, 2026",
+      "url": "https://www.nhl.com/devils/news/preview-2026020318",
+      "date": "Nov 14, 2026"
+    }
+  ],
   "rosterChanges": {
     "baselineExists": false,
     "newlyListed": [],
