@@ -1,0 +1,49 @@
+name: Refresh New Jersey Devils data
+
+on:
+  schedule:
+    - cron: "17 */6 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
+jobs:
+  update-and-publish:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - name: Check out website
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install updater dependencies
+        run: pip install -r requirements.txt
+
+      - name: Retrieve current NHL roster, stats, standings and official news
+        run: python update_devils.py
+
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload website and refreshed data
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: .
+
+      - name: Publish refreshed website
+        id: deployment
+        uses: actions/deploy-pages@v4
