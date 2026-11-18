@@ -4,22 +4,24 @@ on:
   schedule:
     - cron: "17 */6 * * *"
   workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - "update_devils.py"
+      - "requirements.txt"
+      - ".github/workflows/update-devils.yml"
 
 permissions:
-  contents: read
-  pages: write
-  id-token: write
+  contents: write
 
 concurrency:
-  group: "pages"
-  cancel-in-progress: true
+  group: devils-data-refresh
+  cancel-in-progress: false
 
 jobs:
-  update-and-publish:
+  update:
     runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
 
     steps:
       - name: Check out website
@@ -36,14 +38,14 @@ jobs:
       - name: Retrieve current NHL roster, stats, standings and official news
         run: python update_devils.py
 
-      - name: Configure GitHub Pages
-        uses: actions/configure-pages@v5
-
-      - name: Upload website and refreshed data
-        uses: actions/upload-pages-artifact@v4
-        with:
-          path: .
-
-      - name: Publish refreshed website
-        id: deployment
-        uses: actions/deploy-pages@v4
+      - name: Commit refreshed data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/devils.json data/roster-previous.json
+          if ! git diff --cached --quiet; then
+            git commit -m "Refresh Devils roster, stats and news"
+            git push
+          else
+            echo "No data changes to commit."
+          fi
