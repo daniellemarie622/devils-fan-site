@@ -178,7 +178,7 @@
                 ? "th"
                 : ({ 1: "st", 2: "nd", 3: "rd" }[rank % 10] || "th");
             setText("division-rank",
-                Number.isFinite(rank) && rank > 0 ? "#" + rank : "—");
+                Number.isFinite(rank) && rank > 0 ? rank + rankSuffix : "—");
             const divisionDetail = document.querySelector("#division-rank")
                 ?.closest(".stat-card")?.querySelector(".stat-detail");
             if (divisionDetail) {
