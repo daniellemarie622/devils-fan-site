@@ -115,6 +115,37 @@
         }
         .stat-card .stat-accent { color: #ff4b5c; }
         #division-rank { color: #ff4b5c; font-size: clamp(2em, 2.7vw, 2.5em); letter-spacing: -1px; }
+        .availability-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 16px;
+            margin: 14px 0 28px;
+        }
+        .availability-card {
+            min-width: 0;
+            background: #1f1f1f;
+            border: 1px solid #393939;
+            border-top: 3px solid #ce1126;
+            border-radius: 8px;
+            padding: 16px;
+        }
+        .availability-card h4 {
+            margin: 0 0 13px;
+            color: #ff5a68;
+            text-transform: uppercase;
+            font-size: .9em;
+            letter-spacing: .8px;
+        }
+        .availability-player {
+            padding: 10px 0;
+            border-top: 1px solid #383838;
+        }
+        .availability-player:first-of-type { border-top: 0; padding-top: 0; }
+        .availability-player strong { color: #ffffff; }
+        .availability-player p { margin: 5px 0 0; color: #dddddd; font-size: .9em; }
+        .availability-player .availability-source { color: #999999; font-size: .78em; }
+        .availability-source a { color: #ff929b; }
+        .availability-empty { margin: 0; color: #999999; font-size: .9em; }
         .table-wrapper {
             width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch;
             border-radius: 6px; margin-bottom: 18px;
@@ -159,6 +190,9 @@
         a:focus-visible { outline: 3px solid #ffffff; outline-offset: 3px; }
         @media (max-width: 900px) {
             .summary-flex { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+        }
+        @media (max-width: 900px) {
+            .availability-grid { grid-template-columns: 1fr; }
         }
         @media (max-width: 768px) {
             body { display: block; }
@@ -223,6 +257,12 @@
             <p id="team-goals">—</p>
             <span class="stat-detail">Goals scored <span class="stat-accent">/</span> Goals allowed</span>
         </div>
+    </div>
+
+    <h3>Player Availability</h3>
+    <p class="table-hint">Official injury designations and availability updates. Day-to-day is only shown when confirmed by the team.</p>
+    <div id="player-availability" class="availability-grid" aria-live="polite">
+        <div class="empty-state">Loading player availability...</div>
     </div>
 
     <h3>Current Roster — Skater Statistics</h3>
