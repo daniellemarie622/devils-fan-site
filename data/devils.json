@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-18T19:02:59.386950+00:00",
+  "updatedAt": "2026-11-19T01:20:59.905509+00:00",
   "team": "New Jersey Devils",
   "season": "2026-27",
   "standings": {
@@ -355,12 +355,17 @@
   ],
   "news": [
     {
+      "title": "LIVE UPDATES: Devils 2, Canadiens 1 Get regular updates, highlights, lineups and more as the Devils take on the Canadiens Nov 19, 2026",
+      "url": "https://www.nhl.com/devils/news/live-updates-2026020345",
+      "date": "Nov 19, 2026"
+    },
+    {
       "title": "Home(town Remix) vs the Habs | MORNING SKATE The Devils to debut Hometown Remix jerseys against Montreal Nov 18, 2026",
       "url": "https://www.nhl.com/devils/news/preview-2026020345",
       "date": "Nov 18, 2026"
     },
     {
-      "title": "Newark Takes the Stage at Devils Game Tonight | FEATURE EVO Dance Crew, vocalist Destiny Autumn of The Suyat Band and percussionist CarlosÂ Ferreira share the Newark connections behind the performances at Prudential Center Nov 18, 2026",
+      "title": "Newark Takes the Stage at Devils Game | FEATURE Nov 18, 2026",
       "url": "https://www.nhl.com/devils/news/newark-takes-the-stage-at-devils-game-wednesday-feature-11-15-26",
       "date": "Nov 18, 2026"
     },
@@ -422,11 +427,6 @@
     {
       "title": "Important Notice on Ticket Transfers for Tonight's Game (11/12/26) Nov 12, 2026",
       "url": "https://www.nhl.com/devils/news/important-notice-on-ticket-transfers-for-tonight-s-game-11-12-26",
-      "date": "Nov 12, 2026"
-    },
-    {
-      "title": "Devils Recall Kolyachonok from Utica | TRANSACTION Nov 12, 2026",
-      "url": "https://www.nhl.com/devils/news/devils-recall-kolyachonok-from-utica-transaction-11-12-26",
       "date": "Nov 12, 2026"
     }
   ],
@@ -500,6 +500,11 @@
     }
   ],
   "practiceNotes": [
+    {
+      "title": "LIVE UPDATES: Devils 2, Canadiens 1 Get regular updates, highlights, lineups and more as the Devils take on the Canadiens Nov 19, 2026",
+      "url": "https://www.nhl.com/devils/news/live-updates-2026020345",
+      "date": "Nov 19, 2026"
+    },
     {
       "title": "Home(town Remix) vs the Habs | MORNING SKATE The Devils to debut Hometown Remix jerseys against Montreal Nov 18, 2026",
       "url": "https://www.nhl.com/devils/news/preview-2026020345",
