@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-19T16:08:52.876272+00:00",
+  "updatedAt": "2026-11-19T19:21:33.724499+00:00",
   "team": "New Jersey Devils",
   "season": "2026-27",
   "standings": {
@@ -499,6 +499,29 @@
       "date": "Sep 17, 2026"
     }
   ],
+  "injuryStatus": [
+    {
+      "name": "Johnathan Kovacevic",
+      "status": "IR",
+      "detail": "Placed on injured reserve Nov. 13; expected to miss 4-6 weeks with a high ankle sprain.",
+      "date": "Nov. 17, 2026",
+      "url": "https://www.nhl.com/devils/news/keefe-provides-updates-on-mantha-kovacevic-casey-injury-report-11-17-26"
+    },
+    {
+      "name": "Anthony Mantha",
+      "status": "LTIR",
+      "detail": "Placed on long-term injured reserve; expected to be out approximately one month after throat surgery.",
+      "date": "Nov. 17, 2026",
+      "url": "https://www.nhl.com/devils/news/keefe-provides-updates-on-mantha-kovacevic-casey-injury-report-11-17-26"
+    },
+    {
+      "name": "Seamus Casey",
+      "status": "Out",
+      "detail": "Skating on his own; the team has not provided a return-to-play timeline.",
+      "date": "Nov. 17, 2026",
+      "url": "https://www.nhl.com/devils/news/keefe-provides-updates-on-mantha-kovacevic-casey-injury-report-11-17-26"
+    }
+  ],
   "practiceNotes": [
     {
       "title": "QUICK RECAP: Canadiens 3, Devils 2 Get regular updates, highlights, lineups and more as the Devils take on the Canadiens Nov 19, 2026",
@@ -525,28 +548,5 @@
     "baselineExists": true,
     "newlyListed": [],
     "noLongerListed": []
-  },
-  "injuryStatus": [
-    {
-      "name": "Johnathan Kovacevic",
-      "status": "IR",
-      "detail": "Placed on injured reserve Nov. 13; expected to miss 4–6 weeks with a high ankle sprain.",
-      "date": "Nov. 17, 2026",
-      "url": "https://www.nhl.com/devils/news/keefe-provides-updates-on-mantha-kovacevic-casey-injury-report-11-17-26"
-    },
-    {
-      "name": "Anthony Mantha",
-      "status": "LTIR",
-      "detail": "Placed on long-term injured reserve; expected to be out approximately one month after throat surgery.",
-      "date": "Nov. 17, 2026",
-      "url": "https://www.nhl.com/devils/news/keefe-provides-updates-on-mantha-kovacevic-casey-injury-report-11-17-26"
-    },
-    {
-      "name": "Seamus Casey",
-      "status": "Out",
-      "detail": "Skating on his own; the team has not provided a return-to-play timeline.",
-      "date": "Nov. 17, 2026",
-      "url": "https://www.nhl.com/devils/news/keefe-provides-updates-on-mantha-kovacevic-casey-injury-report-11-17-26"
-    }
-  ]
+  }
 }
