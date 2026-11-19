@@ -273,6 +273,33 @@ def main():
         )
     ]
 
+    # Current player availability, based on the latest official Devils injury
+    # report and transaction announcements. Update these entries when the team
+    # confirms a new designation or a player's status changes.
+    injury_status = [
+        {
+            "name": "Johnathan Kovacevic",
+            "status": "IR",
+            "detail": "Placed on injured reserve Nov. 13; expected to miss 4-6 weeks with a high ankle sprain.",
+            "date": "Nov. 17, 2026",
+            "url": "https://www.nhl.com/devils/news/keefe-provides-updates-on-mantha-kovacevic-casey-injury-report-11-17-26"
+        },
+        {
+            "name": "Anthony Mantha",
+            "status": "LTIR",
+            "detail": "Placed on long-term injured reserve; expected to be out approximately one month after throat surgery.",
+            "date": "Nov. 17, 2026",
+            "url": "https://www.nhl.com/devils/news/keefe-provides-updates-on-mantha-kovacevic-casey-injury-report-11-17-26"
+        },
+        {
+            "name": "Seamus Casey",
+            "status": "Out",
+            "detail": "Skating on his own; the team has not provided a return-to-play timeline.",
+            "date": "Nov. 17, 2026",
+            "url": "https://www.nhl.com/devils/news/keefe-provides-updates-on-mantha-kovacevic-casey-injury-report-11-17-26"
+        }
+    ]
+
     practice_terms = ("notebook", "practice", "morning skate", "line")
     practice_notes = [
         article for article in news
@@ -319,6 +346,7 @@ def main():
         "news": news,
         "transactions": transactions,
         "injuryReports": injury_reports,
+        "injuryStatus": injury_status,
         "practiceNotes": practice_notes,
         "rosterChanges": roster_changes
     }
