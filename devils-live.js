@@ -114,6 +114,67 @@
         });
     }
 
+    function renderAvailability(players) {
+        const container = document.getElementById("player-availability");
+        if (!container) return;
+        container.replaceChildren();
+
+        const groups = [
+            { label: "IR / LTIR", statuses: ["IR", "LTIR"] },
+            { label: "Day-to-Day", statuses: ["Day-to-Day"] },
+            { label: "Out", statuses: ["Out"] }
+        ];
+
+        groups.forEach(group => {
+            const card = document.createElement("section");
+            card.className = "availability-card";
+
+            const heading = document.createElement("h4");
+            heading.textContent = group.label;
+            card.appendChild(heading);
+
+            const matching = (Array.isArray(players) ? players : [])
+                .filter(player => group.statuses.includes(player.status));
+
+            if (!matching.length) {
+                const empty = document.createElement("p");
+                empty.className = "availability-empty";
+                empty.textContent = "No players currently listed.";
+                card.appendChild(empty);
+            } else {
+                matching.forEach(player => {
+                    const entry = document.createElement("div");
+                    entry.className = "availability-player";
+
+                    const name = document.createElement("strong");
+                    name.textContent = player.name || "Unknown player";
+                    entry.appendChild(name);
+
+                    const detail = document.createElement("p");
+                    detail.textContent = player.detail || "";
+                    entry.appendChild(detail);
+
+                    if (player.date || player.url) {
+                        const source = document.createElement("p");
+                        source.className = "availability-source";
+                        if (player.date) source.appendChild(document.createTextNode("Updated " + player.date + " · "));
+                        if (player.url) {
+                            const link = document.createElement("a");
+                            link.href = player.url;
+                            link.target = "_blank";
+                            link.rel = "noopener noreferrer";
+                            link.textContent = "Official update";
+                            source.appendChild(link);
+                        }
+                        entry.appendChild(source);
+                    }
+                    card.appendChild(entry);
+                });
+            }
+            container.appendChild(card);
+        });
+    }
+
     function renderRosterChanges(changes) {
         const container = document.getElementById("roster-changes");
         container.replaceChildren();
@@ -193,6 +254,7 @@
 
             renderSkaters(data.skaters || []);
             renderGoalies(data.goalies || []);
+            renderAvailability(data.injuryStatus || []);
             renderArticles("injury-news", data.injuryReports,
                 "No recent official injury-report articles were found.");
             renderArticles("transaction-news", data.transactions,
@@ -236,6 +298,7 @@
                 cell.colSpan = id === "skater-table" ? 10 : 9;
                 cell.textContent = "Data is not available yet. Please check again after the first successful update.";
             });
+            renderAvailability([]);
             ["injury-news", "transaction-news", "team-news", "roster-changes"].forEach(id => {
                 emptyMessage(document.getElementById(id), "The first automatic update has not run yet.");
             });
