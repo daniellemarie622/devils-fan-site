@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-20T13:33:59.595016+00:00",
+  "updatedAt": "2026-11-20T16:15:06.139918+00:00",
   "team": "New Jersey Devils",
   "season": "2026-27",
   "standings": {
@@ -355,12 +355,17 @@
   ],
   "news": [
     {
+      "title": "Devils Practice Before Departure to St. Louis | NOTEBOOK Devils practice in Newark prior to departure for a road game in St. Louis on Saturday Nov 20, 2026",
+      "url": "https://www.nhl.com/devils/news/devils-notebook-11-20-26",
+      "date": "Nov 20, 2026"
+    },
+    {
       "title": "Devils Edged by Canadiens, 3-2 | GAME STORY Meier records goal and assist as New Jersey's seven-game home winning streak comes to an end Nov 19, 2026",
       "url": "https://www.nhl.com/devils/news/game-story-2026020345",
       "date": "Nov 19, 2026"
     },
     {
-      "title": "QUICK RECAP: Canadiens 3, Devils 2 Get regular updates, highlights, lineups and more as the Devils take on the Canadiens Nov 19, 2026",
+      "title": "QUICK RECAP: Canadiens 3, Devils 2 Nov 19, 2026",
       "url": "https://www.nhl.com/devils/news/live-updates-2026020345",
       "date": "Nov 19, 2026"
     },
@@ -423,11 +428,6 @@
       "title": "Call-Ups Lead Devils to 5-2 Win Over Capitals | GAME STORY Nov 13, 2026",
       "url": "https://www.nhl.com/devils/news/game-story-2026020303",
       "date": "Nov 13, 2026"
-    },
-    {
-      "title": "QUICK RECAP: Devils 5, Capitals 2 Nov 12, 2026",
-      "url": "https://www.nhl.com/devils/news/live-updates-2026020303",
-      "date": "Nov 12, 2026"
     }
   ],
   "transactions": [
@@ -524,9 +524,9 @@
   ],
   "practiceNotes": [
     {
-      "title": "QUICK RECAP: Canadiens 3, Devils 2 Get regular updates, highlights, lineups and more as the Devils take on the Canadiens Nov 19, 2026",
-      "url": "https://www.nhl.com/devils/news/live-updates-2026020345",
-      "date": "Nov 19, 2026"
+      "title": "Devils Practice Before Departure to St. Louis | NOTEBOOK Devils practice in Newark prior to departure for a road game in St. Louis on Saturday Nov 20, 2026",
+      "url": "https://www.nhl.com/devils/news/devils-notebook-11-20-26",
+      "date": "Nov 20, 2026"
     },
     {
       "title": "Home(town Remix) vs the Habs | MORNING SKATE Nov 18, 2026",
