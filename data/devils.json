@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-20T16:15:06.139918+00:00",
+  "updatedAt": "2026-11-20T19:23:48.323741+00:00",
   "team": "New Jersey Devils",
   "season": "2026-27",
   "standings": {
@@ -307,20 +307,6 @@
       "plusMinus": 1,
       "pim": 20,
       "timeOnIce": "14:57"
-    },
-    {
-      "id": 8484987,
-      "number": 52,
-      "name": "Anton Silaev",
-      "position": "D",
-      "group": "defensemen",
-      "games": 1,
-      "goals": 0,
-      "assists": 0,
-      "points": 0,
-      "plusMinus": 0,
-      "pim": 0,
-      "timeOnIce": "12:45"
     }
   ],
   "goalies": [
@@ -355,12 +341,17 @@
   ],
   "news": [
     {
-      "title": "Devils Practice Before Departure to St. Louis | NOTEBOOK Devils practice in Newark prior to departure for a road game in St. Louis on Saturday Nov 20, 2026",
+      "title": "Lombardi Back in Lineup and Other Notes from Practice | NOTEBOOK Devils practice in Newark prior to departure for a road game in St. Louis on Saturday Nov 20, 2026",
       "url": "https://www.nhl.com/devils/news/devils-notebook-11-20-26",
       "date": "Nov 20, 2026"
     },
     {
-      "title": "Devils Edged by Canadiens, 3-2 | GAME STORY Meier records goal and assist as New Jersey's seven-game home winning streak comes to an end Nov 19, 2026",
+      "title": "Silaev Loaned to Utica | TRANSACTIONS Silaev played one game for the Devils after being recalled last Friday Nov 20, 2026",
+      "url": "https://www.nhl.com/devils/news/silaev-loaned-to-utica-transactions-11-20-26",
+      "date": "Nov 20, 2026"
+    },
+    {
+      "title": "Devils Edged by Canadiens, 3-2 | GAME STORY Nov 19, 2026",
       "url": "https://www.nhl.com/devils/news/game-story-2026020345",
       "date": "Nov 19, 2026"
     },
@@ -423,14 +414,14 @@
       "title": "Silaev Recalled from Utica, Kovacevic to IR | TRANSACTIONS Nov 13, 2026",
       "url": "https://www.nhl.com/devils/news/silaev-recalled-transactions-11-13-26",
       "date": "Nov 13, 2026"
-    },
-    {
-      "title": "Call-Ups Lead Devils to 5-2 Win Over Capitals | GAME STORY Nov 13, 2026",
-      "url": "https://www.nhl.com/devils/news/game-story-2026020303",
-      "date": "Nov 13, 2026"
     }
   ],
   "transactions": [
+    {
+      "title": "Silaev Loaned to Utica | TRANSACTIONS Nov 20, 2026",
+      "url": "https://www.nhl.com/devils/news/topic/transactions/silaev-loaned-to-utica-transactions-11-20-26",
+      "date": "Nov 20, 2026"
+    },
     {
       "title": "Silaev Recalled from Utica, Kovacevic to IR | TRANSACTIONS Nov 13, 2026",
       "url": "https://www.nhl.com/devils/news/topic/transactions/silaev-recalled-transactions-11-13-26",
@@ -524,7 +515,7 @@
   ],
   "practiceNotes": [
     {
-      "title": "Devils Practice Before Departure to St. Louis | NOTEBOOK Devils practice in Newark prior to departure for a road game in St. Louis on Saturday Nov 20, 2026",
+      "title": "Lombardi Back in Lineup and Other Notes from Practice | NOTEBOOK Devils practice in Newark prior to departure for a road game in St. Louis on Saturday Nov 20, 2026",
       "url": "https://www.nhl.com/devils/news/devils-notebook-11-20-26",
       "date": "Nov 20, 2026"
     },
@@ -547,6 +538,13 @@
   "rosterChanges": {
     "baselineExists": true,
     "newlyListed": [],
-    "noLongerListed": []
+    "noLongerListed": [
+      {
+        "id": 8484987,
+        "number": 52,
+        "name": "Anton Silaev",
+        "position": "D"
+      }
+    ]
   }
 }
