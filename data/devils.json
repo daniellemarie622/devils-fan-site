@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-21T13:20:39.054987+00:00",
+  "updatedAt": "2026-11-21T16:02:27.069270+00:00",
   "team": "New Jersey Devils",
   "season": "2026-27",
   "standings": {
@@ -341,12 +341,17 @@
   ],
   "news": [
     {
+      "title": "Devils in the Lou | PREVIEW Nov 21, 2026",
+      "url": "https://www.nhl.com/devils/news/preview-2026020368",
+      "date": "Nov 21, 2026"
+    },
+    {
       "title": "Beyond the Boxscore | 10 TAKEAWAYS Nov 20, 2026",
       "url": "https://www.nhl.com/devils/news/10-takeaways-11-20-26",
       "date": "Nov 20, 2026"
     },
     {
-      "title": "Lombardi Back in Lineup and Other Notes from Practice | NOTEBOOK Devils practice in Newark prior to departure for a road game in St. Louis on Saturday Nov 20, 2026",
+      "title": "Lombardi Back in Lineup and Other Notes from Practice | NOTEBOOK Nov 20, 2026",
       "url": "https://www.nhl.com/devils/news/devils-notebook-11-20-26",
       "date": "Nov 20, 2026"
     },
@@ -408,11 +413,6 @@
     {
       "title": "QUICK RECAP: Devils 7, Capitals 4 Nov 14, 2026",
       "url": "https://www.nhl.com/devils/news/live-updates-2026020318",
-      "date": "Nov 14, 2026"
-    },
-    {
-      "title": "Silaev to Make NHL Debut in Washington | MORNING SKATE Nov 14, 2026",
-      "url": "https://www.nhl.com/devils/news/preview-2026020318",
       "date": "Nov 14, 2026"
     }
   ],
@@ -515,7 +515,7 @@
   ],
   "practiceNotes": [
     {
-      "title": "Lombardi Back in Lineup and Other Notes from Practice | NOTEBOOK Devils practice in Newark prior to departure for a road game in St. Louis on Saturday Nov 20, 2026",
+      "title": "Lombardi Back in Lineup and Other Notes from Practice | NOTEBOOK Nov 20, 2026",
       "url": "https://www.nhl.com/devils/news/devils-notebook-11-20-26",
       "date": "Nov 20, 2026"
     },
@@ -528,11 +528,6 @@
       "title": "Gritsyuk Gets a Chance on Top Power Play Unit | NOTEBOOK Nov 17, 2026",
       "url": "https://www.nhl.com/devils/news/devils-notebook-11-17-26",
       "date": "Nov 17, 2026"
-    },
-    {
-      "title": "Silaev to Make NHL Debut in Washington | MORNING SKATE Nov 14, 2026",
-      "url": "https://www.nhl.com/devils/news/preview-2026020318",
-      "date": "Nov 14, 2026"
     }
   ],
   "rosterChanges": {
