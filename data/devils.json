@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-24T13:38:32.970926+00:00",
+  "updatedAt": "2026-11-24T16:29:54.078341+00:00",
   "team": "New Jersey Devils",
   "season": "2026-27",
   "standings": {
@@ -341,12 +341,17 @@
   ],
   "news": [
     {
+      "title": "Gaudreau Parents Help Honor New Jersey High School Captains Proud to continue legacy of late sons Johnny, Matthew through work of family foundation Nov 24, 2026",
+      "url": "https://www.nhl.com/devils/news/gaudreau-parents-help-honor-new-jersey-high-school-captains",
+      "date": "Nov 24, 2026"
+    },
+    {
       "title": "Devils Sting Jackets | GAME STORY New Jersey wins 3-2 against Columbus in the first game of a home-and-home series Nov 24, 2026",
       "url": "https://www.nhl.com/devils/news/game-story-2026020378",
       "date": "Nov 24, 2026"
     },
     {
-      "title": "QUICK RECAP: Devils 3, Blue Jackets 2 Get regular updates, highlights, lineups and more as the Devils take on the Jackets Nov 23, 2026",
+      "title": "QUICK RECAP: Devils 3, Blue Jackets 2 Nov 23, 2026",
       "url": "https://www.nhl.com/devils/news/live-updates-2026020378",
       "date": "Nov 23, 2026"
     },
@@ -408,11 +413,6 @@
     {
       "title": "Gritsyuk Gets a Chance on Top Power Play Unit | NOTEBOOK Nov 17, 2026",
       "url": "https://www.nhl.com/devils/news/devils-notebook-11-17-26",
-      "date": "Nov 17, 2026"
-    },
-    {
-      "title": "Keefe Provides Updates on Mantha, Kovacevic | INJURY REPORT Nov 17, 2026",
-      "url": "https://www.nhl.com/devils/news/keefe-provides-updates-on-mantha-kovacevic-casey-injury-report-11-17-26",
       "date": "Nov 17, 2026"
     }
   ],
@@ -514,11 +514,6 @@
     }
   ],
   "practiceNotes": [
-    {
-      "title": "QUICK RECAP: Devils 3, Blue Jackets 2 Get regular updates, highlights, lineups and more as the Devils take on the Jackets Nov 23, 2026",
-      "url": "https://www.nhl.com/devils/news/live-updates-2026020378",
-      "date": "Nov 23, 2026"
-    },
     {
       "title": "Lombardi Back in Lineup and Other Notes from Practice | NOTEBOOK Nov 20, 2026",
       "url": "https://www.nhl.com/devils/news/devils-notebook-11-20-26",
