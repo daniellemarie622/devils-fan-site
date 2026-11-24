@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-23T22:10:36.829030+00:00",
+  "updatedAt": "2026-11-24T01:36:48.761207+00:00",
   "team": "New Jersey Devils",
   "season": "2026-27",
   "standings": {
@@ -341,12 +341,17 @@
   ],
   "news": [
     {
-      "title": "Devils Shuffle Lines Against Columbus | PREVIEW Nov 22, 2026",
-      "url": "https://www.nhl.com/devils/news/preview-2026020378",
-      "date": "Nov 22, 2026"
+      "title": "LIVE UPDATES: Devils 3, Blue Jackets 1 Get regular updates, highlights, lineups and more as the Devils take on the Jackets Nov 23, 2026",
+      "url": "https://www.nhl.com/devils/news/live-updates-2026020378",
+      "date": "Nov 23, 2026"
     },
     {
-      "title": "Blues Beat Devils in High Scoring Affair | GAME STORY Meier records goal and assist as New Jersey's seven-game home winning streak comes to an end Nov 22, 2026",
+      "title": "Devils Scored First! Now You Score From Chick-Fil-A Nov 23, 2026",
+      "url": "https://www.nhl.com/devils/news/devils-scored-first-now-you-score-from-chick-fil-a",
+      "date": "Nov 23, 2026"
+    },
+    {
+      "title": "Blues Beat Devils in High Scoring Affair | GAME STORY Nov 22, 2026",
       "url": "https://www.nhl.com/devils/news/game-story-2026020368",
       "date": "Nov 22, 2026"
     },
@@ -354,11 +359,6 @@
       "title": "QUICK RECAP: Blues 9, Devils 6 Nov 22, 2026",
       "url": "https://www.nhl.com/devils/news/live-updates-2026020368",
       "date": "Nov 22, 2026"
-    },
-    {
-      "title": "Devils Look to Rediscover Pace Against Surging Blues | MORNING SKATE Nov 21, 2026",
-      "url": "https://www.nhl.com/devils/news/preview-2026020368",
-      "date": "Nov 21, 2026"
     },
     {
       "title": "Beyond the Boxscore | 10 TAKEAWAYS Nov 20, 2026",
@@ -515,14 +515,9 @@
   ],
   "practiceNotes": [
     {
-      "title": "Devils Shuffle Lines Against Columbus | PREVIEW Nov 22, 2026",
-      "url": "https://www.nhl.com/devils/news/preview-2026020378",
-      "date": "Nov 22, 2026"
-    },
-    {
-      "title": "Devils Look to Rediscover Pace Against Surging Blues | MORNING SKATE Nov 21, 2026",
-      "url": "https://www.nhl.com/devils/news/preview-2026020368",
-      "date": "Nov 21, 2026"
+      "title": "LIVE UPDATES: Devils 3, Blue Jackets 1 Get regular updates, highlights, lineups and more as the Devils take on the Jackets Nov 23, 2026",
+      "url": "https://www.nhl.com/devils/news/live-updates-2026020378",
+      "date": "Nov 23, 2026"
     },
     {
       "title": "Lombardi Back in Lineup and Other Notes from Practice | NOTEBOOK Nov 20, 2026",
