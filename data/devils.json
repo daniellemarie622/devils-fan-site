@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-26T16:24:51.057407+00:00",
+  "updatedAt": "2026-11-26T19:23:55.868868+00:00",
   "team": "New Jersey Devils",
   "season": "2026-27",
   "standings": {
@@ -341,12 +341,17 @@
   ],
   "news": [
     {
+      "title": "Dillon Suspended 4 Games by DoPS | BLOG Nov 26, 2026",
+      "url": "https://www.nhl.com/devils/news/dillon-suspension-blog-11-26-26",
+      "date": "Nov 26, 2026"
+    },
+    {
       "title": "Gritsyuk's Shootout Winner Seals Win in Columbus | GAME STORY Nov 26, 2026",
       "url": "https://www.nhl.com/devils/news/game-story-2026020393",
       "date": "Nov 26, 2026"
     },
     {
-      "title": "QUICK RECAP: Devils 3, Blue Jackets 2 SO Get regular updates, highlights, lineups and more as the Devils take on the Jackets Nov 25, 2026",
+      "title": "QUICK RECAP: Devils 3, Blue Jackets 2 SO Nov 25, 2026",
       "url": "https://www.nhl.com/devils/news/live-updates-2026020393",
       "date": "Nov 25, 2026"
     },
@@ -379,11 +384,6 @@
       "title": "Devils Scored First! Now You Score From Chick-Fil-A Nov 23, 2026",
       "url": "https://www.nhl.com/devils/news/devils-scored-first-now-you-score-from-chick-fil-a",
       "date": "Nov 23, 2026"
-    },
-    {
-      "title": "Blues Beat Devils in High Scoring Affair | GAME STORY Nov 22, 2026",
-      "url": "https://www.nhl.com/devils/news/game-story-2026020368",
-      "date": "Nov 22, 2026"
     },
     {
       "title": "QUICK RECAP: Blues 9, Devils 6 Nov 22, 2026",
@@ -514,11 +514,6 @@
     }
   ],
   "practiceNotes": [
-    {
-      "title": "QUICK RECAP: Devils 3, Blue Jackets 2 SO Get regular updates, highlights, lineups and more as the Devils take on the Jackets Nov 25, 2026",
-      "url": "https://www.nhl.com/devils/news/live-updates-2026020393",
-      "date": "Nov 25, 2026"
-    },
     {
       "title": "Devils Finding Their Way Back to Good Habits | NOTEBOOK Nov 24, 2026",
       "url": "https://www.nhl.com/devils/news/devils-notebook-11-24-26",
