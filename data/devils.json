@@ -1,17 +1,17 @@
 {
-  "updatedAt": "2026-11-26T01:42:31.454296+00:00",
+  "updatedAt": "2026-11-26T04:24:54.953463+00:00",
   "team": "New Jersey Devils",
   "season": "2026-27",
   "standings": {
-    "wins": 16,
+    "wins": 17,
     "losses": 8,
     "overtimeLosses": 0,
-    "points": 32,
-    "gamesPlayed": 24,
+    "points": 34,
+    "gamesPlayed": 25,
     "division": "Metropolitan",
     "divisionRank": 2,
-    "goalsFor": 91,
-    "goalsAgainst": 75
+    "goalsFor": 94,
+    "goalsAgainst": 77
   },
   "skaters": [
     {
@@ -20,13 +20,13 @@
       "name": "Jack Hughes",
       "position": "C",
       "group": "forwards",
-      "games": 24,
+      "games": 25,
       "goals": 10,
       "assists": 20,
       "points": 30,
       "plusMinus": 12,
       "pim": 2,
-      "timeOnIce": "20:45"
+      "timeOnIce": "20:54"
     },
     {
       "id": 8479407,
@@ -34,13 +34,13 @@
       "name": "Jesper Bratt",
       "position": "LW",
       "group": "forwards",
-      "games": 24,
+      "games": 25,
       "goals": 4,
-      "assists": 18,
-      "points": 22,
-      "plusMinus": 6,
+      "assists": 19,
+      "points": 23,
+      "plusMinus": 7,
       "pim": 0,
-      "timeOnIce": "17:27"
+      "timeOnIce": "17:26"
     },
     {
       "id": 8481721,
@@ -48,13 +48,13 @@
       "name": "Arseny Gritsyuk",
       "position": "RW",
       "group": "forwards",
-      "games": 24,
+      "games": 25,
       "goals": 8,
-      "assists": 9,
-      "points": 17,
-      "plusMinus": 6,
+      "assists": 10,
+      "points": 18,
+      "plusMinus": 7,
       "pim": 2,
-      "timeOnIce": "15:45"
+      "timeOnIce": "15:35"
     },
     {
       "id": 8480002,
@@ -62,13 +62,13 @@
       "name": "Nico Hischier",
       "position": "C",
       "group": "forwards",
-      "games": 24,
-      "goals": 9,
+      "games": 25,
+      "goals": 10,
       "assists": 7,
-      "points": 16,
-      "plusMinus": 0,
+      "points": 17,
+      "plusMinus": 1,
       "pim": 6,
-      "timeOnIce": "18:20"
+      "timeOnIce": "18:17"
     },
     {
       "id": 8482684,
@@ -76,41 +76,13 @@
       "name": "Luke Hughes",
       "position": "D",
       "group": "defensemen",
-      "games": 24,
+      "games": 25,
       "goals": 7,
       "assists": 8,
       "points": 15,
       "plusMinus": 10,
       "pim": 12,
-      "timeOnIce": "24:14"
-    },
-    {
-      "id": 8477015,
-      "number": 16,
-      "name": "Connor Brown",
-      "position": "RW",
-      "group": "forwards",
-      "games": 16,
-      "goals": 7,
-      "assists": 6,
-      "points": 13,
-      "plusMinus": 9,
-      "pim": 0,
-      "timeOnIce": "15:46"
-    },
-    {
-      "id": 8478414,
-      "number": 28,
-      "name": "Timo Meier",
-      "position": "RW",
-      "group": "forwards",
-      "games": 24,
-      "goals": 7,
-      "assists": 6,
-      "points": 13,
-      "plusMinus": 0,
-      "pim": 29,
-      "timeOnIce": "16:50"
+      "timeOnIce": "24:29"
     },
     {
       "id": 8478542,
@@ -118,13 +90,41 @@
       "name": "Evan Rodrigues",
       "position": "C",
       "group": "forwards",
-      "games": 24,
+      "games": 25,
+      "goals": 8,
+      "assists": 6,
+      "points": 14,
+      "plusMinus": -2,
+      "pim": 12,
+      "timeOnIce": "15:34"
+    },
+    {
+      "id": 8477015,
+      "number": 16,
+      "name": "Connor Brown",
+      "position": "RW",
+      "group": "forwards",
+      "games": 17,
       "goals": 7,
       "assists": 6,
       "points": 13,
-      "plusMinus": -1,
-      "pim": 12,
-      "timeOnIce": "15:28"
+      "plusMinus": 9,
+      "pim": 0,
+      "timeOnIce": "15:58"
+    },
+    {
+      "id": 8478414,
+      "number": 28,
+      "name": "Timo Meier",
+      "position": "RW",
+      "group": "forwards",
+      "games": 25,
+      "goals": 7,
+      "assists": 6,
+      "points": 13,
+      "plusMinus": 0,
+      "pim": 29,
+      "timeOnIce": "16:57"
     },
     {
       "id": 8480003,
@@ -132,13 +132,13 @@
       "name": "Jesper Boqvist",
       "position": "C",
       "group": "forwards",
-      "games": 22,
+      "games": 23,
       "goals": 7,
       "assists": 5,
       "points": 12,
-      "plusMinus": 5,
-      "pim": 0,
-      "timeOnIce": "11:27"
+      "plusMinus": 4,
+      "pim": 2,
+      "timeOnIce": "11:19"
     },
     {
       "id": 8482146,
@@ -146,13 +146,13 @@
       "name": "Luke Evangelista",
       "position": "RW",
       "group": "forwards",
-      "games": 21,
+      "games": 22,
       "goals": 5,
       "assists": 7,
       "points": 12,
-      "plusMinus": 2,
+      "plusMinus": 1,
       "pim": 8,
-      "timeOnIce": "17:08"
+      "timeOnIce": "17:07"
     },
     {
       "id": 8476462,
@@ -160,13 +160,27 @@
       "name": "Dougie Hamilton",
       "position": "D",
       "group": "defensemen",
-      "games": 24,
+      "games": 25,
       "goals": 2,
-      "assists": 9,
+      "assists": 10,
+      "points": 12,
+      "plusMinus": 5,
+      "pim": 6,
+      "timeOnIce": "20:47"
+    },
+    {
+      "id": 8477488,
+      "number": 22,
+      "name": "Brett Pesce",
+      "position": "D",
+      "group": "defensemen",
+      "games": 23,
+      "goals": 1,
+      "assists": 10,
       "points": 11,
-      "plusMinus": 6,
-      "pim": 4,
-      "timeOnIce": "20:41"
+      "plusMinus": 14,
+      "pim": 12,
+      "timeOnIce": "21:15"
     },
     {
       "id": 8477511,
@@ -183,32 +197,18 @@
       "timeOnIce": "13:28"
     },
     {
-      "id": 8477488,
-      "number": 22,
-      "name": "Brett Pesce",
-      "position": "D",
-      "group": "defensemen",
-      "games": 22,
-      "goals": 1,
-      "assists": 9,
-      "points": 10,
-      "plusMinus": 14,
-      "pim": 12,
-      "timeOnIce": "21:03"
-    },
-    {
       "id": 8479996,
       "number": 12,
       "name": "Cody Glass",
       "position": "C",
       "group": "forwards",
-      "games": 24,
+      "games": 25,
       "goals": 2,
       "assists": 5,
       "points": 7,
-      "plusMinus": 4,
+      "plusMinus": 3,
       "pim": 2,
-      "timeOnIce": "12:09"
+      "timeOnIce": "12:11"
     },
     {
       "id": 8483695,
@@ -216,13 +216,13 @@
       "name": "Amadeus Lombardi",
       "position": "C",
       "group": "forwards",
-      "games": 19,
+      "games": 20,
       "goals": 0,
       "assists": 7,
       "points": 7,
-      "plusMinus": -1,
-      "pim": 10,
-      "timeOnIce": "11:14"
+      "plusMinus": -2,
+      "pim": 12,
+      "timeOnIce": "11:13"
     },
     {
       "id": 8480990,
@@ -230,13 +230,13 @@
       "name": "Declan Chisholm",
       "position": "D",
       "group": "defensemen",
-      "games": 22,
+      "games": 23,
       "goals": 3,
       "assists": 3,
       "points": 6,
-      "plusMinus": 2,
+      "plusMinus": 1,
       "pim": 8,
-      "timeOnIce": "14:19"
+      "timeOnIce": "14:16"
     },
     {
       "id": 8484177,
@@ -258,13 +258,13 @@
       "name": "Jonas Siegenthaler",
       "position": "D",
       "group": "defensemen",
-      "games": 24,
+      "games": 25,
       "goals": 0,
       "assists": 5,
       "points": 5,
       "plusMinus": 0,
       "pim": 4,
-      "timeOnIce": "19:38"
+      "timeOnIce": "19:46"
     },
     {
       "id": 8476474,
@@ -272,13 +272,13 @@
       "name": "Stefan Noesen",
       "position": "RW",
       "group": "forwards",
-      "games": 9,
+      "games": 10,
       "goals": 2,
       "assists": 2,
       "points": 4,
-      "plusMinus": 3,
+      "plusMinus": 2,
       "pim": 0,
-      "timeOnIce": "9:20"
+      "timeOnIce": "9:10"
     },
     {
       "id": 8475455,
@@ -286,13 +286,13 @@
       "name": "Brenden Dillon",
       "position": "D",
       "group": "defensemen",
-      "games": 15,
+      "games": 16,
       "goals": 1,
       "assists": 1,
       "points": 2,
       "plusMinus": 1,
-      "pim": 22,
-      "timeOnIce": "14:56"
+      "pim": 37,
+      "timeOnIce": "14:13"
     },
     {
       "id": 8480192,
@@ -330,23 +330,28 @@
       "name": "Connor Hellebuyck",
       "position": "G",
       "group": "goalies",
-      "games": 10,
-      "wins": 8,
+      "games": 11,
+      "wins": 9,
       "losses": 1,
       "overtimeLosses": 0,
-      "goalsAgainstAverage": 2.712559,
-      "savePercentage": "0.898",
+      "goalsAgainstAverage": 2.62143,
+      "savePercentage": "0.899",
       "shutouts": 1
     }
   ],
   "news": [
     {
-      "title": "FOLLOW LIVE: Devils 1, Blue Jackets 1 Get regular updates, highlights, lineups and more as the Devils take on the Jackets Nov 25, 2026",
+      "title": "Gritsyuk's Shootout Winner Seals Win in Columbus | GAME STORY Nov 26, 2026",
+      "url": "https://www.nhl.com/devils/news/game-story-2026020393",
+      "date": "Nov 26, 2026"
+    },
+    {
+      "title": "QUICK RECAP: Devils 3, Blue Jackets 2 SO Get regular updates, highlights, lineups and more as the Devils take on the Jackets Nov 25, 2026",
       "url": "https://www.nhl.com/devils/news/live-updates-2026020393",
       "date": "Nov 25, 2026"
     },
     {
-      "title": "New Jersey Devils Partner with Hometown Heroes My Chemical Romance for Exclusive Collaboration | RELEASE Features a full-arena T-shirt giveaway on Friday, November 27, plus limited-edition merchandise. Nov 24, 2026",
+      "title": "New Jersey Devils Partner with Hometown Heroes My Chemical Romance for Exclusive Collaboration | RELEASE Nov 24, 2026",
       "url": "https://www.nhl.com/devils/news/new-jersey-devils-partner-with-hometown-heroes-my-chemical-romance-for-exclusive-collaboration-release-11-24-26",
       "date": "Nov 24, 2026"
     },
@@ -409,11 +414,6 @@
       "title": "QUICK RECAP: Canadiens 3, Devils 2 Nov 19, 2026",
       "url": "https://www.nhl.com/devils/news/live-updates-2026020345",
       "date": "Nov 19, 2026"
-    },
-    {
-      "title": "Home(town Remix) vs the Habs | MORNING SKATE Nov 18, 2026",
-      "url": "https://www.nhl.com/devils/news/preview-2026020345",
-      "date": "Nov 18, 2026"
     }
   ],
   "transactions": [
@@ -515,7 +515,7 @@
   ],
   "practiceNotes": [
     {
-      "title": "FOLLOW LIVE: Devils 1, Blue Jackets 1 Get regular updates, highlights, lineups and more as the Devils take on the Jackets Nov 25, 2026",
+      "title": "QUICK RECAP: Devils 3, Blue Jackets 2 SO Get regular updates, highlights, lineups and more as the Devils take on the Jackets Nov 25, 2026",
       "url": "https://www.nhl.com/devils/news/live-updates-2026020393",
       "date": "Nov 25, 2026"
     },
@@ -528,11 +528,6 @@
       "title": "Lombardi Back in Lineup and Other Notes from Practice | NOTEBOOK Nov 20, 2026",
       "url": "https://www.nhl.com/devils/news/devils-notebook-11-20-26",
       "date": "Nov 20, 2026"
-    },
-    {
-      "title": "Home(town Remix) vs the Habs | MORNING SKATE Nov 18, 2026",
-      "url": "https://www.nhl.com/devils/news/preview-2026020345",
-      "date": "Nov 18, 2026"
     }
   ],
   "rosterChanges": {
