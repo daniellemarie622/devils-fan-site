@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-27T10:25:25.122366+00:00",
+  "updatedAt": "2026-11-27T13:38:55.923462+00:00",
   "team": "New Jersey Devils",
   "season": "2026-27",
   "standings": {
@@ -341,6 +341,11 @@
   ],
   "news": [
     {
+      "title": "Devils Host Flames, Nemec in Matinee | PREVIEW Nov 26, 2026",
+      "url": "https://www.nhl.com/devils/news/preview-2026020401",
+      "date": "Nov 26, 2026"
+    },
+    {
       "title": "Dillon Suspended 4 Games by DoPS | BLOG Nov 26, 2026",
       "url": "https://www.nhl.com/devils/news/dillon-suspension-blog-11-26-26",
       "date": "Nov 26, 2026"
@@ -409,11 +414,6 @@
       "title": "Silaev Loaned to Utica | TRANSACTIONS Nov 20, 2026",
       "url": "https://www.nhl.com/devils/news/silaev-loaned-to-utica-transactions-11-20-26",
       "date": "Nov 20, 2026"
-    },
-    {
-      "title": "Devils Edged by Canadiens, 3-2 | GAME STORY Nov 19, 2026",
-      "url": "https://www.nhl.com/devils/news/game-story-2026020345",
-      "date": "Nov 19, 2026"
     }
   ],
   "transactions": [
