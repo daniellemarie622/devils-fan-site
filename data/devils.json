@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-27T16:23:36.699634+00:00",
+  "updatedAt": "2026-11-27T19:19:49.468629+00:00",
   "team": "New Jersey Devils",
   "season": "2026-27",
   "standings": {
@@ -341,8 +341,8 @@
   ],
   "news": [
     {
-      "title": "Kolyachonok, Silayev to Play vs. Flames | PREVIEW Nov 27, 2026",
-      "url": "https://www.nhl.com/devils/news/preview-2026020401",
+      "title": "LIVE UPDATES: Devils 2, Flames 1 Get regular updates, highlights, lineups and more as the Devils take on the Flames Nov 27, 2026",
+      "url": "https://www.nhl.com/devils/news/live-updates-2026020401",
       "date": "Nov 27, 2026"
     },
     {
@@ -515,6 +515,11 @@
   ],
   "practiceNotes": [
     {
+      "title": "LIVE UPDATES: Devils 2, Flames 1 Get regular updates, highlights, lineups and more as the Devils take on the Flames Nov 27, 2026",
+      "url": "https://www.nhl.com/devils/news/live-updates-2026020401",
+      "date": "Nov 27, 2026"
+    },
+    {
       "title": "Devils Finding Their Way Back to Good Habits | NOTEBOOK Nov 24, 2026",
       "url": "https://www.nhl.com/devils/news/devils-notebook-11-24-26",
       "date": "Nov 24, 2026"
@@ -527,21 +532,7 @@
   ],
   "rosterChanges": {
     "baselineExists": true,
-    "newlyListed": [
-      {
-        "id": 8484987,
-        "number": 52,
-        "name": "Anton Silaev",
-        "position": "D"
-      }
-    ],
-    "noLongerListed": [
-      {
-        "id": 8484177,
-        "number": 29,
-        "name": "Lenni Hameenaho",
-        "position": "RW"
-      }
-    ]
+    "newlyListed": [],
+    "noLongerListed": []
   }
 }
