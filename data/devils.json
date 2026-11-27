@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-27T13:38:55.923462+00:00",
+  "updatedAt": "2026-11-27T16:23:36.699634+00:00",
   "team": "New Jersey Devils",
   "season": "2026-27",
   "standings": {
@@ -239,20 +239,6 @@
       "timeOnIce": "14:16"
     },
     {
-      "id": 8484177,
-      "number": 29,
-      "name": "Lenni Hameenaho",
-      "position": "RW",
-      "group": "forwards",
-      "games": 4,
-      "goals": 2,
-      "assists": 3,
-      "points": 5,
-      "plusMinus": 3,
-      "pim": 0,
-      "timeOnIce": "9:34"
-    },
-    {
       "id": 8478399,
       "number": 71,
       "name": "Jonas Siegenthaler",
@@ -307,6 +293,20 @@
       "plusMinus": 2,
       "pim": 9,
       "timeOnIce": "14:40"
+    },
+    {
+      "id": 8484987,
+      "number": 52,
+      "name": "Anton Silaev",
+      "position": "D",
+      "group": "defensemen",
+      "games": 1,
+      "goals": 0,
+      "assists": 0,
+      "points": 0,
+      "plusMinus": 0,
+      "pim": 0,
+      "timeOnIce": "12:45"
     }
   ],
   "goalies": [
@@ -341,9 +341,14 @@
   ],
   "news": [
     {
-      "title": "Devils Host Flames, Nemec in Matinee | PREVIEW Nov 26, 2026",
+      "title": "Kolyachonok, Silayev to Play vs. Flames | PREVIEW Nov 27, 2026",
       "url": "https://www.nhl.com/devils/news/preview-2026020401",
-      "date": "Nov 26, 2026"
+      "date": "Nov 27, 2026"
+    },
+    {
+      "title": "Silayev, Rittich Recalled | TRANSACTION 11.27.26 Hameenaho Assigned to Utica Nov 27, 2026",
+      "url": "https://www.nhl.com/devils/news/silayev-rittich-recalled-transaction-11-27-26",
+      "date": "Nov 27, 2026"
     },
     {
       "title": "Dillon Suspended 4 Games by DoPS | BLOG Nov 26, 2026",
@@ -409,14 +414,14 @@
       "title": "Lombardi Back in Lineup and Other Notes from Practice | NOTEBOOK Nov 20, 2026",
       "url": "https://www.nhl.com/devils/news/devils-notebook-11-20-26",
       "date": "Nov 20, 2026"
-    },
-    {
-      "title": "Silaev Loaned to Utica | TRANSACTIONS Nov 20, 2026",
-      "url": "https://www.nhl.com/devils/news/silaev-loaned-to-utica-transactions-11-20-26",
-      "date": "Nov 20, 2026"
     }
   ],
   "transactions": [
+    {
+      "title": "Silayev, Rittich Recalled | TRANSACTION 11.27.26 Nov 27, 2026",
+      "url": "https://www.nhl.com/devils/news/topic/transactions/silayev-rittich-recalled-transaction-11-27-26",
+      "date": "Nov 27, 2026"
+    },
     {
       "title": "Silaev Loaned to Utica | TRANSACTIONS Nov 20, 2026",
       "url": "https://www.nhl.com/devils/news/topic/transactions/silaev-loaned-to-utica-transactions-11-20-26",
@@ -461,11 +466,6 @@
       "title": "Kovacevic Activated | TRANSACTION Oct 10, 2026",
       "url": "https://www.nhl.com/devils/news/topic/transactions/kovacevic-activated-transaction-10-10-26",
       "date": "Oct 10, 2026"
-    },
-    {
-      "title": "Noesen Loaned to Utica | TRANSACTION Oct 09, 2026",
-      "url": "https://www.nhl.com/devils/news/topic/transactions/noesen-utica-transaction-10-9-26",
-      "date": "Oct 09, 2026"
     }
   ],
   "injuryReports": [
@@ -527,7 +527,21 @@
   ],
   "rosterChanges": {
     "baselineExists": true,
-    "newlyListed": [],
-    "noLongerListed": []
+    "newlyListed": [
+      {
+        "id": 8484987,
+        "number": 52,
+        "name": "Anton Silaev",
+        "position": "D"
+      }
+    ],
+    "noLongerListed": [
+      {
+        "id": 8484177,
+        "number": 29,
+        "name": "Lenni Hameenaho",
+        "position": "RW"
+      }
+    ]
   }
 }

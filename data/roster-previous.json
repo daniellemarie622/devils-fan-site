@@ -35,12 +35,6 @@
     "name": "Arseny Gritsyuk",
     "position": "RW"
   },
-  "8484177": {
-    "id": 8484177,
-    "number": 29,
-    "name": "Lenni Hameenaho",
-    "position": "RW"
-  },
   "8480002": {
     "id": 8480002,
     "number": 13,
@@ -123,6 +117,12 @@
     "id": 8478399,
     "number": 71,
     "name": "Jonas Siegenthaler",
+    "position": "D"
+  },
+  "8484987": {
+    "id": 8484987,
+    "number": 52,
+    "name": "Anton Silaev",
     "position": "D"
   },
   "8474596": {
