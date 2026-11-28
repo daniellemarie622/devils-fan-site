@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-28T01:39:31.992340+00:00",
+  "updatedAt": "2026-11-28T04:19:35.914539+00:00",
   "team": "New Jersey Devils",
   "season": "2026-27",
   "standings": {
@@ -341,6 +341,11 @@
   ],
   "news": [
     {
+      "title": "Devils, Hellebuyck Host Jets | PREVIEW Nov 28, 2026",
+      "url": "https://www.nhl.com/devils/news/preview-2026020418",
+      "date": "Nov 28, 2026"
+    },
+    {
       "title": "Devils Extinguish Flames | GAME STORY Nov 27, 2026",
       "url": "https://www.nhl.com/devils/news/game-story-2026020401",
       "date": "Nov 27, 2026"
@@ -408,11 +413,6 @@
     {
       "title": "Blues Beat Devils in High Scoring Affair | GAME STORY Nov 22, 2026",
       "url": "https://www.nhl.com/devils/news/game-story-2026020368",
-      "date": "Nov 22, 2026"
-    },
-    {
-      "title": "QUICK RECAP: Blues 9, Devils 6 Nov 22, 2026",
-      "url": "https://www.nhl.com/devils/news/live-updates-2026020368",
       "date": "Nov 22, 2026"
     }
   ],
